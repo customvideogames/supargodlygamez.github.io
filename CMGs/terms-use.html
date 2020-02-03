@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" prefix="content: http://purl.org/rss/1.0/modules/content/  dc: http://purl.org/dc/terms/  foaf: http://xmlns.com/foaf/0.1/  og: http://ogp.me/ns#  rdfs: http://www.w3.org/2000/01/rdf-schema#  schema: http://schema.org/  sioc: http://rdfs.org/sioc/ns#  sioct: http://rdfs.org/sioc/types#  skos: http://www.w3.org/2004/02/skos/core#  xsd: http://www.w3.org/2001/XMLSchema# "><head><!-- Load MBOX First --><script>
+      var pbjs = pbjs || {};
+      pbjs.que = pbjs.que || [];
+    </script><script type="text/javascript" src="js/js-mbox.js"></script><meta charset="utf-8"><link rel="canonical" href="//www.coolmathgames.com/terms-use"><meta name="keywords" content="coolmaths, coolmath, math, maths, game, games, free, online, fun, Terms of Use, coolmaths, coolmath, math, maths, game, games, free, online, fun"><meta property="og:image" content="//m.coolmathgames.com/themes/custom/cmatgame/images/CMG_OG_image.png"><meta property="og:type" content="article"><meta property="og:title" content="Terms of Use"><meta property="og:url" content="//m.coolmathgames.com/terms-use"><link rel="shortcut icon" href="favicons/cmatgame_mob-favicon.ico" type="image/vnd.microsoft.icon"><script type="text/javascript">
+	  var valid_test_environment = false;
+      function getCookie(key) {
+        var keyValue = document.cookie.match("(^|;) ?" + key + "=([^;]*)(;|$)");
+        return keyValue ? keyValue[2] : null;
+      }
+      function setCookie1(cname, cvalue, hours) {
+        var d = new Date();
+        d.setTime(d.getTime() + (hours*60*60*1000));
+        var expires = 'expires='+ d.toUTCString();
+        document.cookie = cname + '=' + cvalue + ';' + expires + ';path=/';
+      }
+      function getParameterByName(name) {
+        var regexS = '[\?&]' + name + '=([^&#]*)';
+        var regex = new RegExp(regexS);
+        var results = regex.exec(location.href);
+        if (results === null) {
+          return '';
+        }
+        return decodeURIComponent(results[1].replace(/\+/g, ' '));
+      }
+      var cmg_gdpr_check = getCookie('GDPR');
+      
+      var cmg_school_whitelisted = getCookie('cmg_schwl');
+      if(cmg_school_whitelisted === null && (typeof valid_test_environment !== 'undefined' && valid_test_environment) && typeof myDebugAction === 'function') {
+        cmg_school_whitelisted = myDebugAction();
+      }
+
+      var freeTrialUser = false;
+      var date = new Date();
+      var hours = date.getHours();
+      var currentMonth = date.getMonth();
+      var currentYear = date.getFullYear();
+      var day = date.getDay();
+      var month_names_short = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
+      var currentMonthName = month_names_short[currentMonth];
+      var schoolStartHour = 7;
+      var schoolEndHour = 10;
+      var cmg_no_ads_debug = false;
+      //var cmg_no_ads = false;
+      if(typeof subscriberLeg === 'undefined' || subscriberLeg === null || subscriberLeg === '') {
+        subscriberLeg = 'Default Leg';
+        if(typeof myDebugAction === 'function' && (typeof valid_test_environment !== 'undefined' && valid_test_environment) ) {
+          myDebugAction();
+        }
+      }
+      if(typeof freeGameLimit === 'undefined' || freeGameLimit === null) {
+        freeGameLimit = 0;
+      }
+      if(typeof cmg_no_ads === 'undefined' && cmg_no_ads_debug && (typeof valid_test_environment !== 'undefined' && valid_test_environment)) {
+        cmg_no_ads = true;
+      }
+      var schoolHours = false;
+      var schoolHolidays = ["Jul 4","Sep 3","Nov 22","Nov 23"];
+      var schoolHoliday = false;
+
+      //TODO -- Summer vacation dates
+      var summerVacationStart = new Date('07/1/'+currentYear);
+      var summerVacationEnd = new Date('07/10/'+currentYear);
+      
+      var today_month_day = currentMonthName + ' ' + date.getDate();
+      if(schoolHolidays.indexOf(today_month_day) !== -1 || (date >= summerVacationStart && date <= summerVacationEnd) || day === 6 || day == 0) {
+        schoolHoliday = true;
+      }
+      var currentMonthName = month_names_short[currentMonth];
+      if(!schoolHoliday && hours >= schoolStartHour && hours <= schoolEndHour) {
+        schoolHours = true;
+      }
+      var targetStateUser = false;
+      if(typeof targeted_state !== 'undefined' && targeted_state !== null && targeted_state) {
+        targetStateUser = true;
+      }
+      if(typeof watchAdtoUnlockGame == 'undefined') {
+        watchAdtoUnlockGame = false;
+      }
+      var cmg_active_anonymous_user = getCookie('cmg_active_anonymous_user');
+      var cmatgame_editor = getCookie('cmg_editor');
+      if(typeof cmg_active_anonymous_user !== 'undefined' && cmg_active_anonymous_user !== null) {
+        ////console.log('We have an active school hours session');
+      }
+      //Display Ads to anonymous users only if the user is not from a targeted state or it is school hours. 
+      //   Do not display ads for targeted state user during non school hours, but free game play is restricted 
+      if(!schoolHours && targetStateUser && cmg_active_anonymous_user === null && cmatgame_editor === null) {
+        freeTrialUser = true;
+     } 
+   </script><script type="text/javascript">
+	   function checkIfFlashIsEnabled() {
+          var ie_flash;
+          try { ie_flash = (window.ActiveXObject && (new ActiveXObject("ShockwaveFlash.ShockwaveFlash")) !== false) } catch(err) { ie_flash = false; }
+          var _flash_installed = ((typeof navigator.plugins != "undefined" && typeof navigator.plugins["Shockwave Flash"] == "object") || ie_flash);
+          if(typeof _flash_installed == "undefined" || !_flash_installed) {
+            return false;
+          } else {
+            return true;
+          }
+       } 
+       function trackEvent(category, action, label, noninteraction) {
+          if(typeof __gaTracker === 'undefined')
+            return;
+            noninteraction = noninteraction || 0;
+           //console.log('Tracked: ' + category + ' ' + action + ' ' + label + ' noninteraction: ' + noninteraction);
+          __gaTracker('send', {
+              'hitType': 'event',          // Required.
+              'eventCategory': category,   // Required.
+              'eventAction': action,      // Required.
+              'eventLabel': label,
+              'eventValue': 0,
+              'nonInteraction': noninteraction
+          });
+      }
+      function trackSocial(network,action,target) {
+          if(typeof __gaTracker === 'undefined')
+            return;
+          __gaTracker('send', {
+              'hitType': 'social',          // Required.
+              'socialNetwork': network,
+              'socialAction': action,
+              'socialTarget': target
+          });
+      }
+	  </script><script type="text/javascript">
+		  gamePage = false;
+          quizPage = false;
+          var ad_refresh_timer_interval = 60000; 
+          var ad_refresh_event_interval = 30000;
+		</script><script type="text/javascript">
+          cmatgame_subscriber = getCookie("cmg_sx");
+          //check if school is whitelisted
+          if(cmg_school_whitelisted !== null && getCookie("cmg_schwl") !== null) {
+            cmg_school_whitelisted = getCookie("cmg_schwl");
+            cmatgame_subscriber = getCookie("cmg_schwl");
+          } else if(cmg_school_whitelisted === null && typeof cmg_no_ads_debug !== "undefined" && cmg_no_ads_debug) {
+          //console.log("KY school hours");
+          cmatgame_subscriber = cmg_no_ads_debug;
+        }
+         if(cmg_gdpr_check !== null) {
+           var cmg_gdpr_all_check = getCookie("GDPR_All");  //GDPR_All cookie is set when user selects accept all cookies in the GDPR overlay
+           var cmg_gdpr_first_check = getCookie("GDPR_First");
+           var cmg_gdpr_reject_check = getCookie("GDPR_Reject");
+           if(cmg_gdpr_all_check == null && (cmg_gdpr_first_check != null || cmg_gdpr_reject_check !=null)) {  //user either accepted only first party cookies or rejected all cookies so do not display ads
+             cmatgame_subscriber = getCookie("GDPR");
+           }
+         }
+        </script><script type="text/javascript">
+          if((typeof cmatgame_subscriber === "undefined" || cmatgame_subscriber === "" || cmatgame_subscriber === null || typeof freeTrialUser === "undefined"  ) && !freeTrialUser) {
+  
+            var tyche = {
+              mode: "tyche",
+              config: "//config.playwire.com/1023174/v2/websites/71134/banner.json"
+                  };
+            var pwScript = document.createElement("script");
+            pwScript.type = "text/javascript";
+            pwScript.src = "//cdn.intergi.com/hera/tyche.js";
+            pwScript.async = true;
+            document.getElementsByTagName("head")[0].appendChild(pwScript);
+          }
+        </script><script src="js/js-jquery.min.js"></script><script type="text/javascript">
+            if (!window.console) console = {log: function() {}};
+            
+            var enableDebug=false;
+            function debugOut(msg){if(enableDebug){console.log(msg);}}
+            
+            refreshCnt = 0;
+            refreshTimer = null;
+            var intvlValue = 30000; // 1m0s
+            //Free trial user change frequency of refresh to 24 hours
+            if(typeof freeTrialUser !== "undefined" && freeTrialUser || cmatgame_subscriber) {
+              intvlValue = 24 * 60 * 60* 1000;
+            }
+            debugOut("Starting with ad refresh timer of " + intvlValue + " ms")
+            if(typeof quizPage == "undefiend" || quizPage != true) {  //
+            	refreshTimer = setTimeout(function(){ myTimerAction() },intvlValue);
+            }
+            
+            function myTimerAction() {
+                console.log("Refresh timer " + intvlValue + " ms mark");
+                refreshAds();
+                myStopFunction();
+            	debugOut("Setting ad refresh timer of " + intvlValue + " ms")
+                refreshTimer = setTimeout(function () { myTimerAction() }, intvlValue);
+            }
+            
+            function myStopFunction() {
+            	debugOut("Clearing refreshTimer")
+                clearTimeout(refreshTimer);
+                refreshTimer = null;
+            }
+            
+            // the myTimerAction() function is intended to be used by a client;
+            // this is intended to be a utility function.
+            function refreshAds() {
+            
+            	refreshCnt++;
+            	/*googletag.pubads().setTargeting("RxCount", refreshCnt.toString());
+                googletag.pubads().setTargeting("Refresh", "True");
+                */
+            	if(typeof tyche != "undefined" && typeof tyche.triggerRefresh === "function") {
+                	tyche.triggerRefresh(); 
+                	doCustomAnalytics("ads", "mobile-refresh");
+            	}   
+            }
+            
+            function doCustomAnalytics( evtCat, evtAct ) {
+            	// Google Analytics
+            	if(typeof __gaTracker !== "undefined") {
+            		__gaTracker("send", {
+            	        "hitType": "event",          // Required.
+            	        "eventCategory": evtCat,   // Required.
+            	        "eventAction": evtAct,      // Required.
+            	        "eventLabel": document.title,
+            	        "eventValue": refreshCnt,
+            	        "nonInteraction": 1
+            	    });
+            	}
+                
+            }
+            
+            
+            // We can"t refresh ads until window has finished loading.
+            var refreshAvail = 0;
+            jQuery(window).on("load", function() {
+              refreshAvail = 1;
+            });
+            
+            </script><script type="text/javascript">
+           jQuery("#div-gpt-ad-591572070363492995-1").attr("id", "noads");
+           jQuery(".adtxt,.adtxt-footer").hide();
+          </script><title>Terms of Use - Play it now at CoolmathGames.com</title><link rel="stylesheet" media="all" href="css/css-css_9m8-tA3IQf8ThlLQYTTZUyEweCvyR908Tg0XCbKYOfY.css"><link rel="stylesheet" media="all" href="css/css-css_ab-2l9a0Yc9snHJxSmydTQtmjv6afI9P_byV9kWY9vc.css"><script type="text/javascript">
+      function getCookie(key) {
+        var keyValue = document.cookie.match("(^|;) ?" + key + "=([^;]*)(;|$)");
+        return keyValue ? keyValue[2] : null;
+      }
+  </script><script type="application/json" data-drupal-selector="drupal-settings-json">{"path":{"baseUrl":"\/","scriptPath":null,"pathPrefix":"","currentPath":"node\/9906","currentPathIsAdmin":false,"isFront":false,"currentLanguage":"en"},"pluralDelimiter":"\u0003","suppressDeprecationErrors":true,"clientside_validation_jquery":{"validate_all_ajax_forms":2,"force_validate_on_blur":false},"user":{"uid":0,"permissionsHash":"c95aaebf1ca44c4827454d0158fc52317722fd64b54ab1580fd1cfe15525a489"}}</script><!--[if lte IE 8]>
+<script src="/sites/default/files/js/js_VtafjXmRvoUgAzqzYTA3Wrjkx9wcWhjP0G4ZnnqRamA.js"></script>
+<![endif]--><script src="js/js-js_wXE2qJkRE-riX00oxFit196aiCiZPpAdfNVG9k9Ug9Y.js"></script><meta name="MobileOptimized" content="width"><meta name="HandheldFriendly" content="true"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"></head><body class="node-type-page section-terms-use not-active-user">
+        <a href="#main-content" class="visually-hidden focusable">
+      Skip to main content
+    </a>
+  
+      <div class="gdpr-overlay-background" style="display:none"></div>
+  <div class="gdpr-overlay-container" style="display:none">
+    <div class="gdpr-overlay">
+    <h1 class="gdpr-welcome">welcome to coolmath games</h1>
+    <p class="overlay-text">We use first party cookies on our website to enhance your
+  browsing experience, and third party cookies to provide
+  advertising that may be of interest to you. </p>
+  <p class="overlay-text">You can accept or reject cookies on our
+  website by clicking one of the buttons below. <span>Rejecting
+  cookies may impair some of our website&rsquo;s functionality.</span></p>
+    <div class="accept-all-cookies overlay-button" onclick="acceptAllCookies();"><span>Accept All Cookies</span></div><br><div class="accept-firstparty-cookies overlay-button" onclick="acceptFirstpartyCookies();"><span>Accept First Party Cookies</span></div><br><div class="reject-all-cookies overlay-button" onclick="rejectAllCookies();"><span>Reject All Cookies</span></div><br><p class="overlay-text">To understand more about how we and our advertising
+  partners use cookies or to change your preference and
+  browser settings, please see our <a href="global-privacy-policy.html">Global Privacy Policy</a>.</p>
+    </div>
+  </div>
+  <script type="text/javascript">
+    function stopBodyScrolling (bool) {
+      if (bool === true) {
+        document.body.addEventListener("touchmove", freezeVp, false);
+        console.log('addeventlistener');
+      } else {
+        document.body.removeEventListener("touchmove", freezeVp, false);
+        console.log('addeventlistener');
+      }
+    }
+    var freezeVp = function(e) {
+      // console.log('freezeVP');
+      e.preventDefault();
+    };
+    jQuery(document).ready(function() {
+    cmg_gdpr_check = getCookie("GDPR");
+    cmg_gdpr_all_check = getCookie("GDPR_All");
+    cmg_gdpr_first_check = getCookie("GDPR_First");
+    cmg_gdpr_reject_check = getCookie("GDPR_Reject");
+    if(cmg_gdpr_check != null && cmg_gdpr_check=="true") {
+      if(cmg_gdpr_all_check == null && cmg_gdpr_first_check == null && cmg_gdpr_reject_check == null) { // user is visiting our site firsttime from one of GDPR countries
+      jQuery("#yourCookieChoices").show();
+      //remove_ads_from_free_game_pages();
+      //jQuery('.content-wrapper').css('pointer-events','default');
+      var footerlink = '<li class="menu__item is-leaf last leaf"><a href="/cookie-choices" class="menu__link">YOUR COOKIE CHOICES';
+      } else if(cmg_gdpr_first_check !== null  || cmg_gdpr_reject_check !== null ){ //user selected first party cookies or rejected all cookies so we need to remove ads
+      remove_ads_from_free_game_pages();
+      var footerlink = '<li class="menu__item is-leaf last leaf"><a href="/cookie-choices" class="menu__link">YOUR COOKIE CHOICES';
+      jQuery("#footerLinks").append(footerlink);
+      //jQuery('.content-wrapper').css('pointer-events','default');
+      } else if(cmg_gdpr_all_check !== null) { //user accepted all cookies
+      var footerlink = '<li class="last leaf"><a href="/cookie-choices" class="menu__link">YOUR COOKIE CHOICES';
+      jQuery("#footerLinks").append(footerlink);
+      }
+    }
+    });
+    ///TODO - REMOVE THIS ALWAYS SHOWS IT FOR TESTING
+    // jQuery('html, body').css('overflow','hidden');
+    // jQuery(".gdpr-overlay-background").show();
+    // jQuery(".gdpr-overlay-background").css('visibility','visible');
+    // jQuery(".gdpr-overlay-container").show();
+    // jQuery(".gdpr-overlay-container").css('visibility','visible');
+    // jQuery('.pageWrapper').css('pointer-events','none');
+    // jQuery('.game-item').css('pointer-events','none');
+    // stopBodyScrolling(true);
+    ///TODO - REMOVE THIS ALWAYS SHOWS IT FOR TESTING
+
+
+    function acceptAllCookies() {
+    var d = new Date();
+    d.setTime(d.getTime() + (365*2*24*60*60*1000));
+    var expires = "expires="+ d.toUTCString();
+    document.cookie = "GDPR_All=true;" + expires + ";path=/";
+    window.location =  location.href;
+    }
+    function acceptFirstpartyCookies() {
+    document.cookie = "GDPR_First=true"+ ";path=/";
+    window.location =  location.href;
+    }
+    function rejectAllCookies() {
+    document.cookie = "GDPR_Reject=true"+ ";path=/";
+    window.location =  location.href;
+    }
+  </script><div class="dialog-off-canvas-main-canvas" data-off-canvas-main-canvas>
+    
+<input type="checkbox" class="navCheckbox" id="navCheckbox" onchange="toggleNav();"><div class="pageWrapper">
+  <!---site wrapper -->
+  <div class="modal-background"></div>
+  <div class="contentWrapper" id="contentWrapper">
+    <!-- site canvas -->
+    <!-- <div class="mobile-header-ad">&nbsp;</div>-->
+    <div class="mobile-header-ad">
+      <div class="adstopmobile">
+<div id="block-adstopmobile-ad-nongame-320x50-1">
+  
+    
+     <div class="view-content">
+    
+      <div class="mobile-container homepage-top-container">
+        <div id="div-gpt-ad-868275232471008982-1" class="homeBlock">
+          <!-- Desktop/iPad Leaderboard ATF  -->
+          <div data-pw-desk="leaderboard_atf"></div>
+          <!-- Mobile Med Rect ATF -->
+          <div data-pw-mobi="leaderboard_atf"></div>
+        </div>
+      </div>
+   </div>	
+  </div>
+</div>
+    </div>
+    <div class="mobile-header">
+      <div class="nav-wrapper">
+        <div class="row">
+          <nav class="top-bar"><ul class="visible-nav"><li class="logo">
+                <a href="m.coolmathgames.html" title="Coolmath Games Mobile">
+                  <img alt="Home" id="new-img-logo" src="images/cmatgame_mob-logo_tab.png"></a>
+              </li>
+
+              <li class="toggle-nav menu-icon header-link">
+                <a class="left-off-canvas-toggle" href="#">Menu</a>
+              </li>
+              <li class="login-link header-link">
+                <a href="login.html">Login</a>
+              </li>
+            </ul></nav><section class="site-menu" id="site-menu"><ul class="inner-right-nav"><li class="off-canvas-close">
+                <a href="#" class="close-panel">
+                  <span class="close-x">X</span></a>
+              </li>
+              <div class="panel-pane pane-block pane-cmatgame-blocks-cmat-blocks-mobile-header-menu">
+                <div class="pane-content">
+                  <div id="menu">
+                    <ul id="menuItems"><a id="link-all-games-a-z" href="1-complete-game-list.html">
+                        <li id="all-games-a-z" class="item left">ALL GAMES A-Z</li>
+                      </a>
+                      <a id="link-most-popular" href="1-popular.html">
+                        <li id="most-popular" class="item left">MOST POPULAR</li>
+                      </a>
+                      <a id="link-trivia" href="trivia.html">
+                        <li id="trivia" class="item left">TRIVIA</li>
+                      </a>
+                    </ul></div>
+                </div>
+              </div>
+          </ul><div class="myaccount-container"></div>
+          <div class="mobile-hamburger-categories">
+            <p class="categories-sidebar">Game Categories</p>
+            <div class="mobile-categories-wrapper"><div class="views-field views-field-name"><span class="field-content"><a href="1-run-jump-games.html">Run &amp; Jump</a></span></div><div class="views-field views-field-name"><span class="field-content"><a href="1-cars-planes-trains-games.html">Cars, Planes &amp; Trains</a></span></div><div class="views-field views-field-name"><span class="field-content"><a href="1-fun-physics-games.html">Fun Physics</a></span></div><div class="views-field views-field-name"><span class="field-content"><a href="1-be-the-hero-games.html">Be The Hero</a></span></div><div class="views-field views-field-name"><span class="field-content"><a href="1-strategy-puzzle-games.html">Strategy Puzzle</a></span></div><div class="views-field views-field-name"><span class="field-content"><a href="1-aiming-games-0.html">Aiming</a></span></div><div class="views-field views-field-name"><span class="field-content"><a href="1-classic-games-0.html">Classic</a></span></div><div class="views-field views-field-name"><span class="field-content"><a href="1-animals-games.html">Animals</a></span></div><div class="views-field views-field-name"><span class="field-content"><a href="1-path-planning-games.html">Path Planning</a></span></div><div class="views-field views-field-name"><span class="field-content"><a href="1-stop-think-games.html">Stop &amp; Think</a></span></div><div class="views-field views-field-name"><span class="field-content"><a href="1-quick-reaction-games.html">Quick Reaction</a></span></div><div class="views-field views-field-name"><span class="field-content"><a href="1-drawing-games-0.html">Drawing</a></span></div><div class="views-field views-field-name"><span class="field-content"><a href="1-match-3-games-0.html">Match 3</a></span></div><div class="views-field views-field-name"><span class="field-content"><a href="1-mobile-daily-games.html">Daily Games</a></span></div></div>
+          </div>
+          <div class="mobile-hamburger-trivia">
+            <p class="categories-sidebar">Trivia</p>
+            <div class="trivia-mobile-menu">
+              <div class="side-link">
+                <a href="trivia.html" class="trivia-category-menu-link">Latest Quizzes</a>
+              </div>
+              <div class="side-link">
+                <a href="arts-entertainment.html" class="trivia-category-menu-link">Arts &amp; Entertainment</a>
+              </div>
+              <div class="side-link">
+                <a href="sports.html" class="trivia-category-menu-link">Sports</a>
+              </div>
+              <div class="side-link">
+                <a href="food-home.html" class="trivia-category-menu-link">Food &amp; Home</a>
+              </div>
+              <div class="side-link">
+                <a href="style.html" class="trivia-category-menu-link">Style</a>
+              </div>
+              <div class="side-link">
+                <a href="body-health.html" class="trivia-category-menu-link">Body &amp; Health</a>
+              </div>
+              <div class="side-link">
+                <a href="fun-stuff.html" class="trivia-category-menu-link">Fun Stuff</a>
+              </div>
+              <div class="side-link">
+                <a href="history-politics.html" class="trivia-category-menu-link">History &amp; Politics</a>
+              </div>
+              <div class="side-link">
+                <a href="places.html" class="trivia-category-menu-link">Places</a>
+              </div>
+              <div class="side-link">
+                <a href="science-nature.html" class="trivia-category-menu-link">Science &amp; Nature</a>
+              </div>
+            </div>
+          </div>
+        </section><!-- end of Inner Menu --></div>
+    </div>
+  </div>
+  <div class="content unselectable" id="content">
+          <div class="panel-pane pane-page-content">
+          <div>
+    <div data-drupal-messages-fallback class="hidden"></div>
+<div class="system_breadcrumb_block">
+<div id="block-cmatgame-mob-breadcrumbs">
+  
+    
+     <div class="view-content">
+    
+   </div>	
+  </div>
+</div><div class="page_title_block">
+<div id="block-cmatgame-mob-page-title">
+  
+    
+     <div class="view-content">
+    
+   </div>	
+  </div>
+</div><div class="system_main_block">
+<div id="block-cmatgame-mob-cmatgame-mob-system-main">
+  
+    
+     <div class="view-content">
+    <div class="scrollableContentArea">
+<div id="block-system-main">
+	<article data-history-node-id="9906" role="article" about="/terms-use" typeof="foaf:Document" class="node node-page node--view-mode-full clearfix"><h1 class="node__title"><span property="dc:title">Terms of Use</span>
+</h1>
+	  <div class="node__content clearfix field-item field-body content textContent">
+		    <div property="content:encoded" class="field field--name-body field--type-text-with-summary field--label-hidden field__items">
+                <div property="content:encoded" class="field__item">
+        <style type="text/css">.content-column-wrapper{padding-top:60px !important;}
+</style><p><span style="font-size: 20px;">General Terms of Use for Coolmath's Content</span></p>
+
+<p>By accessing or using the site, you agree to be bound by this agreement and the terms of our privacy policy at http://www.coolmathgames.com/privacyp which are incorporated by this reference.&nbsp; This agreement shall remain in full force and effect while you use any of the Coolmath family of sites.</p>
+
+<p>Coolmath.com LLC makes no promises that our visitors&rsquo; grades will improve by the use of any of our family of sites.</p>
+
+<p>Coolmath.com LLC does not guarantee the accuracy of any information included in any of our family of sites, nor do we guarantee the accuracy of the information included in any of the sites we link to.</p>
+
+<p>The information included in our family of sites is meant to supplement standard academic courses and classroom instruction.</p>
+
+<p>We are not responsible for any of the content included in any of our licensed content that is authored by people not employed by Coolmath.com LLC, such as our games at CoolmathGames.com.</p>
+
+<p>Coolmath is not responsible for any ads that may appear on our sites via error or malware viruses.&nbsp;</p>
+
+<p>All materials on this site, as well as the organization and layout of the site, (except for our licensed content such as the games at CoolmathGames.com) are owned and copyrighted by Coolmath.com LLC and may be accessed or printed for your personal non-commercial use only. Without the prior written permission of Coolmath.com LLC, you may not copy, modify, distribute or transfer any material on this site, in whole or in part.</p>
+
+<p>YOUR USE OF THE COOLMATH FAMILY OF SITES IS ON AN "AS IS," "AS AVAILABLE" BASIS, AND WE SPECIFICALLY DISCLAIM ANY REPRESENTATIONS OR WARRANTIES, EXPRESS OR IMPLIED, INCLUDING, WITHOUT LIMITATION, ANY REPRESENTATIONS OR WARRANTIES OF MERCHANTABILITY OR FITNESS FOR A PARTICULAR PURPOSE.&nbsp; WE DO NOT WARRANT THAT THE SERVICE WILL BE UNINTERRUPTED OR ERROR FREE OR FREE FROM VIRUSES OR OTHER HARMFUL MALICIOUS AGENTS. TO THE FULLEST EXTENT PERMITTED BY LAW, IN NO EVENT AND UNDER NO LEGAL THEORY, WHETHER TORT (INCLUDING NEGLIGENCE), CONTRACT OR OTHERWISE, SHALL COOLMATH, ITS AFFILIATES, AND ITS AND THEIR RESPECTIVE SHAREHOLDERS, DIRECTORS, OFFICERS, EMPLOYEES, ADVERTISERS, SUPPLIERS, CONTENT PROVIDERS AND LICENSORS (COLLECTIVELY, THE &ldquo;COOLMATH PARTIES&rdquo;) BE LIABLE (JOINTLY OR SEVERALLY) TO YOU OR ANY OTHER PERSON AS A RESULT OF YOUR USE OF THE COOLMATH FAMILY OF SITES FOR INDIRECT, CONSEQUENTIAL, SPECIAL, INCIDENTAL, EXEMPLARY OR PUNITIVE DAMAGES, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGES. WHERE WE ARE NOT LEGALLY ENTITLED TO EXCLUDE ALL LIABILITY, OUR TOTAL LIABILITY FOR ANY LOSS OR DAMAGE RELATING TO THE COOLMATH FAMILY OF SITES SHALL NOT EXCEED AN AMOUNT EQUAL TO THE SUBSCRIPTION FEES (IF ANY) PAID BY YOU TO US. Your sole and exclusive remedy under this Agreement is as expressly set forth herein. Some jurisdictions do not allow the exclusion or limitation of implied warranties, so the above exclusions or limitations may not apply to you.</p>
+
+<p>You agree to use the Coolmath family of sites in compliance with all applicable laws, regulations and rulings.&nbsp; We reserve the right to terminate or restrict your access to the Coolmath sites in our sole discretion if we believe you are using a site in a way that violates these Terms of Use or infringes upon another person&rsquo;s rights.</p>
+
+<p>To the fullest extent of the law, you agree to indemnify and hold the Coolmath Parties harmless from any claim, demand, or damage, including costs and reasonable attorneys' fees, asserted by any third party due to or arising out of your use of the Coolmath family of sites.</p>
+
+<p>Irrespective of the residence of any user, these Terms of Use shall be governed by New York law excluding its conflicts of law principles.&nbsp; Except for claims related to intellectual property and disputes that qualify for small claims court, any dispute that arises shall be resolved by arbitration administered by the American Arbitration Association (&ldquo;AAA&rdquo;) in accordance with its Commercial Arbitration Rules and the Supplementary Procedures for Consumer Related Disputes, in New York, New York.&nbsp; NO CLASS ACTION MAY BE PURSUED OR MAINTAINED WITH RESPECT TO ANY DISPUTE REGARDING THESE TERMS OF USE.</p>
+
+<p>We administer the Coolmath family of sites from the United States of America. If you choose to access the Coolmath sites from outside the United States, you consent to the transfer of information outside of your country of residence to the United States of America.</p>
+
+<p>Note: This document is subject to change at any time. When it does, the changes will be posted on this page. Your continued use of the Coolmath family of sites indicates that you accept the terms spelled out in this document.<br><br><br><span style="font-size: 20px;">About Coolmath Subscriber-only Content</span></p>
+
+<p>Subscriptions may be available to access Coolmath subscriber-only content.&nbsp; If you are under 18 years of age, please have your parent or guardian register, complete the purchase and agree to these Terms of Use on your behalf.&nbsp; In such instances &ldquo;you&rdquo; means you and your parent or guardian. The information you provide for registration is necessary to confirm your identity when you visit the site and to process your payment(s).&nbsp; We will use your information in accordance with our privacy policy.</p>
+
+<p>While Coolmath believes and intends that its information security practices reflect good practice, there is no such thing as perfect information security. As such, you assume the risk of security breaches and all consequences resulting from them. You must safeguard your login credentials and not share them with any other person. Only one individual may access the subscriber-only content at the same time using the same user name or password.</p>
+
+<p>By subscribing to use the subscriber-only content, you agree to pay the associated fees.&nbsp; SUBSCRIPTIONS FOR SUBSCRIBER-ONLY CONTENT ARE AUTO-RENEWING.&nbsp; THIS MEANS THAT WE WILL BILL THE CREDIT CARD THAT YOU PROVIDE TO US UPON YOUR INITIAL PURCHASE OR AT THE END OF YOUR FREE TRIAL (IF APPLICABLE) AND ON A RECURRING BASIS AT THE BEGINNING OF EACH RENEWAL PERIOD. BY SIGNING UP FOR THE SERVICE, YOU AUTHORIZE RECURRING CHARGES TO YOUR CREDIT CARD.&nbsp; You agree that Coolmath will not be responsible for any expenses that you may incur resulting from overdrawing your bank account or exceeding your credit limit as a result of an automatic charge made under this agreement.</p>
+
+<p>You agree to keep your account and payment information current at all times.&nbsp; To make changes to your payment or account information, please contact us at subscriptions@coolmath.com.&nbsp; Please also let us know immediately if you suspect any unauthorized use of your credit card or login credentials.&nbsp;</p>
+
+<p>Please note that we use a third party not affiliated with us to process payments for the subscriber-only content. You agree that the third party processor is solely responsible for controlling, handling, processing, or fulfilling purchases processed through its systems.&nbsp; You may be subject to additional terms of use and/or privacy policies of the third party processor when you purchase subscriber-only content.</p>
+
+<p>Should you wish to cancel your subscription, please let us know in advance of your renewal date by contacting us at subscriptions@coolmath.com.&nbsp; Annual subscribers may cancel their subscription within thirty (30) days of being charged and receive a refund.&nbsp; For all other subscribers, you must cancel your subscription before it renews in order to avoid billing of subscription fees for the renewal term to your credit card.&nbsp; &nbsp;We reserve the right to issue refunds at our sole discretion. If we provide a refund, we are not obligated to do so again in the future.&nbsp; We may cancel your subscription at any time.&nbsp; If we cancel your subscription for a reason other than for cause (cause being, for example, your breach of these Terms of Use), we will issue you a refund for your unused portion of your subscription.</p>
+
+<p>Rates for subscriber-only content are subject to change.&nbsp; The then-current rate will be charged upon auto-renewal.&nbsp; Contact us at <a href="mailto:subscriptions@coolmath.com">subscriptions@coolmath.com</a> should you wish to cancel your subscription after a rate increase for a refund.</p>
+
+<p>From time to time we may offer free trials to, or introductory pricing for, the subscriber-only content.&nbsp; These offers are available to you only if you have not previously been a subscriber to subscriber-only content.&nbsp; If you respond to a free trial or introductory pricing offer but do not qualify, we reserve the right to reject your order.&nbsp;&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+
+            </div>
+          </div>
+
+	  </div>
+	</article></div>
+</div>
+   </div>	
+  </div>
+</div>
+  </div>
+
+      </div>
+            </div>
+  <div class="mobile-fixed-footer">
+    <div id="fixed-footer-content">&nbsp;</div>
+  </div>
+  <div class="footer unselectable">
+    <div class="panel-pane pane-block pane-menu-menu-footer-menu">
+
+      <div class="pane-content">
+        <ul id="footerLinks" class="unselectable"><li class="first leaf">
+            <a href="privacyp.html" class="privacyText">PRIVACY POLICY</a>
+          </li>
+          <li class="leaf">
+            <a href="subscription-faq.html">SUBSCRIPTION FAQ</a>
+          </li>
+          <li class="leaf">
+            <a href="terms-use.html">TERMS OF USE</a>
+          </li>
+          <li class="leaf">
+            <a href="about-us.html">ABOUT US</a>
+          </li>
+          <li class="last leaf">
+            <a href="aboutourads.html">ABOUT OUR ADS</a>
+          </li>
+        </ul></div>
+    </div>
+    <div class="panel-separator"></div>
+    <div class="panel-pane pane-block pane-bean-footer-copyright">
+
+      <div class="pane-content">
+        <div class="entity entity-bean bean-content-block" about="/block/footer_copyright" typeof="">
+
+          <div class="field-text-block">
+            <p>&copy; 2020 Coolmath.com LLC. All Rights Reserved.
+            </p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  <div id="contentFadeout"></div>
+</div>
+</div>
+
+  </div>
+
+  
+    <script src="js/js-ads.js"></script><script src="js/js-js_9Mlc0pFLNgXbu5EnsV-S0-02ZWtRdftJtFDanFfR-fw.js"></script><script src="https://js.stripe.com/v3/"></script><script type="text/javascript">
+      function closeCookieChoices() {
+        var d = new Date();
+        d.setTime(d.getTime() + (365*2*24*60*60*1000));
+        var expires = "expires="+ d.toUTCString();
+        document.cookie = "GDPR_All=true;" + expires + ";path=/";
+        document.cookie = "GDPR_CHOICE=GDPR_All;" + expires + ";path=/";
+        jQuery("#yourCookieChoices").hide();
+        var footerlink = '<li class="last leaf"><a href="/cookie-choices" class="menu__link">YOUR COOKIE CHOICES';
+
+        jQuery("#footerLinks").append(footerlink);
+      }
+    </script><div id="yourCookieChoices" style="display:none;">
+      <p class="cookie-text"><span class="first-cookie">We use cookies to improve your experience and present relevant advertising.</span><span class="second-cookie"> By using this site you agree to our cookie policies.</span></p>
+      <div class="cookie-mobile">
+        <span class="imokwiththat-close" id="closeCookieChoices" onclick="closeCookieChoices();">imokwiththat</span> <a href="cookie-choices.html" class="cookies-link">Manage choices</a>
+      </div>
+  </div></body></html>

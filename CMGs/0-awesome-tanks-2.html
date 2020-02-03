@@ -1,0 +1,1415 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" prefix="content: http://purl.org/rss/1.0/modules/content/  dc: http://purl.org/dc/terms/  foaf: http://xmlns.com/foaf/0.1/  og: http://ogp.me/ns#  rdfs: http://www.w3.org/2000/01/rdf-schema#  schema: http://schema.org/  sioc: http://rdfs.org/sioc/ns#  sioct: http://rdfs.org/sioc/types#  skos: http://www.w3.org/2004/02/skos/core#  xsd: http://www.w3.org/2001/XMLSchema# "><head><!-- Load MBOX First --><script>
+      var pbjs = pbjs || {};
+      pbjs.que = pbjs.que || [];
+    </script><script type="text/javascript" src="js/js-mbox.js"></script><meta charset="utf-8"><link rel="canonical" href="//www.coolmathgames.com/0-awesome-tanks-2"><meta name="keywords" content="coolmaths, coolmath, math, maths, game, games, free, online, fun, coolmaths, coolmath, math, maths, game, games, free, online, fun, awesome, tanks"><meta name="description" content="Awesome Tanks 2 at Cool Math Games: Turn on the engine and fire the cannon! Blast your enemies and grab the cash they leave behind. Make your tank ultra-powerful with new weapons and upgrades!"><meta property="og:description1" content="Awesome Tanks 2 at Cool Math Games: Turn on the engine and fire the cannon! Blast your enemies and grab the cash they leave behind. Make your tank ultra-powerful with new weapons and upgrades!"><meta property="og:image" content="https://m.coolmathgames.com/sites/default/files/awesome-tanks-2.png"><meta property="og:image:alt" content="Awesome Tanks 2 Game Screenshot"><meta property="og:type" content="article"><meta property="og:title" content="Awesome Tanks 2"><meta property="og:url" content="//m.coolmathgames.com/0-awesome-tanks-2"><link rel="shortcut icon" href="favicons/cmatgame_mob-favicon.ico" type="image/vnd.microsoft.icon"><script type="text/javascript">
+	  var valid_test_environment = false;
+      function getCookie(key) {
+        var keyValue = document.cookie.match("(^|;) ?" + key + "=([^;]*)(;|$)");
+        return keyValue ? keyValue[2] : null;
+      }
+      function setCookie1(cname, cvalue, hours) {
+        var d = new Date();
+        d.setTime(d.getTime() + (hours*60*60*1000));
+        var expires = 'expires='+ d.toUTCString();
+        document.cookie = cname + '=' + cvalue + ';' + expires + ';path=/';
+      }
+      function getParameterByName(name) {
+        var regexS = '[\?&]' + name + '=([^&#]*)';
+        var regex = new RegExp(regexS);
+        var results = regex.exec(location.href);
+        if (results === null) {
+          return '';
+        }
+        return decodeURIComponent(results[1].replace(/\+/g, ' '));
+      }
+      var cmg_gdpr_check = getCookie('GDPR');
+      
+      var cmg_school_whitelisted = getCookie('cmg_schwl');
+      if(cmg_school_whitelisted === null && (typeof valid_test_environment !== 'undefined' && valid_test_environment) && typeof myDebugAction === 'function') {
+        cmg_school_whitelisted = myDebugAction();
+      }
+
+      var freeTrialUser = false;
+      var date = new Date();
+      var hours = date.getHours();
+      var currentMonth = date.getMonth();
+      var currentYear = date.getFullYear();
+      var day = date.getDay();
+      var month_names_short = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
+      var currentMonthName = month_names_short[currentMonth];
+      var schoolStartHour = 7;
+      var schoolEndHour = 10;
+      var cmg_no_ads_debug = false;
+      //var cmg_no_ads = false;
+      if(typeof subscriberLeg === 'undefined' || subscriberLeg === null || subscriberLeg === '') {
+        subscriberLeg = 'Default Leg';
+        if(typeof myDebugAction === 'function' && (typeof valid_test_environment !== 'undefined' && valid_test_environment) ) {
+          myDebugAction();
+        }
+      }
+      if(typeof freeGameLimit === 'undefined' || freeGameLimit === null) {
+        freeGameLimit = 0;
+      }
+      if(typeof cmg_no_ads === 'undefined' && cmg_no_ads_debug && (typeof valid_test_environment !== 'undefined' && valid_test_environment)) {
+        cmg_no_ads = true;
+      }
+      var schoolHours = false;
+      var schoolHolidays = ["Jul 4","Sep 3","Nov 22","Nov 23"];
+      var schoolHoliday = false;
+
+      //TODO -- Summer vacation dates
+      var summerVacationStart = new Date('07/1/'+currentYear);
+      var summerVacationEnd = new Date('07/10/'+currentYear);
+      
+      var today_month_day = currentMonthName + ' ' + date.getDate();
+      if(schoolHolidays.indexOf(today_month_day) !== -1 || (date >= summerVacationStart && date <= summerVacationEnd) || day === 6 || day == 0) {
+        schoolHoliday = true;
+      }
+      var currentMonthName = month_names_short[currentMonth];
+      if(!schoolHoliday && hours >= schoolStartHour && hours <= schoolEndHour) {
+        schoolHours = true;
+      }
+      var targetStateUser = false;
+      if(typeof targeted_state !== 'undefined' && targeted_state !== null && targeted_state) {
+        targetStateUser = true;
+      }
+      if(typeof watchAdtoUnlockGame == 'undefined') {
+        watchAdtoUnlockGame = false;
+      }
+      var cmg_active_anonymous_user = getCookie('cmg_active_anonymous_user');
+      var cmatgame_editor = getCookie('cmg_editor');
+      if(typeof cmg_active_anonymous_user !== 'undefined' && cmg_active_anonymous_user !== null) {
+        ////console.log('We have an active school hours session');
+      }
+      //Display Ads to anonymous users only if the user is not from a targeted state or it is school hours. 
+      //   Do not display ads for targeted state user during non school hours, but free game play is restricted 
+      if(!schoolHours && targetStateUser && cmg_active_anonymous_user === null && cmatgame_editor === null) {
+        freeTrialUser = true;
+     } 
+   </script><script type="text/javascript">
+	   function checkIfFlashIsEnabled() {
+          var ie_flash;
+          try { ie_flash = (window.ActiveXObject && (new ActiveXObject("ShockwaveFlash.ShockwaveFlash")) !== false) } catch(err) { ie_flash = false; }
+          var _flash_installed = ((typeof navigator.plugins != "undefined" && typeof navigator.plugins["Shockwave Flash"] == "object") || ie_flash);
+          if(typeof _flash_installed == "undefined" || !_flash_installed) {
+            return false;
+          } else {
+            return true;
+          }
+       } 
+       function trackEvent(category, action, label, noninteraction) {
+          if(typeof __gaTracker === 'undefined')
+            return;
+            noninteraction = noninteraction || 0;
+           //console.log('Tracked: ' + category + ' ' + action + ' ' + label + ' noninteraction: ' + noninteraction);
+          __gaTracker('send', {
+              'hitType': 'event',          // Required.
+              'eventCategory': category,   // Required.
+              'eventAction': action,      // Required.
+              'eventLabel': label,
+              'eventValue': 0,
+              'nonInteraction': noninteraction
+          });
+      }
+      function trackSocial(network,action,target) {
+          if(typeof __gaTracker === 'undefined')
+            return;
+          __gaTracker('send', {
+              'hitType': 'social',          // Required.
+              'socialNetwork': network,
+              'socialAction': action,
+              'socialTarget': target
+          });
+      }
+	  </script><script type="text/javascript">
+		  gamePage = true;
+          quizPage = false;
+		  gameType = 'game_html5';
+		  game_width_size = 640;
+		  mobile_ga_game_type = 'Mobile'; 
+          var ad_refresh_timer_interval = 60000; 
+          var ad_refresh_event_interval = 30000;
+		  </script><script type="text/javascript">
+          cmatgame_subscriber = getCookie("cmg_sx");
+          //check if school is whitelisted
+          if(cmg_school_whitelisted !== null && getCookie("cmg_schwl") !== null) {
+            cmg_school_whitelisted = getCookie("cmg_schwl");
+            cmatgame_subscriber = getCookie("cmg_schwl");
+          } else if(cmg_school_whitelisted === null && typeof cmg_no_ads_debug !== "undefined" && cmg_no_ads_debug) {
+          //console.log("KY school hours");
+          cmatgame_subscriber = cmg_no_ads_debug;
+        }
+         if(cmg_gdpr_check !== null) {
+           var cmg_gdpr_all_check = getCookie("GDPR_All");  //GDPR_All cookie is set when user selects accept all cookies in the GDPR overlay
+           var cmg_gdpr_first_check = getCookie("GDPR_First");
+           var cmg_gdpr_reject_check = getCookie("GDPR_Reject");
+           if(cmg_gdpr_all_check == null && (cmg_gdpr_first_check != null || cmg_gdpr_reject_check !=null)) {  //user either accepted only first party cookies or rejected all cookies so do not display ads
+             cmatgame_subscriber = getCookie("GDPR");
+           }
+         }
+        </script><script type="text/javascript">
+          if((typeof cmatgame_subscriber === "undefined" || cmatgame_subscriber === "" || cmatgame_subscriber === null || typeof freeTrialUser === "undefined"  ) && !freeTrialUser) {
+  
+            var tyche = {
+              mode: "tyche",
+              config: "//config.playwire.com/1023174/v2/websites/71134/banner.json"
+                  };
+            var pwScript = document.createElement("script");
+            pwScript.type = "text/javascript";
+            pwScript.src = "//cdn.intergi.com/hera/tyche.js";
+            pwScript.async = true;
+            document.getElementsByTagName("head")[0].appendChild(pwScript);
+          }
+        </script><script src="js/js-jquery.min.js"></script><script type="text/javascript">
+            if (!window.console) console = {log: function() {}};
+            
+            var enableDebug=false;
+            function debugOut(msg){if(enableDebug){console.log(msg);}}
+            
+            refreshCnt = 0;
+            refreshTimer = null;
+            var intvlValue = 30000; // 1m0s
+            //Free trial user change frequency of refresh to 24 hours
+            if(typeof freeTrialUser !== "undefined" && freeTrialUser || cmatgame_subscriber) {
+              intvlValue = 24 * 60 * 60* 1000;
+            }
+            debugOut("Starting with ad refresh timer of " + intvlValue + " ms")
+            if(typeof quizPage == "undefiend" || quizPage != true) {  //
+            	refreshTimer = setTimeout(function(){ myTimerAction() },intvlValue);
+            }
+            
+            function myTimerAction() {
+                console.log("Refresh timer " + intvlValue + " ms mark");
+                refreshAds();
+                myStopFunction();
+            	debugOut("Setting ad refresh timer of " + intvlValue + " ms")
+                refreshTimer = setTimeout(function () { myTimerAction() }, intvlValue);
+            }
+            
+            function myStopFunction() {
+            	debugOut("Clearing refreshTimer")
+                clearTimeout(refreshTimer);
+                refreshTimer = null;
+            }
+            
+            // the myTimerAction() function is intended to be used by a client;
+            // this is intended to be a utility function.
+            function refreshAds() {
+            
+            	refreshCnt++;
+            	/*googletag.pubads().setTargeting("RxCount", refreshCnt.toString());
+                googletag.pubads().setTargeting("Refresh", "True");
+                */
+            	if(typeof tyche != "undefined" && typeof tyche.triggerRefresh === "function") {
+                	tyche.triggerRefresh(); 
+                	doCustomAnalytics("ads", "mobile-refresh");
+            	}   
+            }
+            
+            function doCustomAnalytics( evtCat, evtAct ) {
+            	// Google Analytics
+            	if(typeof __gaTracker !== "undefined") {
+            		__gaTracker("send", {
+            	        "hitType": "event",          // Required.
+            	        "eventCategory": evtCat,   // Required.
+            	        "eventAction": evtAct,      // Required.
+            	        "eventLabel": document.title,
+            	        "eventValue": refreshCnt,
+            	        "nonInteraction": 1
+            	    });
+            	}
+                
+            }
+            
+            
+            // We can"t refresh ads until window has finished loading.
+            var refreshAvail = 0;
+            jQuery(window).on("load", function() {
+              refreshAvail = 1;
+            });
+            
+            </script><title>Awesome Tanks 2 - Play it now at CoolmathGames.com</title><link rel="stylesheet" media="all" href="css/css-css_9m8-tA3IQf8ThlLQYTTZUyEweCvyR908Tg0XCbKYOfY.css"><link rel="stylesheet" media="all" href="css/css-css_ab-2l9a0Yc9snHJxSmydTQtmjv6afI9P_byV9kWY9vc.css"><script type="text/javascript">
+      function getCookie(key) {
+        var keyValue = document.cookie.match("(^|;) ?" + key + "=([^;]*)(;|$)");
+        return keyValue ? keyValue[2] : null;
+      }
+  </script><script type="application/json" data-drupal-selector="drupal-settings-json">{"path":{"baseUrl":"\/","scriptPath":null,"pathPrefix":"","currentPath":"node\/11579","currentPathIsAdmin":false,"isFront":false,"currentLanguage":"en"},"pluralDelimiter":"\u0003","suppressDeprecationErrors":true,"clientside_validation_jquery":{"validate_all_ajax_forms":2,"force_validate_on_blur":false},"cmatgame":{"html5embed":{"width":"640","height":"600","game":{"u":"sites\/default\/files\/games\/awesome_tanks_2_3_0.zip"}},"swfembed":"","isSubscriptionActive":false},"user":{"uid":0,"permissionsHash":"c95aaebf1ca44c4827454d0158fc52317722fd64b54ab1580fd1cfe15525a489"}}</script><!--[if lte IE 8]>
+<script src="/sites/default/files/js/js_VtafjXmRvoUgAzqzYTA3Wrjkx9wcWhjP0G4ZnnqRamA.js"></script>
+<![endif]--><script src="js/js-js_wXE2qJkRE-riX00oxFit196aiCiZPpAdfNVG9k9Ug9Y.js"></script><meta name="MobileOptimized" content="width"><meta name="HandheldFriendly" content="true"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"></head><body class="node-type-game not-active-user">
+        <a href="#main-content" class="visually-hidden focusable">
+      Skip to main content
+    </a>
+  
+      <div class="gdpr-overlay-background" style="display:none"></div>
+  <div class="gdpr-overlay-container" style="display:none">
+    <div class="gdpr-overlay">
+    <h1 class="gdpr-welcome">welcome to coolmath games</h1>
+    <p class="overlay-text">We use first party cookies on our website to enhance your
+  browsing experience, and third party cookies to provide
+  advertising that may be of interest to you. </p>
+  <p class="overlay-text">You can accept or reject cookies on our
+  website by clicking one of the buttons below. <span>Rejecting
+  cookies may impair some of our website&rsquo;s functionality.</span></p>
+    <div class="accept-all-cookies overlay-button" onclick="acceptAllCookies();"><span>Accept All Cookies</span></div><br><div class="accept-firstparty-cookies overlay-button" onclick="acceptFirstpartyCookies();"><span>Accept First Party Cookies</span></div><br><div class="reject-all-cookies overlay-button" onclick="rejectAllCookies();"><span>Reject All Cookies</span></div><br><p class="overlay-text">To understand more about how we and our advertising
+  partners use cookies or to change your preference and
+  browser settings, please see our <a href="global-privacy-policy.html">Global Privacy Policy</a>.</p>
+    </div>
+  </div>
+  <script type="text/javascript">
+    function stopBodyScrolling (bool) {
+      if (bool === true) {
+        document.body.addEventListener("touchmove", freezeVp, false);
+        console.log('addeventlistener');
+      } else {
+        document.body.removeEventListener("touchmove", freezeVp, false);
+        console.log('addeventlistener');
+      }
+    }
+    var freezeVp = function(e) {
+      // console.log('freezeVP');
+      e.preventDefault();
+    };
+    jQuery(document).ready(function() {
+    cmg_gdpr_check = getCookie("GDPR");
+    cmg_gdpr_all_check = getCookie("GDPR_All");
+    cmg_gdpr_first_check = getCookie("GDPR_First");
+    cmg_gdpr_reject_check = getCookie("GDPR_Reject");
+    if(cmg_gdpr_check != null && cmg_gdpr_check=="true") {
+      if(cmg_gdpr_all_check == null && cmg_gdpr_first_check == null && cmg_gdpr_reject_check == null) { // user is visiting our site firsttime from one of GDPR countries
+      jQuery("#yourCookieChoices").show();
+      //remove_ads_from_free_game_pages();
+      //jQuery('.content-wrapper').css('pointer-events','default');
+      var footerlink = '<li class="menu__item is-leaf last leaf"><a href="/cookie-choices" class="menu__link">YOUR COOKIE CHOICES';
+      } else if(cmg_gdpr_first_check !== null  || cmg_gdpr_reject_check !== null ){ //user selected first party cookies or rejected all cookies so we need to remove ads
+      remove_ads_from_free_game_pages();
+      var footerlink = '<li class="menu__item is-leaf last leaf"><a href="/cookie-choices" class="menu__link">YOUR COOKIE CHOICES';
+      jQuery("#footerLinks").append(footerlink);
+      //jQuery('.content-wrapper').css('pointer-events','default');
+      } else if(cmg_gdpr_all_check !== null) { //user accepted all cookies
+      var footerlink = '<li class="last leaf"><a href="/cookie-choices" class="menu__link">YOUR COOKIE CHOICES';
+      jQuery("#footerLinks").append(footerlink);
+      }
+    }
+    });
+    ///TODO - REMOVE THIS ALWAYS SHOWS IT FOR TESTING
+    // jQuery('html, body').css('overflow','hidden');
+    // jQuery(".gdpr-overlay-background").show();
+    // jQuery(".gdpr-overlay-background").css('visibility','visible');
+    // jQuery(".gdpr-overlay-container").show();
+    // jQuery(".gdpr-overlay-container").css('visibility','visible');
+    // jQuery('.pageWrapper').css('pointer-events','none');
+    // jQuery('.game-item').css('pointer-events','none');
+    // stopBodyScrolling(true);
+    ///TODO - REMOVE THIS ALWAYS SHOWS IT FOR TESTING
+
+
+    function acceptAllCookies() {
+    var d = new Date();
+    d.setTime(d.getTime() + (365*2*24*60*60*1000));
+    var expires = "expires="+ d.toUTCString();
+    document.cookie = "GDPR_All=true;" + expires + ";path=/";
+    window.location =  location.href;
+    }
+    function acceptFirstpartyCookies() {
+    document.cookie = "GDPR_First=true"+ ";path=/";
+    window.location =  location.href;
+    }
+    function rejectAllCookies() {
+    document.cookie = "GDPR_Reject=true"+ ";path=/";
+    window.location =  location.href;
+    }
+  </script><div class="dialog-off-canvas-main-canvas" data-off-canvas-main-canvas>
+    
+<input type="checkbox" class="navCheckbox" id="navCheckbox" onchange="toggleNav();"><div class="pageWrapper">
+  <!---site wrapper -->
+  <div class="modal-background"></div>
+  <div class="contentWrapper" id="contentWrapper">
+    <!-- site canvas -->
+    <!-- <div class="mobile-header-ad">&nbsp;</div>-->
+    <div class="mobile-header-ad">
+      <div class="adstopmobile">
+<div id="block-adstopmobile-ad-nongame-320x50-1">
+  
+    
+     <div class="view-content">
+    
+      <div class="mobile-container homepage-top-container">
+        <div id="div-gpt-ad-868275232471008982-1" class="homeBlock">
+          <!-- Desktop/iPad Leaderboard ATF  -->
+          <div data-pw-desk="leaderboard_atf"></div>
+          <!-- Mobile Med Rect ATF -->
+          <div data-pw-mobi="leaderboard_atf"></div>
+        </div>
+      </div>
+   </div>	
+  </div>
+</div>
+    </div>
+    <div class="mobile-header">
+      <div class="nav-wrapper">
+        <div class="row">
+          <nav class="top-bar"><ul class="visible-nav"><li class="logo">
+                <a href="m.coolmathgames.html" title="Coolmath Games Mobile">
+                  <img alt="Home" id="new-img-logo" src="images/cmatgame_mob-logo_tab.png"></a>
+              </li>
+
+              <li class="toggle-nav menu-icon header-link">
+                <a class="left-off-canvas-toggle" href="#">Menu</a>
+              </li>
+              <li class="login-link header-link">
+                <a href="login.html">Login</a>
+              </li>
+            </ul></nav><section class="site-menu" id="site-menu"><ul class="inner-right-nav"><li class="off-canvas-close">
+                <a href="#" class="close-panel">
+                  <span class="close-x">X</span></a>
+              </li>
+              <div class="panel-pane pane-block pane-cmatgame-blocks-cmat-blocks-mobile-header-menu">
+                <div class="pane-content">
+                  <div id="menu">
+                    <ul id="menuItems"><a id="link-all-games-a-z" href="1-complete-game-list.html">
+                        <li id="all-games-a-z" class="item left">ALL GAMES A-Z</li>
+                      </a>
+                      <a id="link-most-popular" href="1-popular.html">
+                        <li id="most-popular" class="item left">MOST POPULAR</li>
+                      </a>
+                      <a id="link-trivia" href="trivia.html">
+                        <li id="trivia" class="item left">TRIVIA</li>
+                      </a>
+                    </ul></div>
+                </div>
+              </div>
+          </ul><div class="myaccount-container"></div>
+          <div class="mobile-hamburger-categories">
+            <p class="categories-sidebar">Game Categories</p>
+            <div class="mobile-categories-wrapper"><div class="views-field views-field-name"><span class="field-content"><a href="1-run-jump-games.html">Run &amp; Jump</a></span></div><div class="views-field views-field-name"><span class="field-content"><a href="1-cars-planes-trains-games.html">Cars, Planes &amp; Trains</a></span></div><div class="views-field views-field-name"><span class="field-content"><a href="1-fun-physics-games.html">Fun Physics</a></span></div><div class="views-field views-field-name"><span class="field-content"><a href="1-be-the-hero-games.html">Be The Hero</a></span></div><div class="views-field views-field-name"><span class="field-content"><a href="1-strategy-puzzle-games.html">Strategy Puzzle</a></span></div><div class="views-field views-field-name"><span class="field-content"><a href="1-aiming-games-0.html">Aiming</a></span></div><div class="views-field views-field-name"><span class="field-content"><a href="1-classic-games-0.html">Classic</a></span></div><div class="views-field views-field-name"><span class="field-content"><a href="1-animals-games.html">Animals</a></span></div><div class="views-field views-field-name"><span class="field-content"><a href="1-path-planning-games.html">Path Planning</a></span></div><div class="views-field views-field-name"><span class="field-content"><a href="1-stop-think-games.html">Stop &amp; Think</a></span></div><div class="views-field views-field-name"><span class="field-content"><a href="1-quick-reaction-games.html">Quick Reaction</a></span></div><div class="views-field views-field-name"><span class="field-content"><a href="1-drawing-games-0.html">Drawing</a></span></div><div class="views-field views-field-name"><span class="field-content"><a href="1-match-3-games-0.html">Match 3</a></span></div><div class="views-field views-field-name"><span class="field-content"><a href="1-mobile-daily-games.html">Daily Games</a></span></div></div>
+          </div>
+          <div class="mobile-hamburger-trivia">
+            <p class="categories-sidebar">Trivia</p>
+            <div class="trivia-mobile-menu">
+              <div class="side-link">
+                <a href="trivia.html" class="trivia-category-menu-link">Latest Quizzes</a>
+              </div>
+              <div class="side-link">
+                <a href="arts-entertainment.html" class="trivia-category-menu-link">Arts &amp; Entertainment</a>
+              </div>
+              <div class="side-link">
+                <a href="sports.html" class="trivia-category-menu-link">Sports</a>
+              </div>
+              <div class="side-link">
+                <a href="food-home.html" class="trivia-category-menu-link">Food &amp; Home</a>
+              </div>
+              <div class="side-link">
+                <a href="style.html" class="trivia-category-menu-link">Style</a>
+              </div>
+              <div class="side-link">
+                <a href="body-health.html" class="trivia-category-menu-link">Body &amp; Health</a>
+              </div>
+              <div class="side-link">
+                <a href="fun-stuff.html" class="trivia-category-menu-link">Fun Stuff</a>
+              </div>
+              <div class="side-link">
+                <a href="history-politics.html" class="trivia-category-menu-link">History &amp; Politics</a>
+              </div>
+              <div class="side-link">
+                <a href="places.html" class="trivia-category-menu-link">Places</a>
+              </div>
+              <div class="side-link">
+                <a href="science-nature.html" class="trivia-category-menu-link">Science &amp; Nature</a>
+              </div>
+            </div>
+          </div>
+        </section><!-- end of Inner Menu --></div>
+    </div>
+  </div>
+  <div class="content unselectable" id="content">
+          <div class="panel-pane pane-page-content">
+          <div>
+    <div data-drupal-messages-fallback class="hidden"></div>
+<div class="system_breadcrumb_block">
+<div id="block-cmatgame-mob-breadcrumbs">
+  
+    
+     <div class="view-content">
+    
+   </div>	
+  </div>
+</div><div class="page_title_block">
+<div id="block-cmatgame-mob-page-title">
+  
+    
+     <div class="view-content">
+    
+   </div>	
+  </div>
+</div><div class="gamedetailcarousel">
+<div id="block-cmatgame-mob-carouselingamedetailpage">
+  
+    
+     <div class="view-content">
+    
+   </div>	
+  </div>
+</div><div class="system_main_block">
+<div id="block-cmatgame-mob-cmatgame-mob-system-main">
+  
+    
+     <div class="view-content">
+    
+
+<div id="block-system-main">
+  	<article data-history-node-id="11579" role="article" about="/0-awesome-tanks-2" class="node node-game node--view-mode-full clearfix game-w-summary game-field-wrapper"><div class="node__content clearfix field-item">
+	    
+  	 
+	  <div id="gameDetail" class="scrollableContentArea clearfix gameLandingPage">
+		<div id="bg-fade" style="display:none;"></div>
+		<div id="gamePlayForm">
+		  <a href="play.html" class="active"><h1><span>Awesome Tanks 2</span>
+</h1>
+		  <div class="field-mobile-screenshot">
+						      <div class="field field--name-field-mobile-screenshot field--type-image field--label-above field__items">
+      <div class="field__label">Mobile screenshot</div>
+                <div class="field__item">
+          <img src="images/game_m_screenshot-awesome-tanks-2-game-screenshot.jpg" width="340" height="500" typeof="foaf:Image"></div>
+          </div>
+
+					  </div>
+		  </a>
+		  <div id="playNowButton">Play Now</div>
+		  <div id="modal">
+			<!-- Load message -->
+			<div class="preroll-headline">
+			  <h3>Just a moment while your game loads</h3>
+			  <div class="circle-container">
+				<div class="circle"></div>
+				<div class="circle"></div>
+				<div class="circle"></div>
+			  </div>
+			</div>
+
+			<div id="container123">
+
+				<div id="videoplayer" style="width:100%;">
+				  <video id="content123" playsinline muted style="width:300px;height:250px;background:transparent;"><source src="https://s0.2mdn.net/4253510/google_ddm_animation_480P11.mp4"></source><source src="https://s0.2mdn.net/4253510/google_ddm_animation_480P11.webm"></source></video><div id="adcontainer" style="width:300px;height:250px; border: 1px solid white;"></div>
+				  <p style="text-align:center;color:white;font-size:14px;position: relative;top: 5px;">Advertisement</p>
+				  
+				</div>
+			</div>
+
+			<!-- Timer -->
+			<div id="continue-container">
+			  <div id="continue-link" style="color: yellow;">Continue in </div><span id="timer_div" style="margin-left:5px;">6</span>
+			</div>
+		  </div>
+			
+					 <div class="noMoreGamesOverlay" style="display:none;"></div>
+			  <!--    <h2>Instructions</h2>-->
+			  <div class="gameInstructions">
+				<div id="gameInstructionsInner">
+				  <div id="gameInstructionsContent">
+					<div style="display:block;" class="field-mobile-instructions">
+										      <div class="field field--name-field-mobile-instructions field--type-text-long field--label-hidden field__items">
+                <div class="field__item">
+        <p>Press the left side of the screen to move your tank around. Hold the right side of the screen to shoot. Buy new weapons between levels, and then tap the icon to switch to them.</p>
+            </div>
+          </div>
+
+										</div>
+				  </div>
+				</div>
+				<div id="moreButton" class="greenLink" onclick="toggleInstructions();">More</div>
+				<div id="lessButton" class="greenLink" onclick="toggleInstructions();">Less</div>
+			  </div>
+				<div class="freeGamesContainer"></div>
+				<div class="adsgamemiddle">
+<div id="block-adsgamemiddlemobile-ad-game-detail-300x250">
+  
+    
+     <div class="view-content">
+    
+      <div class="mobile-container middle-container">
+        <div id="div-gpt-ad-868275232471008982-2" class="detailBlock">
+          <!-- Desktop/iPad Med Rect ATF -->
+          <div data-pw-desk="med_rect_atf"></div>
+          <!-- Mobile Med Rect ATF -->
+          <div data-pw-mobi="med_rect_atf"></div>
+        </div>
+      </div>
+   </div>	
+  </div>
+</div>
+			</div>
+			</div>
+		
+		<script type="text/javascript" src="js/libs-cmg-prebid-1.40.0.new.js"></script><script type="text/javascript" src="js/sdkloader-ima3.js"></script><script type="text/javascript">
+            
+
+                var videoAdUnit = {
+                      code: 'video',
+                      mediaTypes: {
+                        video: {
+                          context: 'instream',
+                          playerSize: [640, 480]
+                        },
+                      },
+                      bids: [{
+                        bidder: 'appnexus',
+                        params: {
+                          placementId: 14548822
+                        }
+                      }, {
+                        bidder: 'rubicon',
+                        params: {
+                          accountId: "12556",
+                          siteId: "240994",
+                          zoneId: "1188846",
+                          video: {
+                            language: "en",
+                            playerHeight: 480,
+                            playerWidth: 640,
+                            size_id: 201
+                          }
+                        }
+                      },{
+                        bidder: 'districtm',
+                        params: {
+                          placementId: 16752860,
+                        }
+                      },{
+                        bidder: 'openx',
+                        params: {
+                          unit: 540783085,
+                          delDomain: 'playwire-d.openx.net',
+                          openrtb: {
+                            imp: [
+                              {
+                                video: {
+                                    mimes: ['video/mp4, video/x-ms-wmv']
+                                  }
+                              }
+                            ]
+                          }
+                        }
+                      }]
+                    }
+
+
+                    let bidderSettings = {
+                          'districtm': {
+                            'bidCpmAdjustment': (bidCpm) => {
+                                // adjust the bid in real time before the auction takes place
+                                return bidCpm * 0.90;
+                            }
+                          },
+                          'rubicon': {
+                              'bidCpmAdjustment': (bidCpm) => {
+                                  // adjust the bid in real time before the auction takes place
+                                  return bidCpm * 0.83;
+                              }
+                          },
+                          'standard': {
+                            'alwaysUseBid': false,
+                            'adserverTargeting': [{
+                                'key': 'hb_bidder',
+                                'val': function(bidResponse){
+                                  if(bidResponse.bidder === 'appnexus') {
+                                    return 'appnexusAst'
+                                  }
+                                  return  bidResponse.bidder
+                                }
+                              },
+                              {
+                                'key': 'hb_val',
+                                'val': function(bidResponse){
+                                  return bidResponse.cpm.toFixed(2);
+                                }
+                              }
+                            ]
+                          }
+                        }
+
+                      if(typeof cmgpbjs !== "undefined") {
+                        cmgpbjs.que.push(function () {
+                        
+                          cmgpbjs.bidderSettings = bidderSettings;
+                          cmgpbjs.addAdUnits(videoAdUnit);
+                        
+                          cmgpbjs.setConfig({
+                            bidderSequence: 'fixed',
+                            /* Or whatever your preferred video cache URL is */
+                            cache: {
+                              url: 'https://prebid.adnxs.com/pbc/v1/cache'
+                            },
+                            userSync: {
+                                filterSettings: {
+                                    iframe: {
+                                        bidders: ['openx'],
+                                        filter: 'include'
+                                    },
+                                    image: {
+                                      bidders: '*',
+                                      filter: 'include'
+                                    }
+                                }
+                            },
+                            enableSendAllBids: false,
+                          });
+                          
+                        });
+                      }
+
+                      function startAuction(){
+                        if(typeof cmgpbjs !== "undefined") {
+                          cmgpbjs.que.push(function() {
+                            cmgpbjs.requestBids({
+                              timeout: 2500,
+                              bidsBackHandler: function(bids){
+                                var videoUrl = cmgpbjs.adServers.dfp.buildVideoUrl({
+                                    adUnit: videoAdUnit,
+                                            params: {
+                                            iu: '/137548614/1023174/71134/1023174-71134-video',
+                                            description_url: window.location.href, // add dynamic URL - window.location.url
+                                            env: 'vp',         
+                                            impl: 's',
+                                            correlator:Date.now(), // add dynamic correlator timestamp
+                                            tfcd: '0',
+                                            output: 'vast',
+                                            sz: '640x480',
+                                            unviewed_position_start: '1'
+                                        }
+                                    });
+                        
+                                    console.log("Preroll Headerbidding video URL:::::"+ videoUrl);
+                        
+                                    application = new Application( true, videoUrl );
+                                }
+                            });
+                          });
+                        } else {
+                          application = new Application( false, "videoUrl" );
+                        }
+                      
+                      }
+
+
+                      /**
+                        * Handles user interaction and creates the player and ads controllers.
+                        */
+                var Application = function(displayAds,adTagUrl) {
+                  this.playing_ = false;
+                  this.adsActive_ = false;
+                  this.adsDone_ = false;
+                  if(typeof displayAds === 'undefined' || displayAds === null) {
+                    this.displayAds = true;
+                  } else {
+                    this.displayAds = displayAds;
+                  }
+                  this.adTagUrl_ = adTagUrl;
+                  
+                  this.videoPlayer_ = new VideoPlayer();
+                  if(jQuery(window).width() >= 610 && jQuery(window).height() >= 610) {
+                    this.videoPlayer_.width = 640;
+                    this.videoPlayer_.height = 480;
+                  } else {
+                    this.videoPlayer_.width = 300;
+                    this.videoPlayer_.height = 250;
+                  }
+                  
+                  if(this.displayAds) {
+                    //console.log("Preload ads for non subscription time games");
+                    this.ads_ = new Ads(this, this.videoPlayer_);
+                    //Adx Preroll Tag with fallback display Ad
+                    // The user clicked/tapped - inform the ads controller that this code
+                    // is being run in a user action thread.
+                    this.ads_.initialUserAction();
+                    // At the same time, initialize the content player as well.
+                    // When content is loaded, we'll issue the ad request to prevent it
+                    // from interfering with the initialization. See
+                    // https://developers.google.com/interactive-media-ads/docs/sdks/html5/v3/ads#iosvideo
+                    // for more information.
+                    this.videoPlayer_.preloadContent(this.bind_(this, this.loadAds_));
+                    this.adsDone_ = true;
+                  } else {
+                    //console.log("Do not preload ads for free trial user");
+                    removePrerollAndDisplayGame();
+                  }
+                };
+
+          Application.prototype.bind_ = function(thisObj, fn) {
+            return function() {
+              fn.apply(thisObj, arguments);
+            };
+          };
+
+          Application.prototype.loadAds_ = function() {
+            this.ads_.requestAds(this.adTagUrl_);
+          };
+
+          /**
+           * Handles video player functionality.
+           */
+          var VideoPlayer = function() {
+            this.contentPlayer = document.getElementById('content123');
+            this.adContainer = document.getElementById('adcontainer');
+            this.videoPlayerContainer_ = document.getElementById('videoplayer');
+            this.continueContainer = document.getElementById('continue-container');
+            
+            if(jQuery(window).width() >= 610 && jQuery(window).height() >= 610) { //tablet size
+              if(window.orientation == 0 || window.orientation == 180){ //portrait mode
+                
+              this.contentPlayer.style.width = '640px';
+            this.contentPlayer.style.height = '480px';
+            this.contentPlayer.style.margin = '0 auto 0 auto';
+    
+            this.adContainer.style.width = '640px';
+            this.adContainer.style.height = '480px';
+            this.adContainer.style.marginTop = '-480px';
+            this.adContainer.style.marginRight = 'auto';
+            this.adContainer.style.marginBottom = '0';
+            this.adContainer.style.marginLeft = 'auto';
+            
+            //this.adContainer.style.margin = '-480px auto 0 auto';
+            this.continueContainer.style.marginTop = '0';
+            this.continueContainer.style.top = '35px';  
+                
+                /*jQuery("#adcontainer").css("margin","-250px auto auto 60px");
+                jQuery("#continue-container").css({
+                  "margin":"300px auto auto auto",
+                  "top":"-30px",
+                  "position":"relative"
+                  });
+                
+                  jQuery('.continue-link').css('left','-135px');
+                 
+                  jQuery('.preroll-headline h3').css({
+                    'height':'45px',
+                    'font-size':'28px',
+                    'position':'relative',
+                    'top':'10px'
+                  });
+                 */
+                  
+              } else { //landscape mode
+              this.contentPlayer.style.width = '640px';
+            this.contentPlayer.style.height = '480px';
+            this.contentPlayer.style.margin = '0 auto 0 auto';
+    
+            this.adContainer.style.width = '640px';
+            this.adContainer.style.height = '480px';
+            this.adContainer.style.marginTop = '-480px';
+            this.adContainer.style.marginRight = 'auto';
+            this.adContainer.style.marginBottom = '0';
+            this.adContainer.style.marginLeft = 'auto';
+            // this.adContainer.style.top = '25px';
+            
+           // this.adContainer.style.margin = '-480px auto 0 auto';
+            this.continueContainer.style.marginTop = '0';
+            this.continueContainer.style.top = '35px';
+                /*
+                jQuery("#adcontainer").css("margin","-250px auto auto 190px");
+                jQuery("#continue-container").css({
+                  "margin":"300px auto auto auto",
+                  "top":"-30px",
+                  "position":"relative"
+                  });
+                  jQuery('.continue-link').css('left','-135px');
+                  jQuery('.preroll-headline h3').css({
+                    'height':'45px',
+                    'font-size':'28px',
+                    'position':'relative',
+                    'top':'10px'
+                  });
+                  */
+               
+               }
+              
+               // document.getElementById('content123').style.width = '640px';
+               // document.getElementById('content123').style.height = '480px';
+               // document.getElementById('content123').style.margin = '0 auto 0 auto';
+               // document.getElementById('adcontainer').style.width = '640px';
+               // document.getElementById('adcontainer').style.height = '480px';
+               // document.getElementById('adcontainer').style.margin = '-480px 0 auto 0';
+               // document.getElementById('continue-container').style.marginTop = '0';
+               // document.getElementById('continue-container').style.top = '0';
+              } else { //mobile
+                this.contentPlayer.style.width = '300px';
+            this.contentPlayer.style.height = '250px';
+            this.contentPlayer.style.margin = '0 auto 0 auto';
+    
+            this.adContainer.style.width = '300px';
+            this.adContainer.style.height = '250px';
+            this.adContainer.style.margin = '-250px auto 0 auto';
+            this.continueContainer.style.marginTop = '0';
+            this.continueContainer.style.top = '0';
+                jQuery('#continue-container').css({
+                  "top":"25px",
+                  "position":"relative"
+                });
+                jQuery('.continue-link').css({
+                  'left':'-135px',
+                  // 'top':'-10px'
+              });
+                jQuery('.preroll-headline h3').html(jQuery('#continue-container'));
+                jQuery('#continue-container').css('top','0');
+            }
+          };
+
+
+
+          VideoPlayer.prototype.preloadContent = function(contentLoadedAction) {
+              contentLoadedAction();
+          };
+          VideoPlayer.prototype.play = function() {
+            this.contentPlayer.play();
+          };
+
+          VideoPlayer.prototype.pause = function() {
+            this.contentPlayer.pause();
+          };
+
+
+          /**
+           * Shows how to use the IMA SDK to request and display ads.
+           */
+          var Ads = function(application, videoPlayer) {
+            this.application_ = application;
+            this.videoPlayer_ = videoPlayer;
+            this.customClickDiv_ = document.getElementById('customClick');
+            this.contentCompleteCalled_ = false;
+            google.ima.settings.setVpaidMode(google.ima.ImaSdkSettings.VpaidMode.ENABLED);
+            // Call setLocale() to localize language text and downloaded swfs
+            // google.ima.settings.setLocale('fr');
+            this.adDisplayContainer_ =
+                new google.ima.AdDisplayContainer(
+                    this.videoPlayer_.adContainer,
+                    this.videoPlayer_.contentPlayer,
+                    this.customClickDiv_);
+            this.adsLoader_ = new google.ima.AdsLoader(this.adDisplayContainer_);
+            this.adsManager_ = null;
+
+            this.adsLoader_.addEventListener(
+                google.ima.AdsManagerLoadedEvent.Type.ADS_MANAGER_LOADED,
+                this.onAdsManagerLoaded_,
+                false,
+                this);
+            this.adsLoader_.addEventListener(
+                google.ima.AdErrorEvent.Type.AD_ERROR,
+                this.onAdError_,
+                false,
+                this);
+          };
+
+          // On iOS and Android devices, video playback must begin in a user action.
+          // AdDisplayContainer provides a initialize() API to be called at appropriate
+          // time.
+          // This should be called when the user clicks or taps.
+          Ads.prototype.initialUserAction = function() {
+            this.adDisplayContainer_.initialize();
+            this.videoPlayer_.contentPlayer.load();
+
+          };
+
+          Ads.prototype.requestAds = function(adTagUrl) {
+            var adsRequest = new google.ima.AdsRequest();
+            adsRequest.adTagUrl = adTagUrl;
+            if(jQuery(window).width() >= 610 && jQuery(window).height() >= 610) {
+              this.videoPlayer_.width = 640;
+              this.videoPlayer_.height = 480;
+            } else {
+              this.videoPlayer_.width = 300;
+              this.videoPlayer_.height = 250;
+            }
+            adsRequest.linearAdSlotWidth = this.videoPlayer_.width;
+            adsRequest.linearAdSlotHeight = this.videoPlayer_.height;
+            adsRequest.nonLinearAdSlotWidth = this.videoPlayer_.width;
+            adsRequest.nonLinearAdSlotHeight = this.videoPlayer_.height;
+            
+            adsRequest.setAdWillAutoPlay(true);
+            adsRequest.setAdWillPlayMuted(true);
+            
+            this.adsLoader_.requestAds(adsRequest);
+          };
+
+          Ads.prototype.onAdsManagerLoaded_ = function(adsManagerLoadedEvent) {
+            //console.log('Ads loaded.');
+            var adsRenderingSettings = new google.ima.AdsRenderingSettings();
+            //adsRenderingSettings.loadVideoTimeout = 4000;
+            adsRenderingSettings.restoreCustomPlaybackStateOnAdBreakComplete = true;
+            this.adsManager_ = adsManagerLoadedEvent.getAdsManager(
+                this.videoPlayer_.contentPlayer, adsRenderingSettings);
+            this.adsManager_.setVolume(0);
+            this.processAdsManager_(this.adsManager_);
+          };
+
+          Ads.prototype.processAdsManager_ = function(adsManager) {
+            if (adsManager.isCustomClickTrackingUsed()) {
+              this.customClickDiv_.style.display = 'table';
+            }
+            // Handle errors.
+            adsManager.addEventListener(
+                google.ima.AdErrorEvent.Type.AD_ERROR,
+                this.onAdError_,
+                false,
+                this);
+            var events = [google.ima.AdEvent.Type.ALL_ADS_COMPLETED, 
+                          google.ima.AdEvent.Type.COMPLETE,
+                          google.ima.AdEvent.Type.FIRST_QUARTILE,
+                          google.ima.AdEvent.Type.LOADED,
+                          google.ima.AdEvent.Type.MIDPOINT,
+                          google.ima.AdEvent.Type.STARTED,
+                          google.ima.AdEvent.Type.THIRD_QUARTILE, google.ima.AdEvent.Type.USER_CLOSE];
+            for (var index in events) {
+              adsManager.addEventListener(
+                  events[index],
+                  this.onAdEvent_,
+                  false,
+                  this);
+            }
+
+            var initWidth, initHeight;
+
+              initWidth = this.videoPlayer_.width;
+              initHeight = this.videoPlayer_.height;
+
+            adsManager.init(
+              initWidth,
+              initHeight,
+              google.ima.ViewMode.NORMAL);
+
+            adsManager.start();
+          };
+
+
+          Ads.prototype.onAdEvent_ = function(adEvent) {
+            console.log('Ad event2: ' + adEvent.type);
+            if (adEvent.type == google.ima.AdEvent.Type.LOADED) {
+              var ad = adEvent.getAd();
+              //jQuery("#content123").hide();
+            }
+            if (adEvent.type == google.ima.AdEvent.Type.ALL_ADS_COMPLETED) {
+              removePrerollAndDisplayGame();
+            }
+            if (adEvent.type == google.ima.AdEvent.Type.USER_CLOSE) {
+              removePrerollAndDisplayGame();
+            }
+            if(adEvent.type == "complete") {
+              console.log('Ad complete..: ');
+              if (this.adsManager_) {
+                this.adsManager_.destroy();
+              }
+              //TODO remove the ad slot and display the game
+              //this.application_.resumeAfterAd();
+              removePrerollAndDisplayGame();
+            }
+          };
+
+          Ads.prototype.onAdError_ = function(adErrorEvent) {
+            console.log('Ad error: ' + adErrorEvent.getError().toString());
+            if (this.adsManager_) {
+              this.adsManager_.destroy();
+            }
+            //TODO remove the ad slot and display the game
+            //this.application_.resumeAfterAd();
+            removePrerollAndDisplayGame();
+          };
+          
+
+
+          
+          </script></div>
+    
+
+
+
+      <script type="text/javascript">
+         function removePrerollAndDisplayGame() {
+          console.log("preroll player removed");
+          window.location = window.location.pathname + "/play";
+         }
+
+         document.addEventListener("DOMContentLoaded", function(event) {
+
+          var button = document.getElementById('playNowButton');
+          if(button !== null) {
+            button.addEventListener('click', function(e) {
+  
+              e.preventDefault();
+              var cmatgame_subscriber = getCookie('cmg_sx');
+              var validSubscriber = false;
+              if(typeof cmatgame_subscriber !== 'undefined' && cmatgame_subscriber !== null ) {
+               validSubscriber = true;
+              }
+              var userVisitedGamePageCount = localStorage.getItem("userVisitedGamePageCount");
+              if(userVisitedGamePageCount == null) {
+                userVisitedGamePageCount = 1;
+                localStorage.setItem("userVisitedGamePageCount",userVisitedGamePageCount); 
+                localStorage.setItem("userVisitedGamePageLastAccessTime", Date.now());
+              } else if(userVisitedGamePageCount != null){
+                var userVisitedGamePageLastAccessTime = localStorage.getItem("userVisitedGamePageLastAccessTime");
+                
+                currentTime = Date.now();
+                var lastAccessTime = localStorage.getItem("userVisitedGamePageLastAccessTime");
+                if(lastAccessTime != null ) {
+                  if(currentTime - lastAccessTime > 1800000) { //if user comes back after 30 minutes then make the user as coming first time
+                   userVisitedGamePageCount = 1;
+                   localStorage.setItem("userVisitedGamePageCount",userVisitedGamePageCount);
+                  }  else {
+                    userVisitedGamePageCount++;
+                    localStorage.setItem("userVisitedGamePageCount",userVisitedGamePageCount); 
+                  }
+                }
+                localStorage.setItem("userVisitedGamePageLastAccessTime", currentTime);
+              }
+              //preroll ads
+              var prerollUrls = /0\-testing/;
+  
+              //display preroll ads only on 2nd,4th, 6th visits of any game page
+              if((userVisitedGamePageCount != null && userVisitedGamePageCount % 2 === 1 ) || !jQuery("#adblockdiv").length || validSubscriber) {
+                window.location = window.location.pathname + "/play";
+              } else { //display preroll ad for parking fury 2
+  
+                window.scrollTo(0,0);
+  
+                var modal = document.getElementById('modal');            
+                modal.style.display = 'block';
+                //clear refresh timer
+                if(typeof refreshTimer !== "undefined") {
+                  clearTimeout(refreshTimer);
+                  refreshTimer = null;  
+                }
+                var adTagUrl = 'https://pubads.g.doubleclick.net/gampad/ads?iu=/137548614/1023174/71134/1023174-71134-video&description_url=https%3A%2F%2Fwww.coolmathgames.com%2F&env=vp&impl=s&correlator=&tfcd=0&npa=0&gdfp_req=1&output=vast&sz=640x480&unviewed_position_start=1';
+  
+                //test ad tag
+                //var adTagUrl =  'https://pubads.g.doubleclick.net/gampad/ads?sz=640x480&iu=/124319096/external/ad_rule_samples&ciu_szs=300x250&ad_rule=1&impl=s&gdfp_req=1&env=vp&output=vmap&unviewed_position_start=1&cust_params=deployment%3Ddevsite%26sample_ar%3Dpremidpost&cmsid=496&vid=short_onecue&correlator=';
+                /*var prerollUrls = /(0\-parking\-fury\-2|0\-hangman|0\-toy\-defense|0\-iq\-ball|0\-circloo\-2|0\-awesome\-tanks|0\-basketball\-master\-2)/;
+                if(!prerollUrls.test(window.location.pathname)) {
+                  application = new Application(true,adTagUrl);  
+                } else {  //use headerbidding for basketball master 2 game
+                  startAuction();
+                }
+                */
+                startAuction();
+  
+                var seconds_left = 6;
+                intervalId  = setInterval(function() {
+                  seconds_left--;
+                  document.getElementById("timer_div").innerHTML = seconds_left;
+                  if (seconds_left <= 0) {
+                    if(document.getElementById("timer_div")!=null) {
+                      document.getElementById("continue-link").innerHTML = "";
+                      document.getElementById("timer_div").innerHTML = '<a href="javascript:removePrerollAndDisplayGame();"><div class="continue-link" style="position:relative;left:-130px;">Continue to Game <span style="font-family:Times New Roman;">&#x25BA;</script></article></div>';
+                    }
+                    clearInterval(intervalId);
+                  }    
+                }, 1000); 
+              }
+  
+            });
+         }
+
+        });
+
+         
+      
+	  
+	  
+<!-- THIS IS THE GAMES REMAINING AREA BELOW EVERYTHING ELSE -->
+<!-- <div class="freeGamesContainer"></div> -->
+
+<script type="text/javascript">
+//google analytics for subscriber legs
+	var cmg_upg_days_limit = 180;
+	if(typeof signUpURL === 'undefined' || signUpURL === null || signUpURL === '') {
+	  signUpURL = '/signup';
+	}
+  function subscription_promo_handler() {
+    if(typeof freeTrialUser !== 'undefined' && freeTrialUser) {
+   		trackEvent('Premium Subscription ' +subscriberLeg, 'Subscription Mobile overlay clicked', userPlayedGames);
+   		trackGoalVirtualPV('/virtual/subscription-overlay-click');
+    }
+   return;
+  }
+  function subscriptionSignUpUrl() {
+	  var user_played_games = '';
+	  var zeroFreeGamesLeftUsers =localStorage.getItem("zeroFreeGamesLeftUsers");
+		if(typeof userPlayedGames !== 'undefined' && userPlayedGames) {
+		  user_played_games = "upg=" +userPlayedGames;
+		} else {
+		  user_played_games = "upg=0";
+		}
+		if(zeroFreeGamesLeftUsers !== null && user_played_games !== '') {
+			user_played_games = user_played_games + '&zfg='+zeroFreeGamesLeftUsers;
+		} else if(zeroFreeGamesLeftUsers !== null) {
+			user_played_games = 'zfg='+zeroFreeGamesLeftUsers;
+		}
+		
+		if(typeof signUpURL !== 'undefined' && signUpURL !== null && signUpURL.indexOf('upg') === -1) {
+		  if(signUpURL.indexOf('?random_true') > -1) {
+			  signUpURL = signUpURL.replace('?random_true', '');
+			}
+			if(signUpURL.indexOf('?') > -1) {
+			  signUpURL = signUpURL + '&' +user_played_games;
+			} else {
+			  signUpURL = signUpURL + '?' +user_played_games;
+			}
+		}
+	}
+ 	var cmatgame_subscriber = getCookie('cmg_sx');
+ 	if(typeof subscribeNowAlienClass === 'undefined' || subscribeNowAlienClass === null || subscribeNowAlienClass === '') {
+    subscribeNowAlienClass = "subscribe-now-alien-signup";
+  }
+ 	var validSubscriber = false;
+ 	if(typeof cmatgame_subscriber !== 'undefined' && cmatgame_subscriber !== null) {
+ 	 validSubscriber = true;
+ 	}
+  var freeGamesExceeded = false;
+  var isFlashGame = false;
+  
+  // var freeGamesLeft = 0;
+  //display Ads to anonymous users the time from 7am to 13pm, display ads to anonymous users
+  //  from 13pm to 11:59pm and 00 to 7am only if the user is not from New York city
+  //  TODO -->  Need to add day of the week for school hours logic, day < 6 
+  if(schoolHours  || ( !schoolHours && !targetStateUser )  || validSubscriber || isFlashGame) {
+    jQuery('.freeGamesContainer').hide();
+  } else if(!schoolHours && targetStateUser && !validSubscriber && getCookie('cmg_editor') === null) {
+    //if user comes from google dont show the subscription paywall
+    var ref = document.referrer;
+    //count number of games played by the user this month
+    userPlayedGames = 0;
+    var userFreeGameList = [];
+    var freeGameNid = 11579;
+    if(sessionStorage.getItem("userFreeGameList") !== null) {
+      userFreeGameList = JSON.parse(sessionStorage.getItem("userFreeGameList"));
+    }
+    //set so -1 won't show and user won't get to play game
+    if((localStorage.getItem("userPlayedGames") == null || getCookie('cmg_upg') === null) && freeGameLimit !==0) {
+      userPlayedGames = 1;
+      //localStorage.setItem("userPlayedGames"+currentMonth+currentYear,userPlayedGames);
+      localStorage.setItem("userPlayedGames",userPlayedGames); 
+      //TODO monthly cookie
+			setCookie('cmg_upg', 'true', cmg_upg_days_limit * 24*60*60*1000);
+      userFreeGameList = [freeGameNid];
+      sessionStorage.setItem("userFreeGameList", JSON.stringify(userFreeGameList));
+    } else {
+      //userPlayedGames = parseInt(localStorage.getItem("userPlayedGames"+currentMonth+currentYear));//monthly limit
+      if(localStorage.getItem("userPlayedGames") !== null && getCookie('cmg_upg') !== null) {
+        userPlayedGames = parseInt(localStorage.getItem("userPlayedGames"));//lifetime limit
+      } else {
+        userPlayedGames = 0;
+        setCookie('cmg_upg', 'true', cmg_upg_days_limit * 24*60*60*1000);
+      }
+      //check and increase userPlayedGames
+      if(freeGameLimit != 0 && userPlayedGames < freeGameLimit && userFreeGameList.indexOf(freeGameNid) === -1) {
+        userPlayedGames++;
+        freeGamesExceeded = false;
+        if(userFreeGameList.length > 0) {
+          userFreeGameList = userFreeGameList.concat(freeGameNid);
+        } else {
+          userFreeGameList = [freeGameNid];
+        }
+        localStorage.setItem("userPlayedGames",userPlayedGames);
+        sessionStorage.setItem("userFreeGameList", JSON.stringify(userFreeGameList));
+      } else {
+        freeGamesExceeded = true;
+      }
+      var validReferer = false;
+      var validGameSession = false;
+      if(userFreeGameList.indexOf(freeGameNid) > -1) {
+        validGameSession = true;
+      }
+      if(ref.match("google.com") !== null || ref.match("yahoo.com") !== null || ref.match("bing.com") !== null) {
+        validReferer = true;
+      }
+      subscriptionSignUpUrl();
+      if(!validReferer && userPlayedGames >= freeGameLimit && !validGameSession) { //subscription paywall
+        //block anonymous users for New York City from 0-7am and 13pm to 11:59pm
+        jQuery('#playNowButton').replaceWith('');
+        if(typeof intervalId !== 'undefined') {clearInterval(intervalId);}//todo check why intervalId is not defined
+        // jQuery("#afg_container").remove();
+        // jQuery(".title-instructions").remove();
+        // jQuery(".body-instructions").remove();
+        jQuery(".noMoreGamesOverlay").html('<div class="free-games-left-mobile-bottom zero-games-remaining">'+
+          // '<p class="no-free-games-headline">You Have <span class="remaining">'+ freeGamesLeft + ' <br> Free Games Remaining' +
+          '<p class="no-free-games-headline">You Have <span class="remaining">0<br> Free Games Remaining' +
+          '<p class="free-in-schools">The World\'s Best Collection of Games <br>For Logic, Reasoning & Fun!  '+
+          '<a class="'+ subscribeNowAlienClass +'" onclick="subscription_promo_handler();" href="' + signUpURL + ' ">Subscribe Now' +
+          '<p class="already-subscribed">Already a Subscriber?&nbsp;&nbsp;<a class="learn-more-link" href="/user/login">Login'+
+       '</script></div>');
+        //localStorage.setItem("userPlayedGames"+currentMonth+currentYear,userPlayedGames);
+        //localStorage.setItem("userPlayedGames",userPlayedGames);
+      }
+    }
+    //display to user how many free games left once page load completes.
+    if (window.addEventListener)
+      window.addEventListener('load', checkPageLoad, false);
+    else if (window.attachEvent)
+      window.attachEvent('onload', checkPageLoad);
+    else window.onload = checkPageLoad;
+  }
+  function checkPageLoad() {
+    if(typeof validReferer !== 'undefined' &amp;&amp; validReferer) {
+      jQuery('.freeGamesContainer').hide();
+      return;
+    }
+    if(freeGameLimit) {
+      freeGamesLeft = (freeGameLimit - userPlayedGames);
+    } else {
+      freeGamesLeft = 0;
+    }
+    if(freeGamesLeft === 0) {
+      var zeroFreeGamesLeftUsers =localStorage.getItem("zeroFreeGamesLeftUsers");
+      if(zeroFreeGamesLeftUsers == null) {
+        localStorage.setItem("zeroFreeGamesLeftUsers","1");
+        __gaTracker('send', {
+        'hitType': 'event',          // Required.
+        'eventCategory': "ZeroFreeGamesLeftUsers",   // Required.
+        'eventAction': subscriberLeg,      // Required.
+        'eventLabel': document.title,
+        'eventValue': "0",
+        'nonInteraction': 1
+        });
+      }
+    }
+      if(typeof subscribeNowAlienClass === 'undefined' || subscribeNowAlienClass === null || subscribeNowAlienClass === '') {
+        subscribeNowAlienClass = "subscribe-now-alien-signup";
+      }
+      subscriptionSignUpUrl();
+      // var freeGamesLeft = ((freeGameLimit - userPlayedGames) &gt; 0) ? freeGameLimit - userPlayedGames : 0;
+      // freeGamesLeft = (freeGameLimit - userPlayedGames);
+        if(freeGamesLeft === 0 &amp;&amp; !freeGamesExceeded ){
+          freeGamesLeftDiv = '<div class="free-games-left-mobile-bottom games-remaining">'+
+                                // '<p class="no-free-games-headline">You Have <span class="remaining">'+ freeGamesLeft + '</span> <br> Free Games Remaining</p>' +
+                                '<p class="no-free-games-headline">You Have <span class="remaining">'+ freeGamesLeft + '</span> <br>Free Games Remaining</p>' +
+                                '<p class="free-in-schools">The World\'s Best Collection of Games <br>For Logic, Reasoning &amp; Fun!  '+
+                                '<a class="'+ subscribeNowAlienClass +'" onclick="subscription_promo_handler();" href="'%20+%20signUpURL%20+%20'%20.html">Subscribe Now</a>' +
+                                '</p><p class="already-subscribed">Already a Subscriber?&nbsp;&nbsp;<a class="learn-more-link" href="login.html">Login</a></p>'+
+                             '</div>';
+                              jQuery(".freeGamesContainer").html(freeGamesLeftDiv);
+        } else if(freeGamesLeft === 1) { //User has only 1 free game remaining
+          freeGamesLeftDiv = '<div class="free-games-left-mobile-bottom">'+
+                                '<p class="no-free-games-headline">You Have <span class="remaining">'+ freeGamesLeft + '</span> <br>Free Game Remaining</p>' +
+                                '<p class="free-in-schools">The World\'s Best Collection of Games <br>For Logic, Reasoning &amp; Fun!  '+
+                                '<a class="'+ subscribeNowAlienClass +'" onclick="subscription_promo_handler();" href="'%20+%20signUpURL%20+%20'%20.html">Subscribe Now</a>' +
+                                '</p><p class="already-subscribed">Already a Subscriber?&nbsp;&nbsp;<a class="learn-more-link" href="login.html">Login</a></p>'+
+                              '</div>';
+                              jQuery(".freeGamesContainer").html(freeGamesLeftDiv);
+                              // jQuery(".pane-bean-remaining-games-placeholder").html(freeGamesLeftDiv);
+                              // jQuery('.noMoreGamesOverlay').html(FreeGamesLeftDiv);
+      } else if(freeGamesLeft === 0 &amp;&amp; freeGamesExceeded &amp;&amp; !validGameSession){ //User has no free more games
+        jQuery('.freeGamesContainer').css('display','none');
+        jQuery('.footer').css({'position':'absolute','z-index':'1'});
+        freeGamesLeftDiv = '<div class="free-games-left-mobile-bottom">'+
+                                '<p class="no-free-games-headline">Please sign up to keep playing</p>' +
+                                '<p class="free-in-schools">The World\'s Best Collection of Games <br>For Logic, Reasoning &amp; Fun!  '+
+                                '<a class="'+ subscribeNowAlienClass +'" onclick="subscription_promo_handler();" href="'%20+%20signUpURL%20+%20'%20.html">Subscribe Now</a>' +
+                                '</p><p class="already-subscribed">Already a Subscriber?&nbsp;&nbsp;<a class="learn-more-link" href="login.html">Login</a></p>'+
+                             '</div>';
+        jQuery('#playNowButton').css({'opacity':'0.4','pointer-events':'none','cursor':'default'});
+        // jQuery('.gameInstructions').hide();
+        jQuery('.noMoreGamesOverlay').css('display','block');
+        jQuery('.noMoreGamesOverlay').html(freeGamesLeftDiv);
+        //console.log('THIS__');
+        jQuery('body').css('overflow','hidden');
+        jQuery('#bg-fade').css('opacity','0.7');
+        if(window.location.href.indexOf("0-") &amp;&amp; freeGamesLeft === 0) {
+          jQuery('#content').css('padding-bottom','0px');
+          jQuery('#bg-fade').css('display','block');
+          //console.log('remove this');
+        }
+      } else {
+        //console.log('else');
+       freeGamesLeftDiv = '<div class="free-games-left-mobile-bottom games-remaining">'+
+                            '<p class="no-free-games-headline">You Have <span class="remaining">'+ freeGamesLeft + '</span> <br>Free Games Remaining</p>' +
+                            '<p class="free-in-schools">The World\'s Best Collection of Games <br>For Logic, Reasoning &amp; Fun!  '+
+                            '<a class="'+ subscribeNowAlienClass +'" onclick="subscription_promo_handler();" href="'%20+%20signUpURL%20+%20'%20.html">Subscribe Now</a>' +
+                            '</p><p class="already-subscribed">Already a Subscriber?&nbsp;&nbsp;<a class="learn-more-link" href="login.html">Login</a></p>'+
+                           '</div>';
+                          jQuery(".freeGamesContainer").html(freeGamesLeftDiv);
+                              // jQuery(".noMoreGamesOverlay").html(freeGamesLeftDiv);
+                          // jQuery(".freeGamesLeftDivPlaceholder").html(freeGamesLeftDiv);
+      }
+    }// end checkPageLoad();
+	  
+		
+	  </div>
+	
+</div>
+   </div>	
+  </div>
+</div><div class="views_block:game_queues-block_2">
+<div class="views-element-container" id="block-cmatgame-mob-views-block-game-queues-block-2">
+  
+    
+     <div class="view-content">
+    
+   </div>	
+  </div>
+</div>
+  </div>
+
+      </div>
+            </div>
+  <div class="mobile-fixed-footer">
+    <div id="fixed-footer-content">&nbsp;</div>
+  </div>
+  <div class="footer unselectable">
+    <div class="panel-pane pane-block pane-menu-menu-footer-menu">
+
+      <div class="pane-content">
+        <ul id="footerLinks" class="unselectable"><li class="first leaf">
+            <a href="privacyp.html" class="privacyText">PRIVACY POLICY</a>
+          </li>
+          <li class="leaf">
+            <a href="subscription-faq.html">SUBSCRIPTION FAQ</a>
+          </li>
+          <li class="leaf">
+            <a href="terms-use.html">TERMS OF USE</a>
+          </li>
+          <li class="leaf">
+            <a href="about-us.html">ABOUT US</a>
+          </li>
+          <li class="last leaf">
+            <a href="aboutourads.html">ABOUT OUR ADS</a>
+          </li>
+        </ul></div>
+    </div>
+    <div class="panel-separator"></div>
+    <div class="panel-pane pane-block pane-bean-footer-copyright">
+
+      <div class="pane-content">
+        <div class="entity entity-bean bean-content-block" about="/block/footer_copyright" typeof="">
+
+          <div class="field-text-block">
+            <p>&copy; 2020 Coolmath.com LLC. All Rights Reserved.
+            </p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  <div id="contentFadeout"></div>
+
+
+
+  
+
+  
+    <script src="js/js-ads.js"></script><script src="js/js-js_9Mlc0pFLNgXbu5EnsV-S0-02ZWtRdftJtFDanFfR-fw.js"></script><script src="https://js.stripe.com/v3/"></script><script type="text/javascript">
+      function closeCookieChoices() {
+        var d = new Date();
+        d.setTime(d.getTime() + (365*2*24*60*60*1000));
+        var expires = "expires="+ d.toUTCString();
+        document.cookie = "GDPR_All=true;" + expires + ";path=/";
+        document.cookie = "GDPR_CHOICE=GDPR_All;" + expires + ";path=/";
+        jQuery("#yourCookieChoices").hide();
+        var footerlink = '<li class="last leaf"><a href="/cookie-choices" class="menu__link">YOUR COOKIE CHOICES';
+
+        jQuery("#footerLinks").append(footerlink);
+      }
+    </script><div id="yourCookieChoices" style="display:none;">
+      <p class="cookie-text"><span class="first-cookie">We use cookies to improve your experience and present relevant advertising.</span><span class="second-cookie"> By using this site you agree to our cookie policies.</span></p>
+      <div class="cookie-mobile">
+        <span class="imokwiththat-close" id="closeCookieChoices" onclick="closeCookieChoices();">imokwiththat</span> <a href="cookie-choices.html" class="cookies-link">Manage choices</a>
+      </div>
+  </div></body></html>

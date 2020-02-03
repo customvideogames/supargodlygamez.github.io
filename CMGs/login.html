@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" prefix="content: http://purl.org/rss/1.0/modules/content/  dc: http://purl.org/dc/terms/  foaf: http://xmlns.com/foaf/0.1/  og: http://ogp.me/ns#  rdfs: http://www.w3.org/2000/01/rdf-schema#  schema: http://schema.org/  sioc: http://rdfs.org/sioc/ns#  sioct: http://rdfs.org/sioc/types#  skos: http://www.w3.org/2004/02/skos/core#  xsd: http://www.w3.org/2001/XMLSchema# "><head><!-- Load MBOX First --><script>
+      var pbjs = pbjs || {};
+      pbjs.que = pbjs.que || [];
+    </script><script type="text/javascript" src="js/js-mbox.js"></script><!-- BEGIN TRACKJS --><script type="text/javascript" src="js/js-trackjs.js"></script><script type="text/javascript" src="js/current-tracker.js"></script><!-- END TRACKJS --><meta charset="utf-8"><link rel="canonical" href="//www.coolmathgames.com/user/login"><meta name="keywords" content="coolmaths, coolmath, math, maths, game, games, free, online, fun"><meta property="og:image" content="//m.coolmathgames.com/themes/custom/cmatgame/images/CMG_OG_image.png"><link rel="shortcut icon" href="favicons/cmatgame_mob-favicon.ico" type="image/vnd.microsoft.icon"><script type="text/javascript">
+	  var valid_test_environment = false;
+      function getCookie(key) {
+        var keyValue = document.cookie.match("(^|;) ?" + key + "=([^;]*)(;|$)");
+        return keyValue ? keyValue[2] : null;
+      }
+      function setCookie1(cname, cvalue, hours) {
+        var d = new Date();
+        d.setTime(d.getTime() + (hours*60*60*1000));
+        var expires = 'expires='+ d.toUTCString();
+        document.cookie = cname + '=' + cvalue + ';' + expires + ';path=/';
+      }
+      function getParameterByName(name) {
+        var regexS = '[\?&]' + name + '=([^&#]*)';
+        var regex = new RegExp(regexS);
+        var results = regex.exec(location.href);
+        if (results === null) {
+          return '';
+        }
+        return decodeURIComponent(results[1].replace(/\+/g, ' '));
+      }
+      var cmg_gdpr_check = getCookie('GDPR');
+      
+      var cmg_school_whitelisted = getCookie('cmg_schwl');
+      if(cmg_school_whitelisted === null && (typeof valid_test_environment !== 'undefined' && valid_test_environment) && typeof myDebugAction === 'function') {
+        cmg_school_whitelisted = myDebugAction();
+      }
+
+      var freeTrialUser = false;
+      var date = new Date();
+      var hours = date.getHours();
+      var currentMonth = date.getMonth();
+      var currentYear = date.getFullYear();
+      var day = date.getDay();
+      var month_names_short = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
+      var currentMonthName = month_names_short[currentMonth];
+      var schoolStartHour = 7;
+      var schoolEndHour = 10;
+      var cmg_no_ads_debug = false;
+      //var cmg_no_ads = false;
+      if(typeof subscriberLeg === 'undefined' || subscriberLeg === null || subscriberLeg === '') {
+        subscriberLeg = 'Default Leg';
+        if(typeof myDebugAction === 'function' && (typeof valid_test_environment !== 'undefined' && valid_test_environment) ) {
+          myDebugAction();
+        }
+      }
+      if(typeof freeGameLimit === 'undefined' || freeGameLimit === null) {
+        freeGameLimit = 0;
+      }
+      if(typeof cmg_no_ads === 'undefined' && cmg_no_ads_debug && (typeof valid_test_environment !== 'undefined' && valid_test_environment)) {
+        cmg_no_ads = true;
+      }
+      var schoolHours = false;
+      var schoolHolidays = ["Jul 4","Sep 3","Nov 22","Nov 23"];
+      var schoolHoliday = false;
+
+      //TODO -- Summer vacation dates
+      var summerVacationStart = new Date('07/1/'+currentYear);
+      var summerVacationEnd = new Date('07/10/'+currentYear);
+      
+      var today_month_day = currentMonthName + ' ' + date.getDate();
+      if(schoolHolidays.indexOf(today_month_day) !== -1 || (date >= summerVacationStart && date <= summerVacationEnd) || day === 6 || day == 0) {
+        schoolHoliday = true;
+      }
+      var currentMonthName = month_names_short[currentMonth];
+      if(!schoolHoliday && hours >= schoolStartHour && hours <= schoolEndHour) {
+        schoolHours = true;
+      }
+      var targetStateUser = false;
+      if(typeof targeted_state !== 'undefined' && targeted_state !== null && targeted_state) {
+        targetStateUser = true;
+      }
+      if(typeof watchAdtoUnlockGame == 'undefined') {
+        watchAdtoUnlockGame = false;
+      }
+      var cmg_active_anonymous_user = getCookie('cmg_active_anonymous_user');
+      var cmatgame_editor = getCookie('cmg_editor');
+      if(typeof cmg_active_anonymous_user !== 'undefined' && cmg_active_anonymous_user !== null) {
+        ////console.log('We have an active school hours session');
+      }
+      //Display Ads to anonymous users only if the user is not from a targeted state or it is school hours. 
+      //   Do not display ads for targeted state user during non school hours, but free game play is restricted 
+      if(!schoolHours && targetStateUser && cmg_active_anonymous_user === null && cmatgame_editor === null) {
+        freeTrialUser = true;
+     } 
+   </script><script type="text/javascript">
+	   function checkIfFlashIsEnabled() {
+          var ie_flash;
+          try { ie_flash = (window.ActiveXObject && (new ActiveXObject("ShockwaveFlash.ShockwaveFlash")) !== false) } catch(err) { ie_flash = false; }
+          var _flash_installed = ((typeof navigator.plugins != "undefined" && typeof navigator.plugins["Shockwave Flash"] == "object") || ie_flash);
+          if(typeof _flash_installed == "undefined" || !_flash_installed) {
+            return false;
+          } else {
+            return true;
+          }
+       } 
+       function trackEvent(category, action, label, noninteraction) {
+          if(typeof __gaTracker === 'undefined')
+            return;
+            noninteraction = noninteraction || 0;
+           //console.log('Tracked: ' + category + ' ' + action + ' ' + label + ' noninteraction: ' + noninteraction);
+          __gaTracker('send', {
+              'hitType': 'event',          // Required.
+              'eventCategory': category,   // Required.
+              'eventAction': action,      // Required.
+              'eventLabel': label,
+              'eventValue': 0,
+              'nonInteraction': noninteraction
+          });
+      }
+      function trackSocial(network,action,target) {
+          if(typeof __gaTracker === 'undefined')
+            return;
+          __gaTracker('send', {
+              'hitType': 'social',          // Required.
+              'socialNetwork': network,
+              'socialAction': action,
+              'socialTarget': target
+          });
+      }
+	  </script><script type="text/javascript">
+		  gamePage = false;
+          quizPage = false;
+          var ad_refresh_timer_interval = 60000; 
+          var ad_refresh_event_interval = 30000;
+		</script><script type="text/javascript">
+          cmatgame_subscriber = getCookie("cmg_sx");
+          //check if school is whitelisted
+          if(cmg_school_whitelisted !== null && getCookie("cmg_schwl") !== null) {
+            cmg_school_whitelisted = getCookie("cmg_schwl");
+            cmatgame_subscriber = getCookie("cmg_schwl");
+          } else if(cmg_school_whitelisted === null && typeof cmg_no_ads_debug !== "undefined" && cmg_no_ads_debug) {
+          //console.log("KY school hours");
+          cmatgame_subscriber = cmg_no_ads_debug;
+        }
+         if(cmg_gdpr_check !== null) {
+           var cmg_gdpr_all_check = getCookie("GDPR_All");  //GDPR_All cookie is set when user selects accept all cookies in the GDPR overlay
+           var cmg_gdpr_first_check = getCookie("GDPR_First");
+           var cmg_gdpr_reject_check = getCookie("GDPR_Reject");
+           if(cmg_gdpr_all_check == null && (cmg_gdpr_first_check != null || cmg_gdpr_reject_check !=null)) {  //user either accepted only first party cookies or rejected all cookies so do not display ads
+             cmatgame_subscriber = getCookie("GDPR");
+           }
+         }
+        </script><title>Log in | Free Online Math Games, Cool Puzzles, and More</title><link rel="stylesheet" media="all" href="css/css-css_9m8-tA3IQf8ThlLQYTTZUyEweCvyR908Tg0XCbKYOfY.css"><link rel="stylesheet" media="all" href="css/css-css_ab-2l9a0Yc9snHJxSmydTQtmjv6afI9P_byV9kWY9vc.css"><script type="text/javascript">
+      function getCookie(key) {
+        var keyValue = document.cookie.match("(^|;) ?" + key + "=([^;]*)(;|$)");
+        return keyValue ? keyValue[2] : null;
+      }
+  </script><script type="application/json" data-drupal-selector="drupal-settings-json">{"path":{"baseUrl":"\/","scriptPath":null,"pathPrefix":"","currentPath":"user\/login","currentPathIsAdmin":false,"isFront":false,"currentLanguage":"en"},"pluralDelimiter":"\u0003","suppressDeprecationErrors":true,"clientside_validation_jquery":{"validate_all_ajax_forms":2,"force_validate_on_blur":false},"form_placeholder":{"include":"","exclude":"","required_indicator":"append"},"ajaxTrustedUrl":{"form_action_p_pvdeGsVG5zNF_XLGPTvYSKCf43t8qZYSwcfZl2uzM":true},"user":{"uid":0,"permissionsHash":"c95aaebf1ca44c4827454d0158fc52317722fd64b54ab1580fd1cfe15525a489"}}</script><!--[if lte IE 8]>
+<script src="/sites/default/files/js/js_VtafjXmRvoUgAzqzYTA3Wrjkx9wcWhjP0G4ZnnqRamA.js"></script>
+<![endif]--><script src="js/js-js_wXE2qJkRE-riX00oxFit196aiCiZPpAdfNVG9k9Ug9Y.js"></script><meta name="MobileOptimized" content="width"><meta name="HandheldFriendly" content="true"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"></head><body class="section-user-admin not-active-user">
+        <a href="#main-content" class="visually-hidden focusable">
+      Skip to main content
+    </a>
+  
+      <div class="gdpr-overlay-background" style="display:none"></div>
+  <div class="gdpr-overlay-container" style="display:none">
+    <div class="gdpr-overlay">
+    <h1 class="gdpr-welcome">welcome to coolmath games</h1>
+    <p class="overlay-text">We use first party cookies on our website to enhance your
+  browsing experience, and third party cookies to provide
+  advertising that may be of interest to you. </p>
+  <p class="overlay-text">You can accept or reject cookies on our
+  website by clicking one of the buttons below. <span>Rejecting
+  cookies may impair some of our website&rsquo;s functionality.</span></p>
+    <div class="accept-all-cookies overlay-button" onclick="acceptAllCookies();"><span>Accept All Cookies</span></div><br><div class="accept-firstparty-cookies overlay-button" onclick="acceptFirstpartyCookies();"><span>Accept First Party Cookies</span></div><br><div class="reject-all-cookies overlay-button" onclick="rejectAllCookies();"><span>Reject All Cookies</span></div><br><p class="overlay-text">To understand more about how we and our advertising
+  partners use cookies or to change your preference and
+  browser settings, please see our <a href="global-privacy-policy.html">Global Privacy Policy</a>.</p>
+    </div>
+  </div>
+  <script type="text/javascript">
+    function stopBodyScrolling (bool) {
+      if (bool === true) {
+        document.body.addEventListener("touchmove", freezeVp, false);
+        console.log('addeventlistener');
+      } else {
+        document.body.removeEventListener("touchmove", freezeVp, false);
+        console.log('addeventlistener');
+      }
+    }
+    var freezeVp = function(e) {
+      // console.log('freezeVP');
+      e.preventDefault();
+    };
+    jQuery(document).ready(function() {
+    cmg_gdpr_check = getCookie("GDPR");
+    cmg_gdpr_all_check = getCookie("GDPR_All");
+    cmg_gdpr_first_check = getCookie("GDPR_First");
+    cmg_gdpr_reject_check = getCookie("GDPR_Reject");
+    if(cmg_gdpr_check != null && cmg_gdpr_check=="true") {
+      if(cmg_gdpr_all_check == null && cmg_gdpr_first_check == null && cmg_gdpr_reject_check == null) { // user is visiting our site firsttime from one of GDPR countries
+      jQuery("#yourCookieChoices").show();
+      //remove_ads_from_free_game_pages();
+      //jQuery('.content-wrapper').css('pointer-events','default');
+      var footerlink = '<li class="menu__item is-leaf last leaf"><a href="/cookie-choices" class="menu__link">YOUR COOKIE CHOICES';
+      } else if(cmg_gdpr_first_check !== null  || cmg_gdpr_reject_check !== null ){ //user selected first party cookies or rejected all cookies so we need to remove ads
+      remove_ads_from_free_game_pages();
+      var footerlink = '<li class="menu__item is-leaf last leaf"><a href="/cookie-choices" class="menu__link">YOUR COOKIE CHOICES';
+      jQuery("#footerLinks").append(footerlink);
+      //jQuery('.content-wrapper').css('pointer-events','default');
+      } else if(cmg_gdpr_all_check !== null) { //user accepted all cookies
+      var footerlink = '<li class="last leaf"><a href="/cookie-choices" class="menu__link">YOUR COOKIE CHOICES';
+      jQuery("#footerLinks").append(footerlink);
+      }
+    }
+    });
+    ///TODO - REMOVE THIS ALWAYS SHOWS IT FOR TESTING
+    // jQuery('html, body').css('overflow','hidden');
+    // jQuery(".gdpr-overlay-background").show();
+    // jQuery(".gdpr-overlay-background").css('visibility','visible');
+    // jQuery(".gdpr-overlay-container").show();
+    // jQuery(".gdpr-overlay-container").css('visibility','visible');
+    // jQuery('.pageWrapper').css('pointer-events','none');
+    // jQuery('.game-item').css('pointer-events','none');
+    // stopBodyScrolling(true);
+    ///TODO - REMOVE THIS ALWAYS SHOWS IT FOR TESTING
+
+
+    function acceptAllCookies() {
+    var d = new Date();
+    d.setTime(d.getTime() + (365*2*24*60*60*1000));
+    var expires = "expires="+ d.toUTCString();
+    document.cookie = "GDPR_All=true;" + expires + ";path=/";
+    window.location =  location.href;
+    }
+    function acceptFirstpartyCookies() {
+    document.cookie = "GDPR_First=true"+ ";path=/";
+    window.location =  location.href;
+    }
+    function rejectAllCookies() {
+    document.cookie = "GDPR_Reject=true"+ ";path=/";
+    window.location =  location.href;
+    }
+  </script><div class="dialog-off-canvas-main-canvas" data-off-canvas-main-canvas>
+    <div class="global-wrapper">
+  <div class="global-content-wrapper">
+    <header class="main-header"><div class="logo-container-signup">
+        <a href="m.coolmathgames.html"><img src="images/cmatgame-logo.png" class="logo"></a>
+      </div>
+    </header><div class="content-column-wrapper clearfix">
+      <main class="main-column" role="main"><div class="inside">
+          <div class="subscribe-outer-container">
+            <div class="signup-form-container">
+                <div>
+    <div data-drupal-messages-fallback class="hidden"></div>
+<div class="system_main_block">
+<div id="block-cmatgame-mob-cmatgame-mob-system-main">
+  
+    
+     <div class="view-content">
+    <form class="user-login-form form-placeholder-include-children" data-drupal-selector="user-login-form" data-msg-required="This field is required." action="/user/login" method="post" id="user-login-form" accept-charset="UTF-8">
+  <h1>Member Login</h1><input autocomplete="off" data-drupal-selector="form-xc3uwixcaynb834-2jv1qgsnkw5nze4ti4dai8vrsba" data-msg-required="This field is required." type="hidden" name="form_build_id" value="form-XC3UWIXCaynb834_2jv1qGsNkw5NzE4tI4dAI8VRsBA"><input data-drupal-selector="edit-user-login-form" data-msg-required="This field is required." type="hidden" name="form_id" value="user_login_form"><div class="js-form-item form-item js-form-type-textfield form-item-name js-form-item-name form-group">
+      <label for="edit-name" class="js-form-required form-required">Your Email</label>
+        <input autocorrect="none" autocapitalize="none" spellcheck="false" autofocus="autofocus" data-drupal-selector="edit-name" class="form-placeholder-include form-text required" data-msg-maxlength="Your Email field has a maximum length of 60." data-msg-required="Your Email is required." type="text" id="edit-name" name="name" value="" size="60" maxlength="60" required="required" aria-required="true"></div>
+<div class="js-form-item form-item js-form-type-password form-item-pass js-form-item-pass form-group">
+      <label for="edit-pass" class="js-form-required form-required">Password</label>
+        <input data-drupal-selector="edit-pass" class="form-placeholder-include form-text required" data-msg-maxlength="Password field has a maximum length of 128." data-msg-required="Password is required." type="password" id="edit-pass" name="pass" size="60" maxlength="128" required="required" aria-required="true"></div>
+<div class="js-form-item form-item js-form-type-checkbox form-item-remember-me js-form-item-remember-me form-check">
+ <input class="remember-me-container form-checkbox form-check-input" data-drupal-selector="edit-remember-me" data-msg-required="Remember Me is required." type="checkbox" id="edit-remember-me" name="remember_me" value="1" checked><span class="checkmark"></span>
+  <label class="form-check-label option" for="edit-remember-me">Remember Me</label>
+
+
+  
+  </div>
+<div data-drupal-selector="edit-actions" class="form-actions js-form-wrapper form-wrapper" data-msg-required="This field is required." id="edit-actions"><input class="btn login usetry-again-link button js-form-submit form-submit" data-drupal-selector="edit-submit" data-msg-required="This field is required." type="submit" id="edit-submit" name="op" value="Login"></div>
+<div class="forgotpasswordlink"><a href="password.html">Forgot Password?</a></div><div class="noaccount">Not a member? <a class="signup-on-login-page" href="b2df5a33.html">Join Now!</a></div>
+</form>
+
+   </div>	
+  </div>
+</div>
+  </div>
+
+            </div>
+          </div>
+        </div>
+      </main></div>
+  </div>
+  <footer class="main-footer"><div class="item-list"></div>
+  </footer></div>
+  </div>
+
+  
+    <script src="js/js-js_QssuvkBrx8hV2zn_PWuNjJuiZMC0FrEO1oFG9MbdWf0.js"></script><script src="js/js-ads.js"></script><script src="js/js-js_9Mlc0pFLNgXbu5EnsV-S0-02ZWtRdftJtFDanFfR-fw.js"></script><script src="https://js.stripe.com/v3/"></script><script src="js/js-js_rk0rmefLSD4NOHf8jP0LLEvSJwJDOETpHA_9YNsMzdM.js"></script><script type="text/javascript">
+      function closeCookieChoices() {
+        var d = new Date();
+        d.setTime(d.getTime() + (365*2*24*60*60*1000));
+        var expires = "expires="+ d.toUTCString();
+        document.cookie = "GDPR_All=true;" + expires + ";path=/";
+        document.cookie = "GDPR_CHOICE=GDPR_All;" + expires + ";path=/";
+        jQuery("#yourCookieChoices").hide();
+        var footerlink = '<li class="last leaf"><a href="/cookie-choices" class="menu__link">YOUR COOKIE CHOICES';
+
+        jQuery("#footerLinks").append(footerlink);
+      }
+    </script><div id="yourCookieChoices" style="display:none;">
+      <p class="cookie-text"><span class="first-cookie">We use cookies to improve your experience and present relevant advertising.</span><span class="second-cookie"> By using this site you agree to our cookie policies.</span></p>
+      <div class="cookie-mobile">
+        <span class="imokwiththat-close" id="closeCookieChoices" onclick="closeCookieChoices();">imokwiththat</span> <a href="cookie-choices.html" class="cookies-link">Manage choices</a>
+      </div>
+  </div></body></html>

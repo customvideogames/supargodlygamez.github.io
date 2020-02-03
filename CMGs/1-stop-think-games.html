@@ -1,0 +1,1533 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" prefix="content: http://purl.org/rss/1.0/modules/content/  dc: http://purl.org/dc/terms/  foaf: http://xmlns.com/foaf/0.1/  og: http://ogp.me/ns#  rdfs: http://www.w3.org/2000/01/rdf-schema#  schema: http://schema.org/  sioc: http://rdfs.org/sioc/ns#  sioct: http://rdfs.org/sioc/types#  skos: http://www.w3.org/2004/02/skos/core#  xsd: http://www.w3.org/2001/XMLSchema# "><head><!-- Load MBOX First --><script>
+      var pbjs = pbjs || {};
+      pbjs.que = pbjs.que || [];
+    </script><script type="text/javascript" src="js/js-mbox.js"></script><meta charset="utf-8"><link rel="canonical" href="//www.coolmathgames.com/1-stop-think-games"><meta name="keywords" content="Stop &amp; Think, coolmaths, coolmath, math, maths, game, games, free, online, fun"><meta property="og:image" content="//m.coolmathgames.com/themes/custom/cmatgame/images/CMG_OG_image.png"><link rel="shortcut icon" href="favicons/cmatgame_mob-favicon.ico" type="image/vnd.microsoft.icon"><script type="text/javascript">
+	  var valid_test_environment = false;
+      function getCookie(key) {
+        var keyValue = document.cookie.match("(^|;) ?" + key + "=([^;]*)(;|$)");
+        return keyValue ? keyValue[2] : null;
+      }
+      function setCookie1(cname, cvalue, hours) {
+        var d = new Date();
+        d.setTime(d.getTime() + (hours*60*60*1000));
+        var expires = 'expires='+ d.toUTCString();
+        document.cookie = cname + '=' + cvalue + ';' + expires + ';path=/';
+      }
+      function getParameterByName(name) {
+        var regexS = '[\?&]' + name + '=([^&#]*)';
+        var regex = new RegExp(regexS);
+        var results = regex.exec(location.href);
+        if (results === null) {
+          return '';
+        }
+        return decodeURIComponent(results[1].replace(/\+/g, ' '));
+      }
+      var cmg_gdpr_check = getCookie('GDPR');
+      
+      var cmg_school_whitelisted = getCookie('cmg_schwl');
+      if(cmg_school_whitelisted === null && (typeof valid_test_environment !== 'undefined' && valid_test_environment) && typeof myDebugAction === 'function') {
+        cmg_school_whitelisted = myDebugAction();
+      }
+
+      var freeTrialUser = false;
+      var date = new Date();
+      var hours = date.getHours();
+      var currentMonth = date.getMonth();
+      var currentYear = date.getFullYear();
+      var day = date.getDay();
+      var month_names_short = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
+      var currentMonthName = month_names_short[currentMonth];
+      var schoolStartHour = 7;
+      var schoolEndHour = 10;
+      var cmg_no_ads_debug = false;
+      //var cmg_no_ads = false;
+      if(typeof subscriberLeg === 'undefined' || subscriberLeg === null || subscriberLeg === '') {
+        subscriberLeg = 'Default Leg';
+        if(typeof myDebugAction === 'function' && (typeof valid_test_environment !== 'undefined' && valid_test_environment) ) {
+          myDebugAction();
+        }
+      }
+      if(typeof freeGameLimit === 'undefined' || freeGameLimit === null) {
+        freeGameLimit = 0;
+      }
+      if(typeof cmg_no_ads === 'undefined' && cmg_no_ads_debug && (typeof valid_test_environment !== 'undefined' && valid_test_environment)) {
+        cmg_no_ads = true;
+      }
+      var schoolHours = false;
+      var schoolHolidays = ["Jul 4","Sep 3","Nov 22","Nov 23"];
+      var schoolHoliday = false;
+
+      //TODO -- Summer vacation dates
+      var summerVacationStart = new Date('07/1/'+currentYear);
+      var summerVacationEnd = new Date('07/10/'+currentYear);
+      
+      var today_month_day = currentMonthName + ' ' + date.getDate();
+      if(schoolHolidays.indexOf(today_month_day) !== -1 || (date >= summerVacationStart && date <= summerVacationEnd) || day === 6 || day == 0) {
+        schoolHoliday = true;
+      }
+      var currentMonthName = month_names_short[currentMonth];
+      if(!schoolHoliday && hours >= schoolStartHour && hours <= schoolEndHour) {
+        schoolHours = true;
+      }
+      var targetStateUser = false;
+      if(typeof targeted_state !== 'undefined' && targeted_state !== null && targeted_state) {
+        targetStateUser = true;
+      }
+      if(typeof watchAdtoUnlockGame == 'undefined') {
+        watchAdtoUnlockGame = false;
+      }
+      var cmg_active_anonymous_user = getCookie('cmg_active_anonymous_user');
+      var cmatgame_editor = getCookie('cmg_editor');
+      if(typeof cmg_active_anonymous_user !== 'undefined' && cmg_active_anonymous_user !== null) {
+        ////console.log('We have an active school hours session');
+      }
+      //Display Ads to anonymous users only if the user is not from a targeted state or it is school hours. 
+      //   Do not display ads for targeted state user during non school hours, but free game play is restricted 
+      if(!schoolHours && targetStateUser && cmg_active_anonymous_user === null && cmatgame_editor === null) {
+        freeTrialUser = true;
+     } 
+   </script><script type="text/javascript">
+	   function checkIfFlashIsEnabled() {
+          var ie_flash;
+          try { ie_flash = (window.ActiveXObject && (new ActiveXObject("ShockwaveFlash.ShockwaveFlash")) !== false) } catch(err) { ie_flash = false; }
+          var _flash_installed = ((typeof navigator.plugins != "undefined" && typeof navigator.plugins["Shockwave Flash"] == "object") || ie_flash);
+          if(typeof _flash_installed == "undefined" || !_flash_installed) {
+            return false;
+          } else {
+            return true;
+          }
+       } 
+       function trackEvent(category, action, label, noninteraction) {
+          if(typeof __gaTracker === 'undefined')
+            return;
+            noninteraction = noninteraction || 0;
+           //console.log('Tracked: ' + category + ' ' + action + ' ' + label + ' noninteraction: ' + noninteraction);
+          __gaTracker('send', {
+              'hitType': 'event',          // Required.
+              'eventCategory': category,   // Required.
+              'eventAction': action,      // Required.
+              'eventLabel': label,
+              'eventValue': 0,
+              'nonInteraction': noninteraction
+          });
+      }
+      function trackSocial(network,action,target) {
+          if(typeof __gaTracker === 'undefined')
+            return;
+          __gaTracker('send', {
+              'hitType': 'social',          // Required.
+              'socialNetwork': network,
+              'socialAction': action,
+              'socialTarget': target
+          });
+      }
+	  </script><script type="text/javascript">
+		  gamePage = false;
+          quizPage = false;
+          var ad_refresh_timer_interval = 60000; 
+          var ad_refresh_event_interval = 30000;
+		</script><script type="text/javascript">
+          cmatgame_subscriber = getCookie("cmg_sx");
+          //check if school is whitelisted
+          if(cmg_school_whitelisted !== null && getCookie("cmg_schwl") !== null) {
+            cmg_school_whitelisted = getCookie("cmg_schwl");
+            cmatgame_subscriber = getCookie("cmg_schwl");
+          } else if(cmg_school_whitelisted === null && typeof cmg_no_ads_debug !== "undefined" && cmg_no_ads_debug) {
+          //console.log("KY school hours");
+          cmatgame_subscriber = cmg_no_ads_debug;
+        }
+         if(cmg_gdpr_check !== null) {
+           var cmg_gdpr_all_check = getCookie("GDPR_All");  //GDPR_All cookie is set when user selects accept all cookies in the GDPR overlay
+           var cmg_gdpr_first_check = getCookie("GDPR_First");
+           var cmg_gdpr_reject_check = getCookie("GDPR_Reject");
+           if(cmg_gdpr_all_check == null && (cmg_gdpr_first_check != null || cmg_gdpr_reject_check !=null)) {  //user either accepted only first party cookies or rejected all cookies so do not display ads
+             cmatgame_subscriber = getCookie("GDPR");
+           }
+         }
+        </script><script type="text/javascript">
+          if((typeof cmatgame_subscriber === "undefined" || cmatgame_subscriber === "" || cmatgame_subscriber === null || typeof freeTrialUser === "undefined"  ) && !freeTrialUser) {
+  
+            var tyche = {
+              mode: "tyche",
+              config: "//config.playwire.com/1023174/v2/websites/71134/banner.json"
+                  };
+            var pwScript = document.createElement("script");
+            pwScript.type = "text/javascript";
+            pwScript.src = "//cdn.intergi.com/hera/tyche.js";
+            pwScript.async = true;
+            document.getElementsByTagName("head")[0].appendChild(pwScript);
+          }
+        </script><script src="js/js-jquery.min.js"></script><script type="text/javascript">
+            if (!window.console) console = {log: function() {}};
+            
+            var enableDebug=false;
+            function debugOut(msg){if(enableDebug){console.log(msg);}}
+            
+            refreshCnt = 0;
+            refreshTimer = null;
+            var intvlValue = 30000; // 1m0s
+            //Free trial user change frequency of refresh to 24 hours
+            if(typeof freeTrialUser !== "undefined" && freeTrialUser || cmatgame_subscriber) {
+              intvlValue = 24 * 60 * 60* 1000;
+            }
+            debugOut("Starting with ad refresh timer of " + intvlValue + " ms")
+            if(typeof quizPage == "undefiend" || quizPage != true) {  //
+            	refreshTimer = setTimeout(function(){ myTimerAction() },intvlValue);
+            }
+            
+            function myTimerAction() {
+                console.log("Refresh timer " + intvlValue + " ms mark");
+                refreshAds();
+                myStopFunction();
+            	debugOut("Setting ad refresh timer of " + intvlValue + " ms")
+                refreshTimer = setTimeout(function () { myTimerAction() }, intvlValue);
+            }
+            
+            function myStopFunction() {
+            	debugOut("Clearing refreshTimer")
+                clearTimeout(refreshTimer);
+                refreshTimer = null;
+            }
+            
+            // the myTimerAction() function is intended to be used by a client;
+            // this is intended to be a utility function.
+            function refreshAds() {
+            
+            	refreshCnt++;
+            	/*googletag.pubads().setTargeting("RxCount", refreshCnt.toString());
+                googletag.pubads().setTargeting("Refresh", "True");
+                */
+            	if(typeof tyche != "undefined" && typeof tyche.triggerRefresh === "function") {
+                	tyche.triggerRefresh(); 
+                	doCustomAnalytics("ads", "mobile-refresh");
+            	}   
+            }
+            
+            function doCustomAnalytics( evtCat, evtAct ) {
+            	// Google Analytics
+            	if(typeof __gaTracker !== "undefined") {
+            		__gaTracker("send", {
+            	        "hitType": "event",          // Required.
+            	        "eventCategory": evtCat,   // Required.
+            	        "eventAction": evtAct,      // Required.
+            	        "eventLabel": document.title,
+            	        "eventValue": refreshCnt,
+            	        "nonInteraction": 1
+            	    });
+            	}
+                
+            }
+            
+            
+            // We can"t refresh ads until window has finished loading.
+            var refreshAvail = 0;
+            jQuery(window).on("load", function() {
+              refreshAvail = 1;
+            });
+            
+            </script><title>Stop &amp; Think Games at CoolmathGames.com</title><link rel="stylesheet" media="all" href="css/css-css_FLn9Vgaj1H-zO3jZ-GqN1nXlcK9yHiMTaPS5zXQQkbg.css"><link rel="stylesheet" media="all" href="css/css-css_ab-2l9a0Yc9snHJxSmydTQtmjv6afI9P_byV9kWY9vc.css"><script type="text/javascript">
+      function getCookie(key) {
+        var keyValue = document.cookie.match("(^|;) ?" + key + "=([^;]*)(;|$)");
+        return keyValue ? keyValue[2] : null;
+      }
+  </script><script type="application/json" data-drupal-selector="drupal-settings-json">{"path":{"baseUrl":"\/","scriptPath":null,"pathPrefix":"","currentPath":"taxonomy\/term\/970","currentPathIsAdmin":false,"isFront":false,"currentLanguage":"en"},"pluralDelimiter":"\u0003","suppressDeprecationErrors":true,"clientside_validation_jquery":{"validate_all_ajax_forms":2,"force_validate_on_blur":false},"user":{"uid":0,"permissionsHash":"c95aaebf1ca44c4827454d0158fc52317722fd64b54ab1580fd1cfe15525a489"}}</script><!--[if lte IE 8]>
+<script src="/sites/default/files/js/js_VtafjXmRvoUgAzqzYTA3Wrjkx9wcWhjP0G4ZnnqRamA.js"></script>
+<![endif]--><script src="js/js-js_wXE2qJkRE-riX00oxFit196aiCiZPpAdfNVG9k9Ug9Y.js"></script><meta name="MobileOptimized" content="width"><meta name="HandheldFriendly" content="true"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"></head><body class="page-taxonomy page-taxonomy-term stop-think-games not-active-user">
+        <a href="#main-content" class="visually-hidden focusable">
+      Skip to main content
+    </a>
+  
+      <div class="gdpr-overlay-background" style="display:none"></div>
+  <div class="gdpr-overlay-container" style="display:none">
+    <div class="gdpr-overlay">
+    <h1 class="gdpr-welcome">welcome to coolmath games</h1>
+    <p class="overlay-text">We use first party cookies on our website to enhance your
+  browsing experience, and third party cookies to provide
+  advertising that may be of interest to you. </p>
+  <p class="overlay-text">You can accept or reject cookies on our
+  website by clicking one of the buttons below. <span>Rejecting
+  cookies may impair some of our website&rsquo;s functionality.</span></p>
+    <div class="accept-all-cookies overlay-button" onclick="acceptAllCookies();"><span>Accept All Cookies</span></div><br><div class="accept-firstparty-cookies overlay-button" onclick="acceptFirstpartyCookies();"><span>Accept First Party Cookies</span></div><br><div class="reject-all-cookies overlay-button" onclick="rejectAllCookies();"><span>Reject All Cookies</span></div><br><p class="overlay-text">To understand more about how we and our advertising
+  partners use cookies or to change your preference and
+  browser settings, please see our <a href="global-privacy-policy.html">Global Privacy Policy</a>.</p>
+    </div>
+  </div>
+  <script type="text/javascript">
+    function stopBodyScrolling (bool) {
+      if (bool === true) {
+        document.body.addEventListener("touchmove", freezeVp, false);
+        console.log('addeventlistener');
+      } else {
+        document.body.removeEventListener("touchmove", freezeVp, false);
+        console.log('addeventlistener');
+      }
+    }
+    var freezeVp = function(e) {
+      // console.log('freezeVP');
+      e.preventDefault();
+    };
+    jQuery(document).ready(function() {
+    cmg_gdpr_check = getCookie("GDPR");
+    cmg_gdpr_all_check = getCookie("GDPR_All");
+    cmg_gdpr_first_check = getCookie("GDPR_First");
+    cmg_gdpr_reject_check = getCookie("GDPR_Reject");
+    if(cmg_gdpr_check != null && cmg_gdpr_check=="true") {
+      if(cmg_gdpr_all_check == null && cmg_gdpr_first_check == null && cmg_gdpr_reject_check == null) { // user is visiting our site firsttime from one of GDPR countries
+      jQuery("#yourCookieChoices").show();
+      //remove_ads_from_free_game_pages();
+      //jQuery('.content-wrapper').css('pointer-events','default');
+      var footerlink = '<li class="menu__item is-leaf last leaf"><a href="/cookie-choices" class="menu__link">YOUR COOKIE CHOICES';
+      } else if(cmg_gdpr_first_check !== null  || cmg_gdpr_reject_check !== null ){ //user selected first party cookies or rejected all cookies so we need to remove ads
+      remove_ads_from_free_game_pages();
+      var footerlink = '<li class="menu__item is-leaf last leaf"><a href="/cookie-choices" class="menu__link">YOUR COOKIE CHOICES';
+      jQuery("#footerLinks").append(footerlink);
+      //jQuery('.content-wrapper').css('pointer-events','default');
+      } else if(cmg_gdpr_all_check !== null) { //user accepted all cookies
+      var footerlink = '<li class="last leaf"><a href="/cookie-choices" class="menu__link">YOUR COOKIE CHOICES';
+      jQuery("#footerLinks").append(footerlink);
+      }
+    }
+    });
+    ///TODO - REMOVE THIS ALWAYS SHOWS IT FOR TESTING
+    // jQuery('html, body').css('overflow','hidden');
+    // jQuery(".gdpr-overlay-background").show();
+    // jQuery(".gdpr-overlay-background").css('visibility','visible');
+    // jQuery(".gdpr-overlay-container").show();
+    // jQuery(".gdpr-overlay-container").css('visibility','visible');
+    // jQuery('.pageWrapper').css('pointer-events','none');
+    // jQuery('.game-item').css('pointer-events','none');
+    // stopBodyScrolling(true);
+    ///TODO - REMOVE THIS ALWAYS SHOWS IT FOR TESTING
+
+
+    function acceptAllCookies() {
+    var d = new Date();
+    d.setTime(d.getTime() + (365*2*24*60*60*1000));
+    var expires = "expires="+ d.toUTCString();
+    document.cookie = "GDPR_All=true;" + expires + ";path=/";
+    window.location =  location.href;
+    }
+    function acceptFirstpartyCookies() {
+    document.cookie = "GDPR_First=true"+ ";path=/";
+    window.location =  location.href;
+    }
+    function rejectAllCookies() {
+    document.cookie = "GDPR_Reject=true"+ ";path=/";
+    window.location =  location.href;
+    }
+  </script><div class="dialog-off-canvas-main-canvas" data-off-canvas-main-canvas>
+    
+<input type="checkbox" class="navCheckbox" id="navCheckbox" onchange="toggleNav();"><div class="pageWrapper">
+  <!---site wrapper -->
+  <div class="modal-background"></div>
+  <div class="contentWrapper" id="contentWrapper">
+    <!-- site canvas -->
+    <!-- <div class="mobile-header-ad">&nbsp;</div>-->
+    <div class="mobile-header-ad">
+      <div class="adstopmobile">
+<div id="block-adstopmobile-ad-nongame-320x50-1">
+  
+    
+     <div class="view-content">
+    
+      <div class="mobile-container homepage-top-container">
+        <div id="div-gpt-ad-868275232471008982-1" class="homeBlock">
+          <!-- Desktop/iPad Leaderboard ATF  -->
+          <div data-pw-desk="leaderboard_atf"></div>
+          <!-- Mobile Med Rect ATF -->
+          <div data-pw-mobi="leaderboard_atf"></div>
+        </div>
+      </div>
+   </div>	
+  </div>
+</div>
+    </div>
+    <div class="mobile-header">
+      <div class="nav-wrapper">
+        <div class="row">
+          <nav class="top-bar"><ul class="visible-nav"><li class="logo">
+                <a href="m.coolmathgames.html" title="Coolmath Games Mobile">
+                  <img alt="Home" id="new-img-logo" src="images/cmatgame_mob-logo_tab.png"></a>
+              </li>
+
+              <li class="toggle-nav menu-icon header-link">
+                <a class="left-off-canvas-toggle" href="#">Menu</a>
+              </li>
+              <li class="login-link header-link">
+                <a href="login.html">Login</a>
+              </li>
+            </ul></nav><section class="site-menu" id="site-menu"><ul class="inner-right-nav"><li class="off-canvas-close">
+                <a href="#" class="close-panel">
+                  <span class="close-x">X</span></a>
+              </li>
+              <div class="panel-pane pane-block pane-cmatgame-blocks-cmat-blocks-mobile-header-menu">
+                <div class="pane-content">
+                  <div id="menu">
+                    <ul id="menuItems"><a id="link-all-games-a-z" href="1-complete-game-list.html">
+                        <li id="all-games-a-z" class="item left">ALL GAMES A-Z</li>
+                      </a>
+                      <a id="link-most-popular" href="1-popular.html">
+                        <li id="most-popular" class="item left">MOST POPULAR</li>
+                      </a>
+                      <a id="link-trivia" href="trivia.html">
+                        <li id="trivia" class="item left">TRIVIA</li>
+                      </a>
+                    </ul></div>
+                </div>
+              </div>
+          </ul><div class="myaccount-container"></div>
+          <div class="mobile-hamburger-categories">
+            <p class="categories-sidebar">Game Categories</p>
+            <div class="mobile-categories-wrapper"><div class="views-field views-field-name"><span class="field-content"><a href="1-run-jump-games.html">Run &amp; Jump</a></span></div><div class="views-field views-field-name"><span class="field-content"><a href="1-cars-planes-trains-games.html">Cars, Planes &amp; Trains</a></span></div><div class="views-field views-field-name"><span class="field-content"><a href="1-fun-physics-games.html">Fun Physics</a></span></div><div class="views-field views-field-name"><span class="field-content"><a href="1-be-the-hero-games.html">Be The Hero</a></span></div><div class="views-field views-field-name"><span class="field-content"><a href="1-strategy-puzzle-games.html">Strategy Puzzle</a></span></div><div class="views-field views-field-name"><span class="field-content"><a href="1-aiming-games-0.html">Aiming</a></span></div><div class="views-field views-field-name"><span class="field-content"><a href="1-classic-games-0.html">Classic</a></span></div><div class="views-field views-field-name"><span class="field-content"><a href="1-animals-games.html">Animals</a></span></div><div class="views-field views-field-name"><span class="field-content"><a href="1-path-planning-games.html">Path Planning</a></span></div><div class="views-field views-field-name"><span class="field-content"><a href="1-stop-think-games.html">Stop &amp; Think</a></span></div><div class="views-field views-field-name"><span class="field-content"><a href="1-quick-reaction-games.html">Quick Reaction</a></span></div><div class="views-field views-field-name"><span class="field-content"><a href="1-drawing-games-0.html">Drawing</a></span></div><div class="views-field views-field-name"><span class="field-content"><a href="1-match-3-games-0.html">Match 3</a></span></div><div class="views-field views-field-name"><span class="field-content"><a href="1-mobile-daily-games.html">Daily Games</a></span></div></div>
+          </div>
+          <div class="mobile-hamburger-trivia">
+            <p class="categories-sidebar">Trivia</p>
+            <div class="trivia-mobile-menu">
+              <div class="side-link">
+                <a href="trivia.html" class="trivia-category-menu-link">Latest Quizzes</a>
+              </div>
+              <div class="side-link">
+                <a href="arts-entertainment.html" class="trivia-category-menu-link">Arts &amp; Entertainment</a>
+              </div>
+              <div class="side-link">
+                <a href="sports.html" class="trivia-category-menu-link">Sports</a>
+              </div>
+              <div class="side-link">
+                <a href="food-home.html" class="trivia-category-menu-link">Food &amp; Home</a>
+              </div>
+              <div class="side-link">
+                <a href="style.html" class="trivia-category-menu-link">Style</a>
+              </div>
+              <div class="side-link">
+                <a href="body-health.html" class="trivia-category-menu-link">Body &amp; Health</a>
+              </div>
+              <div class="side-link">
+                <a href="fun-stuff.html" class="trivia-category-menu-link">Fun Stuff</a>
+              </div>
+              <div class="side-link">
+                <a href="history-politics.html" class="trivia-category-menu-link">History &amp; Politics</a>
+              </div>
+              <div class="side-link">
+                <a href="places.html" class="trivia-category-menu-link">Places</a>
+              </div>
+              <div class="side-link">
+                <a href="science-nature.html" class="trivia-category-menu-link">Science &amp; Nature</a>
+              </div>
+            </div>
+          </div>
+        </section><!-- end of Inner Menu --></div>
+    </div>
+  </div>
+  <div class="content unselectable" id="content">
+          <div class="panel-pane pane-page-content">
+          <div>
+    <div data-drupal-messages-fallback class="hidden"></div>
+<div class="system_breadcrumb_block">
+<div id="block-cmatgame-mob-breadcrumbs">
+  
+    
+     <div class="view-content">
+    
+   </div>	
+  </div>
+</div><div class="system_main_block">
+<div id="block-cmatgame-mob-cmatgame-mob-system-main">
+  
+    
+     <div class="view-content">
+      <div class="layout layout--onecol">
+    <div class="layout__region layout__region--content">
+      <div class="block-region-content"><div class="subcategorytermnodes">
+<div>
+  
+    
+     <div class="view-content">
+    <div class="global-wrapper-content"><div class="mobile-categories-header"><h2>Stop &amp; Think</h2></div>
+              <div class="game-item">
+              <li>
+              <div class="game-item-inner">
+              <a href="0-puzzle-ball.html">
+              <div class="field-mobile-thumbnail"><img src="images/game_m_thumbnail-puzzle-ball-game-icon_0.png" alt="Puzzle Ball Game" title="Puzzle Ball" typeof="Image"></div>
+              <span class="iconOverlay"></span>
+              <div class="gameDescription">
+              <h1 id="gameTitle">Puzzle Ball</h1>
+              <div id="gameDescription"><div class="field-mobile-short-description">Slide wooden blocks and roll to the goal.</div></div>
+              </div>
+              </a>
+              </div>
+              </li>
+              </div><div class="adsnongamefirst">
+<div id="block-adshomefirstmobile-ad-nongame-320x50-2">
+  
+    
+     <div class="view-content">
+    
+      <div class="mobile-container homepage-medium-container">
+        <div id="div-gpt-ad-868275232471008982-2" class="homeBlock">
+          
+          <div data-pw-desk="med_rect_atf"></div>
+          
+          <div data-pw-mobi="med_rect_atf"></div>
+        </div>
+      </div>
+   </div>	
+  </div>
+</div>
+              <div class="game-item">
+              <li>
+              <div class="game-item-inner">
+              <a href="0-b-cubed.html">
+              <div class="field-mobile-thumbnail"><img src="images/game_m_thumbnail-b-cubed-game-logo.png" alt="B-Cubed Game" title="B-Cubed" typeof="Image"></div>
+              <span class="iconOverlay"></span>
+              <div class="gameDescription">
+              <h1 id="gameTitle">B-Cubed</h1>
+              <div id="gameDescription"><div class="field-mobile-short-description">Remove the cubes and get to the red square.</div></div>
+              </div>
+              </a>
+              </div>
+              </li>
+              </div>
+              <div class="game-item">
+              <li>
+              <div class="game-item-inner">
+              <a href="0-abandoned.html">
+              <div class="field-mobile-thumbnail"><img src="images/game_m_thumbnail-abandoned-icon.png" alt="Abandoned Game" title="Abandoned" typeof="Image"></div>
+              <span class="iconOverlay"></span>
+              <div class="gameDescription">
+              <h1 id="gameTitle">Abandoned</h1>
+              <div id="gameDescription"><div class="field-mobile-short-description">An abandoned temple. A lost brother.</div></div>
+              </div>
+              </a>
+              </div>
+              </li>
+              </div>
+              <div class="game-item">
+              <li>
+              <div class="game-item-inner">
+              <a href="0-tube-master.html">
+              <div class="field-mobile-thumbnail"><img src="images/public-tubemaster_icon.png" alt="Tube Master Game" title="Tube Master" typeof="Image"></div>
+              <span class="iconOverlay"></span>
+              <div class="gameDescription">
+              <h1 id="gameTitle">Tube Master</h1>
+              <div id="gameDescription"><div class="field-mobile-short-description">Connect pipes of the same color.</div></div>
+              </div>
+              </a>
+              </div>
+              </li>
+              </div>
+              <div class="game-item">
+              <li>
+              <div class="game-item-inner">
+              <a href="0-pixel-puzzle.html">
+              <div class="field-mobile-thumbnail"><img src="images/game_m_thumbnail-pixel-puzzle-icon.png" alt="Pixel Puzzle Game" title="Pixel Puzzle" typeof="Image"></div>
+              <span class="iconOverlay"></span>
+              <div class="gameDescription">
+              <h1 id="gameTitle">Pixel Puzzle</h1>
+              <div id="gameDescription"><div class="field-mobile-short-description">Unscramble the pixels to fix the picture!</div></div>
+              </div>
+              </a>
+              </div>
+              </li>
+              </div>
+              <div class="game-item">
+              <li>
+              <div class="game-item-inner">
+              <a href="0-word-detector.html">
+              <div class="field-mobile-thumbnail"><img src="images/game_m_thumbnail-word-detector-game-icon.png" alt="Word Detector Game" title="Word Detector" typeof="Image"></div>
+              <span class="iconOverlay"></span>
+              <div class="gameDescription">
+              <h1 id="gameTitle">Word Detector</h1>
+              <div id="gameDescription"><div class="field-mobile-short-description">Unscramble the letters to find hidden words!</div></div>
+              </div>
+              </a>
+              </div>
+              </li>
+              </div>
+              <div class="game-item">
+              <li>
+              <div class="game-item-inner">
+              <a href="0-mooving-in.html">
+              <div class="field-mobile-thumbnail"><img src="images/game_m_thumbnail-mooving-in-game-icon.png" alt="Mooving In Game" title="Mooving In" typeof="Image"></div>
+              <span class="iconOverlay"></span>
+              <div class="gameDescription">
+              <h1 id="gameTitle">Mooving In</h1>
+              <div id="gameDescription"><div class="field-mobile-short-description">Build new homes for the animals!</div></div>
+              </div>
+              </a>
+              </div>
+              </li>
+              </div>
+              <div class="game-item">
+              <li>
+              <div class="game-item-inner">
+              <a href="0-salvage.html">
+              <div class="field-mobile-thumbnail"><img src="images/game_m_thumbnail-salvage-game-icon.png" alt="Salvage Game" title="Salvage" typeof="Image"></div>
+              <span class="iconOverlay"></span>
+              <div class="gameDescription">
+              <h1 id="gameTitle">Salvage</h1>
+              <div id="gameDescription"><div class="field-mobile-short-description">Escape before you are blown to bits!</div></div>
+              </div>
+              </a>
+              </div>
+              </li>
+              </div>
+              <div class="game-item">
+              <li>
+              <div class="game-item-inner">
+              <a href="0-coloruid.html">
+              <div class="field-mobile-thumbnail"><img src="images/game_m_thumbnail-coloruid-game-icon.png" alt="Coloruid Game" title="Coloruid" typeof="Image"></div>
+              <span class="iconOverlay"></span>
+              <div class="gameDescription">
+              <h1 id="gameTitle">Coloruid</h1>
+              <div id="gameDescription"><div class="field-mobile-short-description">Transform all the squares to the same color.</div></div>
+              </div>
+              </a>
+              </div>
+              </li>
+              </div>
+              <div class="game-item">
+              <li>
+              <div class="game-item-inner">
+              <a href="0-coloruid-2.html">
+              <div class="field-mobile-thumbnail"><img src="images/game_m_thumbnail-coloruid-2-game-icon.png" alt="Coloruid 2 Game" title="Coloruid 2" typeof="Image"></div>
+              <span class="iconOverlay"></span>
+              <div class="gameDescription">
+              <h1 id="gameTitle">Coloruid 2</h1>
+              <div id="gameDescription"><div class="field-mobile-short-description">Solve more color-iffic puzzles.</div></div>
+              </div>
+              </a>
+              </div>
+              </li>
+              </div>
+              <div class="game-item">
+              <li>
+              <div class="game-item-inner">
+              <a href="0-jelly-slice.html">
+              <div class="field-mobile-thumbnail"><img src="images/game_m_thumbnail-jelly-slice_200x200.gif" alt="Jelly Slice Game" title="Jelly Slice" typeof="Image"></div>
+              <span class="iconOverlay"></span>
+              <div class="gameDescription">
+              <h1 id="gameTitle">Jelly Slice</h1>
+              <div id="gameDescription"><div class="field-mobile-short-description">Slice up the jelly blob in as few moves as possible.</div></div>
+              </div>
+              </a>
+              </div>
+              </li>
+              </div>
+              <div class="game-item">
+              <li>
+              <div class="game-item-inner">
+              <a href="0-protect-the-museum.html">
+              <div class="field-mobile-thumbnail"><img src="images/game_m_thumbnail-protect-the-museum-icon.png" alt="Protect the Museum Game" title="Protect the Museum" typeof="Image"></div>
+              <span class="iconOverlay"></span>
+              <div class="gameDescription">
+              <h1 id="gameTitle">Protect the Museum</h1>
+              <div id="gameDescription"><div class="field-mobile-short-description">Place laser alarm systems to guard the artifacts.</div></div>
+              </div>
+              </a>
+              </div>
+              </li>
+              </div>
+              <div class="game-item">
+              <li>
+              <div class="game-item-inner">
+              <a href="0-find-the-candy.html">
+              <div class="field-mobile-thumbnail"><img src="images/game_m_thumbnail-find-the-candy-game-icon.png" alt="Find the Candy Game" title="Find the Candy" typeof="Image"></div>
+              <span class="iconOverlay"></span>
+              <div class="gameDescription">
+              <h1 id="gameTitle">Find the Candy</h1>
+              <div id="gameDescription"><div class="field-mobile-short-description">Looking for a sweet game? Find the hidden candy!</div></div>
+              </div>
+              </a>
+              </div>
+              </li>
+              </div>
+              <div class="game-item">
+              <li>
+              <div class="game-item-inner">
+              <a href="0-find-the-candy-2-winter.html">
+              <div class="field-mobile-thumbnail"><img src="images/game_m_thumbnail-find-the-candy-2-winter-game-icon.png" alt="Find the Candy 2 Winter Game" title="Find the Candy 2 Winter" typeof="Image"></div>
+              <span class="iconOverlay"></span>
+              <div class="gameDescription">
+              <h1 id="gameTitle">Find the Candy 2 Winter</h1>
+              <div id="gameDescription"><div class="field-mobile-short-description">Find the Christmas candy!</div></div>
+              </div>
+              </a>
+              </div>
+              </li>
+              </div>
+              <div class="game-item">
+              <li>
+              <div class="game-item-inner">
+              <a href="0-find-the-candy-3.html">
+              <div class="field-mobile-thumbnail"><img src="images/game_m_thumbnail-find-the-candy-3-game-icon.png" alt="Find the Candy 3 Game" title="Find the Candy 3" typeof="Image"></div>
+              <span class="iconOverlay"></span>
+              <div class="gameDescription">
+              <h1 id="gameTitle">Find the Candy 3</h1>
+              <div id="gameDescription"><div class="field-mobile-short-description">Even more hidden candy. Can you find it all?</div></div>
+              </div>
+              </a>
+              </div>
+              </li>
+              </div>
+              <div class="game-item">
+              <li>
+              <div class="game-item-inner">
+              <a href="0-circuit.html">
+              <div class="field-mobile-thumbnail"><img src="images/game_m_thumbnail-circuit-game-icon.png" alt="Circuit Game" title="Circuit" typeof="Image"></div>
+              <span class="iconOverlay"></span>
+              <div class="gameDescription">
+              <h1 id="gameTitle">Circuit</h1>
+              <div id="gameDescription"><div class="field-mobile-short-description">Use electricity to power up the targets.</div></div>
+              </div>
+              </a>
+              </div>
+              </li>
+              </div>
+              <div class="game-item">
+              <li>
+              <div class="game-item-inner">
+              <a href="0-rhomb.html">
+              <div class="field-mobile-thumbnail"><img src="images/game_m_thumbnail-rhomb-game-icon.png" alt="Rhomb Game" title="Rhomb" typeof="Image"></div>
+              <span class="iconOverlay"></span>
+              <div class="gameDescription">
+              <h1 id="gameTitle">Rhomb</h1>
+              <div id="gameDescription"><div class="field-mobile-short-description">Untie the knot without any collisions!</div></div>
+              </div>
+              </a>
+              </div>
+              </li>
+              </div>
+              <div class="game-item">
+              <li>
+              <div class="game-item-inner">
+              <a href="0-cut-the-buttons.html">
+              <div class="field-mobile-thumbnail"><img src="images/game_m_thumbnail-cut-the-buttons-game-icon.png" alt="Cut the Buttons Game" title="Cut the Buttons" typeof="Image"></div>
+              <span class="iconOverlay"></span>
+              <div class="gameDescription">
+              <h1 id="gameTitle">Cut the Buttons</h1>
+              <div id="gameDescription"><div class="field-mobile-short-description">Snip, snip! Remove the buttons in the right order. </div></div>
+              </div>
+              </a>
+              </div>
+              </li>
+              </div>
+              <div class="game-item">
+              <li>
+              <div class="game-item-inner">
+              <a href="0-tangleshapes.html">
+              <div class="field-mobile-thumbnail"><img src="images/game_m_thumbnail-tangleshapes-game-icon.png" alt="Tangleshapes Game" title="Tangleshapes" typeof="Image"></div>
+              <span class="iconOverlay"></span>
+              <div class="gameDescription">
+              <h1 id="gameTitle">Tangleshapes</h1>
+              <div id="gameDescription"><div class="field-mobile-short-description">Stretch and slide to make the right shape!</div></div>
+              </div>
+              </a>
+              </div>
+              </li>
+              </div>
+              <div class="game-item">
+              <li>
+              <div class="game-item-inner">
+              <a href="0-strategic-tic-tac-toe.html">
+              <div class="field-mobile-thumbnail"><img src="images/game_m_thumbnail-strategic-tic-tac-toe-game-icon.png" alt="Strategic Tic-Tac-Toe Game" title="Strategic Tic-Tac-Toe" typeof="Image"></div>
+              <span class="iconOverlay"></span>
+              <div class="gameDescription">
+              <h1 id="gameTitle">Strategic Tic-Tac-Toe</h1>
+              <div id="gameDescription"><div class="field-mobile-short-description">Are you a Tic Tac Toe pro? Try this version!</div></div>
+              </div>
+              </a>
+              </div>
+              </li>
+              </div>
+              <div class="game-item">
+              <li>
+              <div class="game-item-inner">
+              <a href="0-pieces-of-cake.html">
+              <div class="field-mobile-thumbnail"><img src="images/game_m_thumbnail-pieces-of-cake-icon.png" alt="Pieces of Cake Game" title="Pieces of Cake" typeof="Image"></div>
+              <span class="iconOverlay"></span>
+              <div class="gameDescription">
+              <h1 id="gameTitle">Pieces of Cake</h1>
+              <div id="gameDescription"><div class="field-mobile-short-description">Ready, set, bake! Piece together the perfect cake. </div></div>
+              </div>
+              </a>
+              </div>
+              </li>
+              </div>
+              <div class="game-item">
+              <li>
+              <div class="game-item-inner">
+              <a href="0-hex-blocks.html">
+              <div class="field-mobile-thumbnail"><img src="images/game_m_thumbnail-hex-blocks-game-icon.png" alt="Hex Blocks Game" title="Hex Blocks" typeof="Image"></div>
+              <span class="iconOverlay"></span>
+              <div class="gameDescription">
+              <h1 id="gameTitle">Hex Blocks</h1>
+              <div id="gameDescription"><div class="field-mobile-short-description">Can you fit all of the hexagon shapes together?</div></div>
+              </div>
+              </a>
+              </div>
+              </li>
+              </div>
+              <div class="game-item">
+              <li>
+              <div class="game-item-inner">
+              <a href="0-unpuzzle.html">
+              <div class="field-mobile-thumbnail"><img src="images/game_m_thumbnail-unpuzzle-game-icon.png" alt="Unpuzzle Game" title="Unpuzzle" typeof="Image"></div>
+              <span class="iconOverlay"></span>
+              <div class="gameDescription">
+              <h1 id="gameTitle">Unpuzzle</h1>
+              <div id="gameDescription"><div class="field-mobile-short-description">To solve this puzzle you have to pull it apart!</div></div>
+              </div>
+              </a>
+              </div>
+              </li>
+              </div>
+              <div class="game-item">
+              <li>
+              <div class="game-item-inner">
+              <a href="0-unpuzzle-2.html">
+              <div class="field-mobile-thumbnail"><img src="images/game_m_thumbnail-unpuzzle-2-game-icon.png" alt="Unpuzzle 2 Game" title="Unpuzzle 2" typeof="Image"></div>
+              <span class="iconOverlay"></span>
+              <div class="gameDescription">
+              <h1 id="gameTitle">Unpuzzle 2</h1>
+              <div id="gameDescription"><div class="field-mobile-short-description">Take apart the puzzle piece by piece!</div></div>
+              </div>
+              </a>
+              </div>
+              </li>
+              </div>
+              <div class="game-item">
+              <li>
+              <div class="game-item-inner">
+              <a href="0-light-on.html">
+              <div class="field-mobile-thumbnail"><img src="images/game_m_thumbnail-light-on-game-logo.png" alt="Light On Game" title="Light On" typeof="Image"></div>
+              <span class="iconOverlay"></span>
+              <div class="gameDescription">
+              <h1 id="gameTitle">Light On</h1>
+              <div id="gameDescription"><div class="field-mobile-short-description">Place lights to light up the night.</div></div>
+              </div>
+              </a>
+              </div>
+              </li>
+              </div>
+              <div class="game-item">
+              <li>
+              <div class="game-item-inner">
+              <a href="0-freeport-town.html">
+              <div class="field-mobile-thumbnail"><img src="images/game_m_thumbnail-freeport-town-game-icon.png" alt="Freeport Town Game" title="Freeport Town" typeof="Image"></div>
+              <span class="iconOverlay"></span>
+              <div class="gameDescription">
+              <h1 id="gameTitle">Freeport Town</h1>
+              <div id="gameDescription"><div class="field-mobile-short-description">Build houses to please the diverse citizens of Freeport.</div></div>
+              </div>
+              </a>
+              </div>
+              </li>
+              </div>
+              <div class="game-item">
+              <li>
+              <div class="game-item-inner">
+              <a href="0-jelly-doods.html">
+              <div class="field-mobile-thumbnail"><img src="images/game_m_thumbnail-jelly-doods_icon.png" alt="Jelly Doods Game" title="Jelly Doods" typeof="Image"></div>
+              <span class="iconOverlay"></span>
+              <div class="gameDescription">
+              <h1 id="gameTitle">Jelly Doods</h1>
+              <div id="gameDescription"><div class="field-mobile-short-description">Meet the Doods! Make blocks of the same color.</div></div>
+              </div>
+              </a>
+              </div>
+              </li>
+              </div>
+              <div class="game-item">
+              <li>
+              <div class="game-item-inner">
+              <a href="0-puzzle-blocks-ancient.html">
+              <div class="field-mobile-thumbnail"><img src="images/game_m_thumbnail-puzzle-blocks-ancient-game-icon.png" alt="Puzzle Blocks Ancient Game" title="Puzzle Blocks Ancient" typeof="Image"></div>
+              <span class="iconOverlay"></span>
+              <div class="gameDescription">
+              <h1 id="gameTitle">Puzzle Blocks Ancient</h1>
+              <div id="gameDescription"><div class="field-mobile-short-description">Fit the blocks together quickly to get three stars!</div></div>
+              </div>
+              </a>
+              </div>
+              </li>
+              </div>
+              <div class="game-item">
+              <li>
+              <div class="game-item-inner">
+              <a href="0-hook.html">
+              <div class="field-mobile-thumbnail"><img src="images/game_m_thumbnail-mobile-game-icon-hook.gif" alt="Hook Game" title="Hook" typeof="Image"></div>
+              <span class="iconOverlay"></span>
+              <div class="gameDescription">
+              <h1 id="gameTitle">Hook</h1>
+              <div id="gameDescription"><div class="field-mobile-short-description">Really great for your timing and planning skills!</div></div>
+              </div>
+              </a>
+              </div>
+              </li>
+              </div>
+              <div class="game-item">
+              <li>
+              <div class="game-item-inner">
+              <a href="0-switchways-dimensions.html">
+              <div class="field-mobile-thumbnail"><img src="images/game_m_thumbnail-switchways-dimensions-icon.png" alt="Switchways: Dimensions Game" title="Switchways: Dimensions" typeof="Image"></div>
+              <span class="iconOverlay"></span>
+              <div class="gameDescription">
+              <h1 id="gameTitle">Switchways: Dimensions</h1>
+              <div id="gameDescription"><div class="field-mobile-short-description">Mind-bending puzzles.</div></div>
+              </div>
+              </a>
+              </div>
+              </li>
+              </div>
+              <div class="game-item">
+              <li>
+              <div class="game-item-inner">
+              <a href="0-triways.html">
+              <div class="field-mobile-thumbnail"><img src="images/game_m_thumbnail-triways-game-icon.png" alt="Triways Game" title="Triways" typeof="Image"></div>
+              <span class="iconOverlay"></span>
+              <div class="gameDescription">
+              <h1 id="gameTitle">Triways</h1>
+              <div id="gameDescription"><div class="field-mobile-short-description">Shift tri-tiles to connect the lines.</div></div>
+              </div>
+              </a>
+              </div>
+              </li>
+              </div>
+              <div class="game-item">
+              <li>
+              <div class="game-item-inner">
+              <a href="0-slideways.html">
+              <div class="field-mobile-thumbnail"><img src="images/game_m_thumbnail-slideways-game-icon.png" alt="Slideways Game" title="Slideways" typeof="Image"></div>
+              <span class="iconOverlay"></span>
+              <div class="gameDescription">
+              <h1 id="gameTitle">Slideways</h1>
+              <div id="gameDescription"><div class="field-mobile-short-description">Connect the roads and light up the path!</div></div>
+              </div>
+              </a>
+              </div>
+              </li>
+              </div>
+              <div class="game-item">
+              <li>
+              <div class="game-item-inner">
+              <a href="0-mine-of-sight.html">
+              <div class="field-mobile-thumbnail"><img src="images/game_m_thumbnail-mine-of-sight-icon.png" alt="Mine of Sight Game" title="Mine of Sight" typeof="Image"></div>
+              <span class="iconOverlay"></span>
+              <div class="gameDescription">
+              <h1 id="gameTitle">Mine of Sight</h1>
+              <div id="gameDescription"><div class="field-mobile-short-description">Detect all of the mines!</div></div>
+              </div>
+              </a>
+              </div>
+              </li>
+              </div>
+              <div class="game-item">
+              <li>
+              <div class="game-item-inner">
+              <a href="0-sumo-sushi-puzzle.html">
+              <div class="field-mobile-thumbnail"><img src="images/game_m_thumbnail-sumo-sushi-puzzle-game-icon.png" alt="Sumo Sushi Puzzle Game" title="Sumo Sushi Puzzle" typeof="Image"></div>
+              <span class="iconOverlay"></span>
+              <div class="gameDescription">
+              <h1 id="gameTitle">Sumo Sushi Puzzle</h1>
+              <div id="gameDescription"><div class="field-mobile-short-description">Help the sumo wrestler join the clean plate club!</div></div>
+              </div>
+              </a>
+              </div>
+              </li>
+              </div>
+              <div class="game-item">
+              <li>
+              <div class="game-item-inner">
+              <a href="0-words-family.html">
+              <div class="field-mobile-thumbnail"><img src="images/game_m_thumbnail-words-family-game-icon-2.png" alt="Words Family Game" title="Words Family" typeof="Image"></div>
+              <span class="iconOverlay"></span>
+              <div class="gameDescription">
+              <h1 id="gameTitle">Words Family</h1>
+              <div id="gameDescription"><div class="field-mobile-short-description">How's your vocab? Fill the grid with words!</div></div>
+              </div>
+              </a>
+              </div>
+              </li>
+              </div>
+              <div class="game-item">
+              <li>
+              <div class="game-item-inner">
+              <a href="0-words-party.html">
+              <div class="field-mobile-thumbnail"><img src="images/game_m_thumbnail-words-party-game-icon.png" alt="Words Party Game" title="Words Party" typeof="Image"></div>
+              <span class="iconOverlay"></span>
+              <div class="gameDescription">
+              <h1 id="gameTitle">Words Party</h1>
+              <div id="gameDescription"><div class="field-mobile-short-description">Come on into the spelling party!</div></div>
+              </div>
+              </a>
+              </div>
+              </li>
+              </div>
+              <div class="game-item">
+              <li>
+              <div class="game-item-inner">
+              <a href="0-flush.html">
+              <div class="field-mobile-thumbnail"><img src="images/game_m_thumbnail-flush_icon.gif" alt="Flush Game" title="Flush" typeof="Image"></div>
+              <span class="iconOverlay"></span>
+              <div class="gameDescription">
+              <h1 id="gameTitle">Flush</h1>
+              <div id="gameDescription"><div class="field-mobile-short-description">Color the X blocks correctly.</div></div>
+              </div>
+              </a>
+              </div>
+              </li>
+              </div>
+              <div class="game-item">
+              <li>
+              <div class="game-item-inner">
+              <a href="0-cities-of-babylon.html">
+              <div class="field-mobile-thumbnail"><img src="images/game_m_thumbnail-cities-of-babylon-icon.png" alt="Cities of Babylon Game" title="Cities of Babylon" typeof="Image"></div>
+              <span class="iconOverlay"></span>
+              <div class="gameDescription">
+              <h1 id="gameTitle">Cities of Babylon</h1>
+              <div id="gameDescription"><div class="field-mobile-short-description">Build cities for ancient civilizations!</div></div>
+              </div>
+              </a>
+              </div>
+              </li>
+              </div>
+              <div class="game-item">
+              <li>
+              <div class="game-item-inner">
+              <a href="0-discrepancy.html">
+              <div class="field-mobile-thumbnail"><img src="images/game_m_thumbnail-discrepancy-game-icon.png" alt="Discrepancy Game" title="Discrepancy" typeof="Image"></div>
+              <span class="iconOverlay"></span>
+              <div class="gameDescription">
+              <h1 id="gameTitle">Discrepancy</h1>
+              <div id="gameDescription"><div class="field-mobile-short-description">Initiate containment protocol.</div></div>
+              </div>
+              </a>
+              </div>
+              </li>
+              </div>
+              <div class="game-item">
+              <li>
+              <div class="game-item-inner">
+              <a href="0-tingly-brain-trainer.html">
+              <div class="field-mobile-thumbnail"><img src="images/game_m_thumbnail-tingly-brain-trainer-game.png" alt="Tingly Brain Trainer Game" title="Tingly Brain Trainer" typeof="Image"></div>
+              <span class="iconOverlay"></span>
+              <div class="gameDescription">
+              <h1 id="gameTitle">Tingly Brain Trainer</h1>
+              <div id="gameDescription"><div class="field-mobile-short-description">Train your brain with these fun minigames!</div></div>
+              </div>
+              </a>
+              </div>
+              </li>
+              </div>
+              <div class="game-item">
+              <li>
+              <div class="game-item-inner">
+              <a href="0-mystery-temple.html">
+              <div class="field-mobile-thumbnail"><img src="images/game_m_thumbnail-mysterytemple_icon.jpg" alt="Mystery Temple Game" title="Mystery Temple" typeof="Image"></div>
+              <span class="iconOverlay"></span>
+              <div class="gameDescription">
+              <h1 id="gameTitle">Mystery Temple</h1>
+              <div id="gameDescription"><div class="field-mobile-short-description">Place sliding tiles to clear the colored blocks.</div></div>
+              </div>
+              </a>
+              </div>
+              </li>
+              </div>
+              <div class="game-item">
+              <li>
+              <div class="game-item-inner">
+              <a href="0-dark-tomb.html">
+              <div class="field-mobile-thumbnail"><img src="images/game_m_thumbnail-dark-tomb-game-icon.png" alt="Dark Tomb Game" title="Dark Tomb" typeof="Image"></div>
+              <span class="iconOverlay"></span>
+              <div class="gameDescription">
+              <h1 id="gameTitle">Dark Tomb</h1>
+              <div id="gameDescription"><div class="field-mobile-short-description">Can you solve the mysteries that lie within?</div></div>
+              </div>
+              </a>
+              </div>
+              </li>
+              </div>
+              <div class="game-item">
+              <li>
+              <div class="game-item-inner">
+              <a href="0-jewel-routes.html">
+              <div class="field-mobile-thumbnail"><img src="images/game_m_thumbnail-jewel-routes-icon.png" alt="Jewel Routes Game" title="Jewel Routes" typeof="Image"></div>
+              <span class="iconOverlay"></span>
+              <div class="gameDescription">
+              <h1 id="gameTitle">Jewel Routes</h1>
+              <div id="gameDescription"><div class="field-mobile-short-description">Light up the grid to collect all the jewels!</div></div>
+              </div>
+              </a>
+              </div>
+              </li>
+              </div>
+              <div class="game-item">
+              <li>
+              <div class="game-item-inner">
+              <a href="0-the-last-rabbit.html">
+              <div class="field-mobile-thumbnail"><img src="images/game_m_thumbnail-the-last-rabbit-game-icon.png" alt="The Last Rabbit Game" title="The Last Rabbit" typeof="Image"></div>
+              <span class="iconOverlay"></span>
+              <div class="gameDescription">
+              <h1 id="gameTitle">The Last Rabbit</h1>
+              <div id="gameDescription"><div class="field-mobile-short-description">Hop over the other rabbits to make them pop!</div></div>
+              </div>
+              </a>
+              </div>
+              </li>
+              </div>
+              <div class="game-item">
+              <li>
+              <div class="game-item-inner">
+              <a href="0-onus.html">
+              <div class="field-mobile-thumbnail"><img src="images/game_m_thumbnail-onus-game-icon.png" alt="Onus Game" title="Onus" typeof="Image"></div>
+              <span class="iconOverlay"></span>
+              <div class="gameDescription">
+              <h1 id="gameTitle">Onus</h1>
+              <div id="gameDescription"><div class="field-mobile-short-description">Cha-ching! Pass the coins around evenly.</div></div>
+              </div>
+              </a>
+              </div>
+              </li>
+              </div>
+              <div class="game-item">
+              <li>
+              <div class="game-item-inner">
+              <a href="0-interconnections.html">
+              <div class="field-mobile-thumbnail"><img src="images/game_m_thumbnail-interconnections-icon.png" alt="Interconnections Game" title="Interconnections" typeof="Image"></div>
+              <span class="iconOverlay"></span>
+              <div class="gameDescription">
+              <h1 id="gameTitle">Interconnections</h1>
+              <div id="gameDescription"><div class="field-mobile-short-description">Slide tiles to connect the lines!</div></div>
+              </div>
+              </a>
+              </div>
+              </li>
+              </div>
+              <div class="game-item">
+              <li>
+              <div class="game-item-inner">
+              <a href="0-rullo.html">
+              <div class="field-mobile-thumbnail"><img src="images/game_m_thumbnail-rullo-icon.png" alt="Rullo Game" title="Rullo" typeof="Image"></div>
+              <span class="iconOverlay"></span>
+              <div class="gameDescription">
+              <h1 id="gameTitle">Rullo</h1>
+              <div id="gameDescription"><div class="field-mobile-short-description">Remove the right numbers from the grid.</div></div>
+              </div>
+              </a>
+              </div>
+              </li>
+              </div>
+              <div class="game-item">
+              <li>
+              <div class="game-item-inner">
+              <a href="0-fillness.html">
+              <div class="field-mobile-thumbnail"><img src="images/game_m_thumbnail-fillness-game-icon.png" alt="Fillness Game" title="Fillness" typeof="Image"></div>
+              <span class="iconOverlay"></span>
+              <div class="gameDescription">
+              <h1 id="gameTitle">Fillness</h1>
+              <div id="gameDescription"><div class="field-mobile-short-description">Poof! Fill every square.</div></div>
+              </div>
+              </a>
+              </div>
+              </li>
+              </div>
+              <div class="game-item">
+              <li>
+              <div class="game-item-inner">
+              <a href="0-roloong.html">
+              <div class="field-mobile-thumbnail"><img src="images/game_m_thumbnail-roloong-game-icon.png" alt="Roloong Game" title="Roloong" typeof="Image"></div>
+              <span class="iconOverlay"></span>
+              <div class="gameDescription">
+              <h1 id="gameTitle">Roloong</h1>
+              <div id="gameDescription"><div class="field-mobile-short-description">Feed the multicolor dragon.</div></div>
+              </div>
+              </a>
+              </div>
+              </li>
+              </div>
+              <div class="game-item">
+              <li>
+              <div class="game-item-inner">
+              <a href="0-right-trick-totem-land.html">
+              <div class="field-mobile-thumbnail"><img src="images/game_m_thumbnail-right-trick-totem-land-game-icon.png" alt="Right Trick Totem Land Game" title="Right Trick Totem Land" typeof="Image"></div>
+              <span class="iconOverlay"></span>
+              <div class="gameDescription">
+              <h1 id="gameTitle">Right Trick Totem Land</h1>
+              <div id="gameDescription"><div class="field-mobile-short-description">The rocks are alive! Turn them back to stone.</div></div>
+              </div>
+              </a>
+              </div>
+              </li>
+              </div>
+              <div class="game-item">
+              <li>
+              <div class="game-item-inner">
+              <a href="0-robotion.html">
+              <div class="field-mobile-thumbnail"><img src="images/game_m_thumbnail-robotion-game-icon.png" alt="Robotion Game" title="Robotion" typeof="Image"></div>
+              <span class="iconOverlay"></span>
+              <div class="gameDescription">
+              <h1 id="gameTitle">Robotion</h1>
+              <div id="gameDescription"><div class="field-mobile-short-description">Bring power back to the robots!</div></div>
+              </div>
+              </a>
+              </div>
+              </li>
+              </div>
+              <div class="game-item">
+              <li>
+              <div class="game-item-inner">
+              <a href="0-moley-the-purple-mole.html">
+              <div class="field-mobile-thumbnail"><img src="images/game_m_thumbnail-moley-the-purple-mole-game-icon.png" alt="Moley the Purple Mole Game" title="Moley the Purple Mole" typeof="Image"></div>
+              <span class="iconOverlay"></span>
+              <div class="gameDescription">
+              <h1 id="gameTitle">Moley the Purple Mole</h1>
+              <div id="gameDescription"><div class="field-mobile-short-description">Help Moley grab the gems and reach the exit.</div></div>
+              </div>
+              </a>
+              </div>
+              </li>
+              </div>
+              <div class="game-item">
+              <li>
+              <div class="game-item-inner">
+              <a href="0-circle-flow.html">
+              <div class="field-mobile-thumbnail"><img src="images/game_m_thumbnail-circle-flow-game-icon.png" alt="Circle Flow Game" title="Circle Flow" typeof="Image"></div>
+              <span class="iconOverlay"></span>
+              <div class="gameDescription">
+              <h1 id="gameTitle">Circle Flow</h1>
+              <div id="gameDescription"><div class="field-mobile-short-description">Twist and turn to match the pattern!</div></div>
+              </div>
+              </a>
+              </div>
+              </li>
+              </div>
+              <div class="game-item">
+              <li>
+              <div class="game-item-inner">
+              <a href="0-the-schema.html">
+              <div class="field-mobile-thumbnail"><img src="images/game_m_thumbnail-the-schema-game-icon.png" alt="The Schema Game" title="The Schema" typeof="Image"></div>
+              <span class="iconOverlay"></span>
+              <div class="gameDescription">
+              <h1 id="gameTitle">The Schema</h1>
+              <div id="gameDescription"><div class="field-mobile-short-description">Do you speak robot? Get your bot to the flag.</div></div>
+              </div>
+              </a>
+              </div>
+              </li>
+              </div>
+              <div class="game-item">
+              <li>
+              <div class="game-item-inner">
+              <a href="0-let-me-rock.html">
+              <div class="field-mobile-thumbnail"><img src="images/game_m_thumbnail-let-me-rock-game-icon.png" alt="Let Me Rock Game" title="Let Me Rock" typeof="Image"></div>
+              <span class="iconOverlay"></span>
+              <div class="gameDescription">
+              <h1 id="gameTitle">Let Me Rock</h1>
+              <div id="gameDescription"><div class="field-mobile-short-description">Get backstage access and let the fans into the concert!</div></div>
+              </div>
+              </a>
+              </div>
+              </li>
+              </div>
+              <div class="game-item">
+              <li>
+              <div class="game-item-inner">
+              <a href="0-sweet-jelly.html">
+              <div class="field-mobile-thumbnail"><img src="images/game_m_thumbnail-sweet-jelly-game-icon.png" alt="Sweet Jelly Game" title="Sweet Jelly" typeof="Image"></div>
+              <span class="iconOverlay"></span>
+              <div class="gameDescription">
+              <h1 id="gameTitle">Sweet Jelly</h1>
+              <div id="gameDescription"><div class="field-mobile-short-description">Smash these sticky jellies together!</div></div>
+              </div>
+              </a>
+              </div>
+              </li>
+              </div>
+              <div class="game-item">
+              <li>
+              <div class="game-item-inner">
+              <a href="0-numberhood.html">
+              <div class="field-mobile-thumbnail"><img src="images/game_m_thumbnail-numberhood-game-icon.png" alt="Numberhood Game" title="Numberhood" typeof="Image"></div>
+              <span class="iconOverlay"></span>
+              <div class="gameDescription">
+              <h1 id="gameTitle">Numberhood</h1>
+              <div id="gameDescription"><div class="field-mobile-short-description">Line up the numbers with the right connections.</div></div>
+              </div>
+              </a>
+              </div>
+              </li>
+              </div>
+              <div class="game-item">
+              <li>
+              <div class="game-item-inner">
+              <a href="0-xlox.html">
+              <div class="field-mobile-thumbnail"><img src="images/game_m_thumbnail-xlox-game-icon.png" alt="Xlox Game" title="Xlox" typeof="Image"></div>
+              <span class="iconOverlay"></span>
+              <div class="gameDescription">
+              <h1 id="gameTitle">Xlox</h1>
+              <div id="gameDescription"><div class="field-mobile-short-description">Poof! Make all the blocks disappear.</div></div>
+              </div>
+              </a>
+              </div>
+              </li>
+              </div>
+              <div class="game-item">
+              <li>
+              <div class="game-item-inner">
+              <a href="0-block-turns.html">
+              <div class="field-mobile-thumbnail"><img src="images/game_m_thumbnail-block-turns-game-icon.png" alt="Block Turns Game" title="Block Turns" typeof="Image"></div>
+              <span class="iconOverlay"></span>
+              <div class="gameDescription">
+              <h1 id="gameTitle">Block Turns</h1>
+              <div id="gameDescription"><div class="field-mobile-short-description">Line up the arrows to crack the code.</div></div>
+              </div>
+              </a>
+              </div>
+              </li>
+              </div>
+              <div class="game-item">
+              <li>
+              <div class="game-item-inner">
+              <a href="0-puzlogic.html">
+              <div class="field-mobile-thumbnail"><img src="images/game_m_thumbnail-puzlogic-game-icon.png" alt="Puzlogic Game" title="Puzlogic" typeof="Image"></div>
+              <span class="iconOverlay"></span>
+              <div class="gameDescription">
+              <h1 id="gameTitle">Puzlogic</h1>
+              <div id="gameDescription"><div class="field-mobile-short-description">A new twist on the classic game Sudoku.</div></div>
+              </div>
+              </a>
+              </div>
+              </li>
+              </div>
+              <div class="game-item">
+              <li>
+              <div class="game-item-inner">
+              <a href="0-softwood-blocks.html">
+              <div class="field-mobile-thumbnail"><img src="images/game_m_thumbnail-softwood-blocks-icon_0.png" alt="Softwood Blocks Game" title="Softwood Blocks" typeof="Image"></div>
+              <span class="iconOverlay"></span>
+              <div class="gameDescription">
+              <h1 id="gameTitle">Softwood Blocks</h1>
+              <div id="gameDescription"><div class="field-mobile-short-description">Can you fit all the pieces together to solve the puzzle?</div></div>
+              </div>
+              </a>
+              </div>
+              </li>
+              </div>
+              <div class="game-item">
+              <li>
+              <div class="game-item-inner">
+              <a href="0-dotless.html">
+              <div class="field-mobile-thumbnail"><img src="images/game_m_thumbnail-dotless-game-icon.jpg" alt="Dotless Game" title="Dotless" typeof="Image"></div>
+              <span class="iconOverlay"></span>
+              <div class="gameDescription">
+              <h1 id="gameTitle">Dotless</h1>
+              <div id="gameDescription"><div class="field-mobile-short-description">Erase all the dots in a limited number of moves!</div></div>
+              </div>
+              </a>
+              </div>
+              </li>
+              </div>
+              <div class="game-item">
+              <li>
+              <div class="game-item-inner">
+              <a href="0-hexaflow.html">
+              <div class="field-mobile-thumbnail"><img src="images/game_m_thumbnail-hexaflow-icon.png" alt="Hexaflow Game" title="Hexaflow" typeof="Image"></div>
+              <span class="iconOverlay"></span>
+              <div class="gameDescription">
+              <h1 id="gameTitle">Hexaflow</h1>
+              <div id="gameDescription"><div class="field-mobile-short-description">Paint the happy hexagons to make them match.</div></div>
+              </div>
+              </a>
+              </div>
+              </li>
+              </div>
+              <div class="game-item">
+              <li>
+              <div class="game-item-inner">
+              <a href="0-move-here-move-there.html">
+              <div class="field-mobile-thumbnail"><img src="images/game_m_thumbnail-move-here-move-there-game-icon.png" alt="Move Here Move There Game" title="Move Here Move There" typeof="Image"></div>
+              <span class="iconOverlay"></span>
+              <div class="gameDescription">
+              <h1 id="gameTitle">Move Here Move There</h1>
+              <div id="gameDescription"><div class="field-mobile-short-description">Line up your bounces and hit the target!</div></div>
+              </div>
+              </a>
+              </div>
+              </li>
+              </div>
+              <div class="game-item">
+              <li>
+              <div class="game-item-inner">
+              <a href="0-push-and-pull-blocks.html">
+              <div class="field-mobile-thumbnail"><img src="images/game_m_thumbnail-push-and-pull-blocks-game-icon.png" alt="Push and Pull Blocks Game" title="Push and Pull Blocks" typeof="Image"></div>
+              <span class="iconOverlay"></span>
+              <div class="gameDescription">
+              <h1 id="gameTitle">Push and Pull Blocks</h1>
+              <div id="gameDescription"><div class="field-mobile-short-description">Cover all the glowing circles!</div></div>
+              </div>
+              </a>
+              </div>
+              </li>
+              </div>
+              <div class="game-item">
+              <li>
+              <div class="game-item-inner">
+              <a href="0-christmas-friends.html">
+              <div class="field-mobile-thumbnail"><img src="images/game_m_thumbnail-christmas-friends-game-icon.png" alt="Christmas Friends Game" title="Christmas Friends" typeof="Image"></div>
+              <span class="iconOverlay"></span>
+              <div class="gameDescription">
+              <h1 id="gameTitle">Christmas Friends</h1>
+              <div id="gameDescription"><div class="field-mobile-short-description">Help the elves find their friends!</div></div>
+              </div>
+              </a>
+              </div>
+              </li>
+              </div>
+              <div class="game-item">
+              <li>
+              <div class="game-item-inner">
+              <a href="0-stacked.html">
+              <div class="field-mobile-thumbnail"><img src="images/game_m_thumbnail-stacked-icon.png" alt="Stacked Game" title="Stacked" typeof="Image"></div>
+              <span class="iconOverlay"></span>
+              <div class="gameDescription">
+              <h1 id="gameTitle">Stacked</h1>
+              <div id="gameDescription"><div class="field-mobile-short-description">Slide and stack your way to combine the colors!</div></div>
+              </div>
+              </a>
+              </div>
+              </li>
+              </div>
+              <div class="game-item">
+              <li>
+              <div class="game-item-inner">
+              <a href="0-feelingz.html">
+              <div class="field-mobile-thumbnail"><img src="images/game_m_thumbnail-feelingz-game-icon.png" alt="Feelingz Game" title="Feelingz" typeof="Image"></div>
+              <span class="iconOverlay"></span>
+              <div class="gameDescription">
+              <h1 id="gameTitle">Feelingz</h1>
+              <div id="gameDescription"><div class="field-mobile-short-description">Make the characters into a big happy family!</div></div>
+              </div>
+              </a>
+              </div>
+              </li>
+              </div>
+              <div class="game-item">
+              <li>
+              <div class="game-item-inner">
+              <a href="0-chain-sums.html">
+              <div class="field-mobile-thumbnail"><img src="images/public-chain-sums-game-icon.png" alt="Chain Sums Game" title="Chain Sums" typeof="Image"></div>
+              <span class="iconOverlay"></span>
+              <div class="gameDescription">
+              <h1 id="gameTitle">Chain Sums</h1>
+              <div id="gameDescription"><div class="field-mobile-short-description">Connect tiles to output the right sums.</div></div>
+              </div>
+              </a>
+              </div>
+              </li>
+              </div>
+              <div class="game-item">
+              <li>
+              <div class="game-item-inner">
+              <a href="0-arcandies.html">
+              <div class="field-mobile-thumbnail"><img src="images/game_m_thumbnail-arcandies-game-icon.png" alt="Arcandies Game" title="Arcandies" typeof="Image"></div>
+              <span class="iconOverlay"></span>
+              <div class="gameDescription">
+              <h1 id="gameTitle">Arcandies</h1>
+              <div id="gameDescription"><div class="field-mobile-short-description">Push pumpkins and get candies!</div></div>
+              </div>
+              </a>
+              </div>
+              </li>
+              </div>
+              <div class="game-item">
+              <li>
+              <div class="game-item-inner">
+              <a href="0-sum-blocks.html">
+              <div class="field-mobile-thumbnail"><img src="images/game_m_thumbnail-sum-blocks-game-icon.png" alt="Sum Blocks Game" title="Sum Blocks" typeof="Image"></div>
+              <span class="iconOverlay"></span>
+              <div class="gameDescription">
+              <h1 id="gameTitle">Sum Blocks</h1>
+              <div id="gameDescription"><div class="field-mobile-short-description">Use the overlapping area to hit the target sums!</div></div>
+              </div>
+              </a>
+              </div>
+              </li>
+              </div><div class="more-link"><a href="1-mobile-categories.html">All Categories &gt;  </a></div></div></div>
+   </div>	
+  </div>
+</div></div>
+    </div>
+  </div>
+
+   </div>	
+  </div>
+</div>
+  </div>
+
+      </div>
+            </div>
+  <div class="mobile-fixed-footer">
+    <div id="fixed-footer-content">&nbsp;</div>
+  </div>
+  <div class="footer unselectable">
+    <div class="panel-pane pane-block pane-menu-menu-footer-menu">
+
+      <div class="pane-content">
+        <ul id="footerLinks" class="unselectable"><li class="first leaf">
+            <a href="privacyp.html" class="privacyText">PRIVACY POLICY</a>
+          </li>
+          <li class="leaf">
+            <a href="subscription-faq.html">SUBSCRIPTION FAQ</a>
+          </li>
+          <li class="leaf">
+            <a href="terms-use.html">TERMS OF USE</a>
+          </li>
+          <li class="leaf">
+            <a href="about-us.html">ABOUT US</a>
+          </li>
+          <li class="last leaf">
+            <a href="aboutourads.html">ABOUT OUR ADS</a>
+          </li>
+        </ul></div>
+    </div>
+    <div class="panel-separator"></div>
+    <div class="panel-pane pane-block pane-bean-footer-copyright">
+
+      <div class="pane-content">
+        <div class="entity entity-bean bean-content-block" about="/block/footer_copyright" typeof="">
+
+          <div class="field-text-block">
+            <p>&copy; 2020 Coolmath.com LLC. All Rights Reserved.
+            </p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  <div id="contentFadeout"></div>
+</div>
+</div>
+
+  
+
+  
+    <script src="js/js-ads.js"></script><script src="js/js-js_9Mlc0pFLNgXbu5EnsV-S0-02ZWtRdftJtFDanFfR-fw.js"></script><script src="https://js.stripe.com/v3/"></script><script type="text/javascript">
+      function closeCookieChoices() {
+        var d = new Date();
+        d.setTime(d.getTime() + (365*2*24*60*60*1000));
+        var expires = "expires="+ d.toUTCString();
+        document.cookie = "GDPR_All=true;" + expires + ";path=/";
+        document.cookie = "GDPR_CHOICE=GDPR_All;" + expires + ";path=/";
+        jQuery("#yourCookieChoices").hide();
+        var footerlink = '<li class="last leaf"><a href="/cookie-choices" class="menu__link">YOUR COOKIE CHOICES';
+
+        jQuery("#footerLinks").append(footerlink);
+      }
+    </script><div id="yourCookieChoices" style="display:none;">
+      <p class="cookie-text"><span class="first-cookie">We use cookies to improve your experience and present relevant advertising.</span><span class="second-cookie"> By using this site you agree to our cookie policies.</span></p>
+      <div class="cookie-mobile">
+        <span class="imokwiththat-close" id="closeCookieChoices" onclick="closeCookieChoices();">imokwiththat</span> <a href="cookie-choices.html" class="cookies-link">Manage choices</a>
+      </div>
+  </div></body></html>
