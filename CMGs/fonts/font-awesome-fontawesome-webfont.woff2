@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" prefix="content: http://purl.org/rss/1.0/modules/content/  dc: http://purl.org/dc/terms/  foaf: http://xmlns.com/foaf/0.1/  og: http://ogp.me/ns#  rdfs: http://www.w3.org/2000/01/rdf-schema#  schema: http://schema.org/  sioc: http://rdfs.org/sioc/ns#  sioct: http://rdfs.org/sioc/types#  skos: http://www.w3.org/2004/02/skos/core#  xsd: http://www.w3.org/2001/XMLSchema# ">
+  <head>
+    <!-- Load MBOX First -->
+  <script>
+      var pbjs = pbjs || {};
+      pbjs.que = pbjs.que || [];
+    </script>
+    <script type="text/javascript" src="/themes/custom/cmatgame/js/mbox.js"></script>
+      <meta charset="utf-8" />
+<link rel="canonical" href="//www.coolmathgames.com/sites/default/files/css//themes/custom/cmatgame_mob/css/fonts/font-awesome/fontawesome-webfont.woff2" />
+<meta name="keywords" content="coolmaths, coolmath, math, maths, game, games, free, online, fun" />
+<meta property="og:image" content="//m.coolmathgames.com/themes/custom/cmatgame/images/CMG_OG_image.png" />
+<link rel="shortcut icon" href="//m.coolmathgames.com/themes/custom/cmatgame_mob/favicon.ico" type="image/vnd.microsoft.icon" />
+<script type="text/javascript">
+	  var valid_test_environment = false;
+      function getCookie(key) {
+        var keyValue = document.cookie.match("(^|;) ?" + key + "=([^;]*)(;|$)");
+        return keyValue ? keyValue[2] : null;
+      }
+      function setCookie1(cname, cvalue, hours) {
+        var d = new Date();
+        d.setTime(d.getTime() + (hours*60*60*1000));
+        var expires = 'expires='+ d.toUTCString();
+        document.cookie = cname + '=' + cvalue + ';' + expires + ';path=/';
+      }
+      function getParameterByName(name) {
+        var regexS = '[\?&]' + name + '=([^&#]*)';
+        var regex = new RegExp(regexS);
+        var results = regex.exec(location.href);
+        if (results === null) {
+          return '';
+        }
+        return decodeURIComponent(results[1].replace(/\+/g, ' '));
+      }
+      var cmg_gdpr_check = getCookie('GDPR');
+      
+      var cmg_school_whitelisted = getCookie('cmg_schwl');
+      if(cmg_school_whitelisted === null && (typeof valid_test_environment !== 'undefined' && valid_test_environment) && typeof myDebugAction === 'function') {
+        cmg_school_whitelisted = myDebugAction();
+      }
+
+      var freeTrialUser = false;
+      var date = new Date();
+      var hours = date.getHours();
+      var currentMonth = date.getMonth();
+      var currentYear = date.getFullYear();
+      var day = date.getDay();
+      var month_names_short = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
+      var currentMonthName = month_names_short[currentMonth];
+      var schoolStartHour = 7;
+      var schoolEndHour = 10;
+      var cmg_no_ads_debug = false;
+      //var cmg_no_ads = false;
+      if(typeof subscriberLeg === 'undefined' || subscriberLeg === null || subscriberLeg === '') {
+        subscriberLeg = 'Default Leg';
+        if(typeof myDebugAction === 'function' && (typeof valid_test_environment !== 'undefined' && valid_test_environment) ) {
+          myDebugAction();
+        }
+      }
+      if(typeof freeGameLimit === 'undefined' || freeGameLimit === null) {
+        freeGameLimit = 0;
+      }
+      if(typeof cmg_no_ads === 'undefined' && cmg_no_ads_debug && (typeof valid_test_environment !== 'undefined' && valid_test_environment)) {
+        cmg_no_ads = true;
+      }
+      var schoolHours = false;
+      var schoolHolidays = ["Jul 4","Sep 3","Nov 22","Nov 23"];
+      var schoolHoliday = false;
+
+      //TODO -- Summer vacation dates
+      var summerVacationStart = new Date('07/1/'+currentYear);
+      var summerVacationEnd = new Date('07/10/'+currentYear);
+      
+      var today_month_day = currentMonthName + ' ' + date.getDate();
+      if(schoolHolidays.indexOf(today_month_day) !== -1 || (date >= summerVacationStart && date <= summerVacationEnd) || day === 6 || day == 0) {
+        schoolHoliday = true;
+      }
+      var currentMonthName = month_names_short[currentMonth];
+      if(!schoolHoliday && hours >= schoolStartHour && hours <= schoolEndHour) {
+        schoolHours = true;
+      }
+      var targetStateUser = false;
+      if(typeof targeted_state !== 'undefined' && targeted_state !== null && targeted_state) {
+        targetStateUser = true;
+      }
+      if(typeof watchAdtoUnlockGame == 'undefined') {
+        watchAdtoUnlockGame = false;
+      }
+      var cmg_active_anonymous_user = getCookie('cmg_active_anonymous_user');
+      var cmatgame_editor = getCookie('cmg_editor');
+      if(typeof cmg_active_anonymous_user !== 'undefined' && cmg_active_anonymous_user !== null) {
+        ////console.log('We have an active school hours session');
+      }
+      //Display Ads to anonymous users only if the user is not from a targeted state or it is school hours. 
+      //   Do not display ads for targeted state user during non school hours, but free game play is restricted 
+      if(!schoolHours && targetStateUser && cmg_active_anonymous_user === null && cmatgame_editor === null) {
+        freeTrialUser = true;
+     } 
+   </script>
+<script type="text/javascript">
+	   function checkIfFlashIsEnabled() {
+          var ie_flash;
+          try { ie_flash = (window.ActiveXObject && (new ActiveXObject("ShockwaveFlash.ShockwaveFlash")) !== false) } catch(err) { ie_flash = false; }
+          var _flash_installed = ((typeof navigator.plugins != "undefined" && typeof navigator.plugins["Shockwave Flash"] == "object") || ie_flash);
+          if(typeof _flash_installed == "undefined" || !_flash_installed) {
+            return false;
+          } else {
+            return true;
+          }
+       } 
+       function trackEvent(category, action, label, noninteraction) {
+          if(typeof __gaTracker === 'undefined')
+            return;
+            noninteraction = noninteraction || 0;
+           //console.log('Tracked: ' + category + ' ' + action + ' ' + label + ' noninteraction: ' + noninteraction);
+          __gaTracker('send', {
+              'hitType': 'event',          // Required.
+              'eventCategory': category,   // Required.
+              'eventAction': action,      // Required.
+              'eventLabel': label,
+              'eventValue': 0,
+              'nonInteraction': noninteraction
+          });
+      }
+      function trackSocial(network,action,target) {
+          if(typeof __gaTracker === 'undefined')
+            return;
+          __gaTracker('send', {
+              'hitType': 'social',          // Required.
+              'socialNetwork': network,
+              'socialAction': action,
+              'socialTarget': target
+          });
+      }
+	  </script>
+<script type="text/javascript">
+		  gamePage = false;
+          quizPage = false;
+          var ad_refresh_timer_interval = 60000; 
+          var ad_refresh_event_interval = 30000;
+		</script>
+<script type="text/javascript">
+          cmatgame_subscriber = getCookie("cmg_sx");
+          //check if school is whitelisted
+          if(cmg_school_whitelisted !== null && getCookie("cmg_schwl") !== null) {
+            cmg_school_whitelisted = getCookie("cmg_schwl");
+            cmatgame_subscriber = getCookie("cmg_schwl");
+          } else if(cmg_school_whitelisted === null && typeof cmg_no_ads_debug !== "undefined" && cmg_no_ads_debug) {
+          //console.log("KY school hours");
+          cmatgame_subscriber = cmg_no_ads_debug;
+        }
+         if(cmg_gdpr_check !== null) {
+           var cmg_gdpr_all_check = getCookie("GDPR_All");  //GDPR_All cookie is set when user selects accept all cookies in the GDPR overlay
+           var cmg_gdpr_first_check = getCookie("GDPR_First");
+           var cmg_gdpr_reject_check = getCookie("GDPR_Reject");
+           if(cmg_gdpr_all_check == null && (cmg_gdpr_first_check != null || cmg_gdpr_reject_check !=null)) {  //user either accepted only first party cookies or rejected all cookies so do not display ads
+             cmatgame_subscriber = getCookie("GDPR");
+           }
+         }
+        </script>
+<script type="text/javascript">
+          if((typeof cmatgame_subscriber === "undefined" || cmatgame_subscriber === "" || cmatgame_subscriber === null || typeof freeTrialUser === "undefined"  ) && !freeTrialUser) {
+  
+            var tyche = {
+              mode: "tyche",
+              config: "//config.playwire.com/1023174/v2/websites/71134/banner.json"
+                  };
+            var pwScript = document.createElement("script");
+            pwScript.type = "text/javascript";
+            pwScript.src = "//cdn.intergi.com/hera/tyche.js";
+            pwScript.async = true;
+            document.getElementsByTagName("head")[0].appendChild(pwScript);
+          }
+        </script>
+<script src="/modules/custom/cmatgame_ads_analytics/js/jquery.min.js?v=3.2.1"></script>
+<script type="text/javascript">
+            if (!window.console) console = {log: function() {}};
+            
+            var enableDebug=false;
+            function debugOut(msg){if(enableDebug){console.log(msg);}}
+            
+            refreshCnt = 0;
+            refreshTimer = null;
+            var intvlValue = 30000; // 1m0s
+            //Free trial user change frequency of refresh to 24 hours
+            if(typeof freeTrialUser !== "undefined" && freeTrialUser || cmatgame_subscriber) {
+              intvlValue = 24 * 60 * 60* 1000;
+            }
+            debugOut("Starting with ad refresh timer of " + intvlValue + " ms")
+            if(typeof quizPage == "undefiend" || quizPage != true) {  //
+            	refreshTimer = setTimeout(function(){ myTimerAction() },intvlValue);
+            }
+            
+            function myTimerAction() {
+                console.log("Refresh timer " + intvlValue + " ms mark");
+                refreshAds();
+                myStopFunction();
+            	debugOut("Setting ad refresh timer of " + intvlValue + " ms")
+                refreshTimer = setTimeout(function () { myTimerAction() }, intvlValue);
+            }
+            
+            function myStopFunction() {
+            	debugOut("Clearing refreshTimer")
+                clearTimeout(refreshTimer);
+                refreshTimer = null;
+            }
+            
+            // the myTimerAction() function is intended to be used by a client;
+            // this is intended to be a utility function.
+            function refreshAds() {
+            
+            	refreshCnt++;
+            	/*googletag.pubads().setTargeting("RxCount", refreshCnt.toString());
+                googletag.pubads().setTargeting("Refresh", "True");
+                */
+            	if(typeof tyche != "undefined" && typeof tyche.triggerRefresh === "function") {
+                	tyche.triggerRefresh(); 
+                	doCustomAnalytics("ads", "mobile-refresh");
+            	}   
+            }
+            
+            function doCustomAnalytics( evtCat, evtAct ) {
+            	// Google Analytics
+            	if(typeof __gaTracker !== "undefined") {
+            		__gaTracker("send", {
+            	        "hitType": "event",          // Required.
+            	        "eventCategory": evtCat,   // Required.
+            	        "eventAction": evtAct,      // Required.
+            	        "eventLabel": document.title,
+            	        "eventValue": refreshCnt,
+            	        "nonInteraction": 1
+            	    });
+            	}
+                
+            }
+            
+            
+            // We can"t refresh ads until window has finished loading.
+            var refreshAvail = 0;
+            jQuery(window).on("load", function() {
+              refreshAvail = 1;
+            });
+            
+            </script>
+
+    <title>Error Page | Free Online Math Games, Cool Puzzles, and More</title>
+  <link rel="stylesheet" media="all" href="/sites/default/files/css/css_FLn9Vgaj1H-zO3jZ-GqN1nXlcK9yHiMTaPS5zXQQkbg.css" />
+<link rel="stylesheet" media="all" href="/sites/default/files/css/css_ab-2l9a0Yc9snHJxSmydTQtmjv6afI9P_byV9kWY9vc.css" />
+
+  <script type="text/javascript">
+      function getCookie(key) {
+        var keyValue = document.cookie.match("(^|;) ?" + key + "=([^;]*)(;|$)");
+        return keyValue ? keyValue[2] : null;
+      }
+  </script>
+    <script type="application/json" data-drupal-selector="drupal-settings-json">{"path":{"baseUrl":"\/","scriptPath":null,"pathPrefix":"","currentPath":"","currentPathIsAdmin":false,"isFront":false,"currentLanguage":"en","currentQuery":{"v":"4.5.0"}},"pluralDelimiter":"\u0003","suppressDeprecationErrors":true,"clientside_validation_jquery":{"validate_all_ajax_forms":2,"force_validate_on_blur":false},"user":{"uid":0,"permissionsHash":"c95aaebf1ca44c4827454d0158fc52317722fd64b54ab1580fd1cfe15525a489"}}</script>
+
+<!--[if lte IE 8]>
+<script src="/sites/default/files/js/js_VtafjXmRvoUgAzqzYTA3Wrjkx9wcWhjP0G4ZnnqRamA.js"></script>
+<![endif]-->
+<script src="/sites/default/files/js/js_wXE2qJkRE-riX00oxFit196aiCiZPpAdfNVG9k9Ug9Y.js"></script>
+
+    <meta name="MobileOptimized" content="width">
+    <meta name="HandheldFriendly" content="true">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  </head>
+  <body class="not-active-user">
+        <a href="#main-content" class="visually-hidden focusable">
+      Skip to main content
+    </a>
+  
+      <div class="gdpr-overlay-background" style="display:none"></div>
+  <div class="gdpr-overlay-container" style="display:none">
+    <div class="gdpr-overlay">
+    <h1 class="gdpr-welcome">welcome to coolmath games</h1>
+    <p class="overlay-text">We use first party cookies on our website to enhance your
+  browsing experience, and third party cookies to provide
+  advertising that may be of interest to you. </p>
+  <p class="overlay-text">You can accept or reject cookies on our
+  website by clicking one of the buttons below. <span>Rejecting
+  cookies may impair some of our website’s functionality.</span></p>
+    <div class="accept-all-cookies overlay-button" onclick="acceptAllCookies();"><span>Accept All Cookies</span></div><br>
+    <div class="accept-firstparty-cookies overlay-button" onclick="acceptFirstpartyCookies();"><span>Accept First Party Cookies</span></div><br>
+    <div class="reject-all-cookies overlay-button" onclick="rejectAllCookies();"><span>Reject All Cookies</span></div><br>
+    <p class="overlay-text">To understand more about how we and our advertising
+  partners use cookies or to change your preference and
+  browser settings, please see our <a href="/global-privacy-policy">Global Privacy Policy</a>.</p>
+    </div>
+  </div>
+  <script type="text/javascript">
+    function stopBodyScrolling (bool) {
+      if (bool === true) {
+        document.body.addEventListener("touchmove", freezeVp, false);
+        console.log('addeventlistener');
+      } else {
+        document.body.removeEventListener("touchmove", freezeVp, false);
+        console.log('addeventlistener');
+      }
+    }
+    var freezeVp = function(e) {
+      // console.log('freezeVP');
+      e.preventDefault();
+    };
+    jQuery(document).ready(function() {
+    cmg_gdpr_check = getCookie("GDPR");
+    cmg_gdpr_all_check = getCookie("GDPR_All");
+    cmg_gdpr_first_check = getCookie("GDPR_First");
+    cmg_gdpr_reject_check = getCookie("GDPR_Reject");
+    if(cmg_gdpr_check != null && cmg_gdpr_check=="true") {
+      if(cmg_gdpr_all_check == null && cmg_gdpr_first_check == null && cmg_gdpr_reject_check == null) { // user is visiting our site firsttime from one of GDPR countries
+      jQuery("#yourCookieChoices").show();
+      //remove_ads_from_free_game_pages();
+      //jQuery('.content-wrapper').css('pointer-events','default');
+      var footerlink = '<li class="menu__item is-leaf last leaf"><a href="/cookie-choices" class="menu__link">YOUR COOKIE CHOICES</a></li>';
+      } else if(cmg_gdpr_first_check !== null  || cmg_gdpr_reject_check !== null ){ //user selected first party cookies or rejected all cookies so we need to remove ads
+      remove_ads_from_free_game_pages();
+      var footerlink = '<li class="menu__item is-leaf last leaf"><a href="/cookie-choices" class="menu__link">YOUR COOKIE CHOICES</a></li>';
+      jQuery("#footerLinks").append(footerlink);
+      //jQuery('.content-wrapper').css('pointer-events','default');
+      } else if(cmg_gdpr_all_check !== null) { //user accepted all cookies
+      var footerlink = '<li class="last leaf"><a href="/cookie-choices" class="menu__link">YOUR COOKIE CHOICES</a></li>';
+      jQuery("#footerLinks").append(footerlink);
+      }
+    }
+    });
+    ///TODO - REMOVE THIS ALWAYS SHOWS IT FOR TESTING
+    // jQuery('html, body').css('overflow','hidden');
+    // jQuery(".gdpr-overlay-background").show();
+    // jQuery(".gdpr-overlay-background").css('visibility','visible');
+    // jQuery(".gdpr-overlay-container").show();
+    // jQuery(".gdpr-overlay-container").css('visibility','visible');
+    // jQuery('.pageWrapper').css('pointer-events','none');
+    // jQuery('.game-item').css('pointer-events','none');
+    // stopBodyScrolling(true);
+    ///TODO - REMOVE THIS ALWAYS SHOWS IT FOR TESTING
+
+
+    function acceptAllCookies() {
+    var d = new Date();
+    d.setTime(d.getTime() + (365*2*24*60*60*1000));
+    var expires = "expires="+ d.toUTCString();
+    document.cookie = "GDPR_All=true;" + expires + ";path=/";
+    window.location =  location.href;
+    }
+    function acceptFirstpartyCookies() {
+    document.cookie = "GDPR_First=true"+ ";path=/";
+    window.location =  location.href;
+    }
+    function rejectAllCookies() {
+    document.cookie = "GDPR_Reject=true"+ ";path=/";
+    window.location =  location.href;
+    }
+  </script>
+      <div class="dialog-off-canvas-main-canvas" data-off-canvas-main-canvas>
+    
+<input type="checkbox" class="navCheckbox" id="navCheckbox" onchange="toggleNav();"/>
+<div class="pageWrapper">
+  <!---site wrapper -->
+  <div class="modal-background"></div>
+  <div class="contentWrapper" id="contentWrapper">
+    <!-- site canvas -->
+    <!-- <div class="mobile-header-ad">&nbsp;</div>-->
+    <div class="mobile-header-ad">
+      <div class="adstopmobile">
+<div id="block-adstopmobile-ad-nongame-320x50-1">
+  
+    
+     <div class="view-content">
+    
+      <div class='mobile-container homepage-top-container'>
+        <div id='div-gpt-ad-868275232471008982-1' class='homeBlock'>
+          <!-- Desktop/iPad Leaderboard ATF  -->
+          <div data-pw-desk='leaderboard_atf'></div>
+          <!-- Mobile Med Rect ATF -->
+          <div data-pw-mobi='leaderboard_atf'></div>
+        </div>
+      </div>
+   </div>	
+  </div>
+</div>
+    </div>
+    <div class="mobile-header">
+      <div class="nav-wrapper">
+        <div class="row">
+          <nav class="top-bar">
+            <ul class="visible-nav">
+              <li class="logo">
+                <a href="/" title="Coolmath Games Mobile">
+                  <img alt="Home" id="new-img-logo" src="/themes/custom/cmatgame_mob/logo_tab.png">
+                </a>
+              </li>
+
+              <li class="toggle-nav menu-icon header-link">
+                <a class="left-off-canvas-toggle" href="#">Menu</a>
+              </li>
+              <li class="login-link header-link">
+                <a href="/user/login">Login</a>
+              </li>
+            </ul>
+          </nav>
+          <section class="site-menu" id="site-menu">
+            <ul class="inner-right-nav">
+              <li class="off-canvas-close">
+                <a href="#" class="close-panel">
+                  <span class="close-x">X</span></a>
+              </li>
+              <div class="panel-pane pane-block pane-cmatgame-blocks-cmat-blocks-mobile-header-menu">
+                <div class="pane-content">
+                  <div id="menu">
+                    <ul id="menuItems">
+                      <a id="link-all-games-a-z" href="/1-complete-game-list">
+                        <li id="all-games-a-z" class="item left">ALL GAMES A-Z</li>
+                      </a>
+                      <a id="link-most-popular" href="/1-popular">
+                        <li id="most-popular" class="item left">MOST POPULAR</li>
+                      </a>
+                      <a id="link-trivia" href="/trivia">
+                        <li id="trivia" class="item left">TRIVIA</li>
+                      </a>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+          </ul>
+          <div class="myaccount-container"></div>
+          <div class="mobile-hamburger-categories">
+            <p class="categories-sidebar">Game Categories</p>
+            <div class="mobile-categories-wrapper"><div class="views-field views-field-name"><span class="field-content"><a href="/1-run-jump-games">Run & Jump</a></span></div><div class="views-field views-field-name"><span class="field-content"><a href="/1-cars-planes-trains-games">Cars, Planes & Trains</a></span></div><div class="views-field views-field-name"><span class="field-content"><a href="/1-fun-physics-games">Fun Physics</a></span></div><div class="views-field views-field-name"><span class="field-content"><a href="/1-be-the-hero-games">Be The Hero</a></span></div><div class="views-field views-field-name"><span class="field-content"><a href="/1-strategy-puzzle-games">Strategy Puzzle</a></span></div><div class="views-field views-field-name"><span class="field-content"><a href="/1-aiming-games-0">Aiming</a></span></div><div class="views-field views-field-name"><span class="field-content"><a href="/1-classic-games-0">Classic</a></span></div><div class="views-field views-field-name"><span class="field-content"><a href="/1-animals-games">Animals</a></span></div><div class="views-field views-field-name"><span class="field-content"><a href="/1-path-planning-games">Path Planning</a></span></div><div class="views-field views-field-name"><span class="field-content"><a href="/1-stop-think-games">Stop & Think</a></span></div><div class="views-field views-field-name"><span class="field-content"><a href="/1-quick-reaction-games">Quick Reaction</a></span></div><div class="views-field views-field-name"><span class="field-content"><a href="/1-drawing-games-0">Drawing</a></span></div><div class="views-field views-field-name"><span class="field-content"><a href="/1-match-3-games-0">Match 3</a></span></div><div class="views-field views-field-name"><span class="field-content"><a href="/1-mobile-daily-games">Daily Games</a></span></div></div>
+          </div>
+          <div class="mobile-hamburger-trivia">
+            <p class="categories-sidebar">Trivia</p>
+            <div class="trivia-mobile-menu">
+              <div class="side-link">
+                <a href="/trivia" class="trivia-category-menu-link">Latest Quizzes</a>
+              </div>
+              <div class="side-link">
+                <a href="/quiz-category/arts-entertainment" class="trivia-category-menu-link">Arts &amp; Entertainment</a>
+              </div>
+              <div class="side-link">
+                <a href="/quiz-category/sports" class="trivia-category-menu-link">Sports</a>
+              </div>
+              <div class="side-link">
+                <a href="/quiz-category/food-home" class="trivia-category-menu-link">Food &amp; Home</a>
+              </div>
+              <div class="side-link">
+                <a href="/quiz-category/style" class="trivia-category-menu-link">Style</a>
+              </div>
+              <div class="side-link">
+                <a href="/quiz-category/body-health" class="trivia-category-menu-link">Body &amp; Health</a>
+              </div>
+              <div class="side-link">
+                <a href="/quiz-category/fun-stuff" class="trivia-category-menu-link">Fun Stuff</a>
+              </div>
+              <div class="side-link">
+                <a href="/quiz-category/history-politics" class="trivia-category-menu-link">History &amp; Politics</a>
+              </div>
+              <div class="side-link">
+                <a href="/quiz-category/places" class="trivia-category-menu-link">Places</a>
+              </div>
+              <div class="side-link">
+                <a href="/quiz-category/science-nature" class="trivia-category-menu-link">Science &amp; Nature</a>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- end of Inner Menu -->
+      </div>
+    </div>
+  </div>
+  <div class="content unselectable" id="content">
+          <div class="panel-pane pane-page-content">
+          <div>
+    <div data-drupal-messages-fallback class="hidden"></div>
+<div class="system_main_block">
+<div id="block-cmatgame-mob-cmatgame-mob-system-main">
+  
+    
+     <div class="view-content">
+      <div class="layout layout--onecol">
+    <div  class="layout__region layout__region--content">
+      <div class="block-region-content"><div class="block_content:8ae22f09-296b-4187-92d3-7e116d416d62">
+<div>
+  
+    
+          <div class="field field--name-body field--type-text-with-summary field--label-hidden field__items">
+                <div class="field__item">
+        <div id="cmg-error-suggestions"> </div><div id="cmg-error-promo-container"> </div>
+            </div>
+          </div>
+<div class="right-rail-promo"></div>
+  </div>
+</div></div>
+    </div>
+  </div>
+
+   </div>	
+  </div>
+</div>
+  </div>
+
+      </div>
+                <div class="error-404-page">
+        <div class="scrollableContentArea">
+          <p><img id="ghostImage" src="/sites/default/files/google_eyed_ghost_icon_yellow.png"></p>
+          <p>Oops… we couldn’t find that page!</p>
+          <p>Please try again, or <a class="greenLink" href="/">visit our homepage.</a></p>
+        </div>
+      </div>
+      </div>
+  <div class="mobile-fixed-footer">
+    <div id="fixed-footer-content">&nbsp;</div>
+  </div>
+  <div class="footer unselectable">
+    <div class="panel-pane pane-block pane-menu-menu-footer-menu">
+
+      <div class="pane-content">
+        <ul id="footerLinks" class="unselectable">
+          <li class="first leaf">
+            <a href="http://m.coolmathgames.com/privacyp" class="privacyText">PRIVACY POLICY</a>
+          </li>
+          <li class="leaf">
+            <a href="/subscription-faq">SUBSCRIPTION FAQ</a>
+          </li>
+          <li class="leaf">
+            <a href="http://m.coolmathgames.com/terms-use">TERMS OF USE</a>
+          </li>
+          <li class="leaf">
+            <a href="http://m.coolmathgames.com/about-us">ABOUT US</a>
+          </li>
+          <li class="last leaf">
+            <a href="http://m.coolmathgames.com/aboutourads">ABOUT OUR ADS</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="panel-separator"></div>
+    <div class="panel-pane pane-block pane-bean-footer-copyright">
+
+      <div class="pane-content">
+        <div class="entity entity-bean bean-content-block" about="/block/footer_copyright" typeof="">
+
+          <div class="field-text-block">
+            <p>© 2020 Coolmath.com LLC. All Rights Reserved.
+            </p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  <div id="contentFadeout"></div>
+</div>
+</div>
+
+  </div>
+
+  
+    <script src="/modules/custom/cmatgame_ads_analytics/js/ads.js?v=1.x"></script>
+<script src="/sites/default/files/js/js_9Mlc0pFLNgXbu5EnsV-S0-02ZWtRdftJtFDanFfR-fw.js"></script>
+<script src="https://js.stripe.com/v3/"></script>
+
+  <script type="text/javascript">
+      function closeCookieChoices() {
+        var d = new Date();
+        d.setTime(d.getTime() + (365*2*24*60*60*1000));
+        var expires = "expires="+ d.toUTCString();
+        document.cookie = "GDPR_All=true;" + expires + ";path=/";
+        document.cookie = "GDPR_CHOICE=GDPR_All;" + expires + ";path=/";
+        jQuery("#yourCookieChoices").hide();
+        var footerlink = '<li class="last leaf"><a href="/cookie-choices" class="menu__link">YOUR COOKIE CHOICES</a></li>';
+
+        jQuery("#footerLinks").append(footerlink);
+      }
+    </script>
+    <div id="yourCookieChoices" style="display:none;">
+      <p class="cookie-text"><span class="first-cookie">We use cookies to improve your experience and present relevant advertising.</span><span class="second-cookie"> By using this site you agree to our cookie policies.</span></p>
+      <div class="cookie-mobile">
+        <span class="imokwiththat-close" id="closeCookieChoices" onclick="closeCookieChoices();">imokwiththat</span> <a href="/cookie-choices" class="cookies-link">Manage choices</a>
+      </div>
+  </body>
+</html>
